@@ -1,0 +1,1077 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>דביר | בניית אתרים ופתרונות טכנולוגיים</title>
+    <style>
+      :root {
+        --bg-main: #060917;
+        --bg-secondary: #0f152b;
+        --text-main: #f4f7ff;
+        --text-soft: #cdd4f3;
+        --neon-cyan: #59b8ff;
+        --neon-purple: #7a6dff;
+        --neon-pink: #9f7bff;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", "Heebo", Arial, sans-serif;
+        color: var(--text-main);
+        background:
+          radial-gradient(circle at 12% 10%, rgba(122, 109, 255, 0.14), transparent 38%),
+          radial-gradient(circle at 88% 16%, rgba(89, 184, 255, 0.1), transparent 40%),
+          linear-gradient(180deg, #070a16 0%, #080b18 45%, #090d1a 100%);
+        min-height: 100vh;
+        overflow-x: hidden;
+        text-rendering: optimizeLegibility;
+      }
+
+      .scroll-3d {
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        perspective: 0.8px;
+        perspective-origin: center top;
+        position: relative;
+      }
+
+      #neon-canvas {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        will-change: transform;
+        opacity: 0.65;
+      }
+
+      .scene {
+        position: relative;
+        transform-style: preserve-3d;
+        min-height: 100%;
+      }
+
+      .layer {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        will-change: transform;
+        z-index: 1;
+      }
+
+      .layer-back {
+        transform: translateZ(-1.6px) scale(2.8) rotateX(10deg);
+        background:
+          radial-gradient(circle at 24% 26%, rgba(122, 109, 255, 0.2), transparent 38%),
+          radial-gradient(circle at 76% 20%, rgba(89, 184, 255, 0.12), transparent 42%);
+        filter: blur(9px) saturate(105%);
+      }
+
+      .layer-mid {
+        transform: translateZ(-0.85px) scale(2) rotateY(-9deg);
+        background:
+          linear-gradient(120deg, rgba(122, 109, 255, 0.1), transparent 42%),
+          linear-gradient(300deg, rgba(89, 184, 255, 0.08), transparent 48%);
+        filter: blur(4px);
+      }
+
+      .layer-front {
+        transform: translateZ(-0.35px) scale(1.42) rotateX(-5deg);
+        background:
+          radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.03), transparent 50%),
+          radial-gradient(circle at 70% 28%, rgba(122, 109, 255, 0.06), transparent 48%);
+        opacity: 0.55;
+        filter: blur(1px);
+      }
+
+      .cursor-glow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        opacity: 0.35;
+        z-index: 5;
+        transform: translate(-50%, -50%);
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(122, 109, 255, 0.2), rgba(122, 109, 255, 0));
+        filter: blur(14px);
+      }
+
+      .content {
+        position: relative;
+        z-index: 3;
+        width: min(1100px, 92%);
+        margin: 0 auto;
+        padding: 5.5rem 0 7rem;
+      }
+
+      .content > section {
+        position: relative;
+        z-index: 3;
+        margin-top: 5.2rem;
+        padding-top: 0.5rem;
+      }
+
+      .hero {
+        min-height: 92vh;
+        display: grid;
+        align-content: center;
+        gap: 1.1rem;
+        margin-bottom: 3.6rem;
+      }
+
+      .badge {
+        width: fit-content;
+        padding: 0.45rem 1rem;
+        border: 1px solid rgba(89, 184, 255, 0.5);
+        border-radius: 999px;
+        font-size: 0.92rem;
+        letter-spacing: 0.5px;
+        color: var(--neon-cyan);
+        background: rgba(0, 246, 255, 0.08);
+        box-shadow: 0 0 10px rgba(89, 184, 255, 0.22);
+      }
+
+      h1 {
+        font-size: clamp(2.2rem, 6vw, 4.2rem);
+        font-weight: 500;
+        line-height: 1.15;
+        letter-spacing: 1px;
+        text-wrap: balance;
+        min-height: 1.3em;
+        text-shadow:
+          0 0 6px rgba(89, 184, 255, 0.42),
+          0 0 16px rgba(122, 109, 255, 0.34);
+      }
+
+      .typing-caret::after {
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: 1em;
+        margin-inline-start: 8px;
+        vertical-align: -0.12em;
+        background: var(--neon-cyan);
+        box-shadow: 0 0 12px var(--neon-cyan), 0 0 22px var(--neon-cyan);
+        animation: caret-blink 780ms steps(1) infinite;
+      }
+
+      @keyframes caret-blink {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .subtitle {
+        max-width: 72ch;
+        color: var(--text-soft);
+        line-height: 1.95;
+        font-weight: 300;
+        font-size: clamp(1rem, 2vw, 1.15rem);
+      }
+
+      .cta {
+        margin-top: 0.4rem;
+        width: fit-content;
+        text-decoration: none;
+        color: var(--text-main);
+        font-weight: 700;
+        border-radius: 14px;
+        padding: 0.78rem 1.2rem;
+        border: 1px solid transparent;
+        background:
+          linear-gradient(var(--bg-secondary), var(--bg-secondary)) padding-box,
+          linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink)) border-box;
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+          0 12px 26px rgba(0, 0, 0, 0.35),
+          0 0 22px rgba(157, 77, 255, 0.28);
+        transition: transform 220ms ease, box-shadow 220ms ease;
+      }
+
+      .cta:hover {
+        transform: translateY(-2px) scale(1.015);
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+          0 14px 30px rgba(0, 0, 0, 0.42),
+          0 0 28px rgba(0, 246, 255, 0.3);
+      }
+
+      .section-title {
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: 1.3rem;
+        text-shadow: 0 0 12px rgba(122, 109, 255, 0.3);
+      }
+
+      .projects {
+        margin-top: 0;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
+      }
+
+      .project-card {
+        background:
+          linear-gradient(160deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015)),
+          rgba(15, 18, 34, 0.78);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        backdrop-filter: blur(15px);
+        overflow: hidden;
+        transform: translateZ(0);
+        box-shadow:
+          0 20px 42px rgba(18, 8, 38, 0.26),
+          0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+        transition: transform 320ms ease, border-color 320ms ease, box-shadow 320ms ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(122, 109, 255, 0.62);
+        box-shadow:
+          0 22px 46px rgba(18, 8, 38, 0.34),
+          0 0 22px rgba(122, 109, 255, 0.22),
+          0 0 0 1px rgba(89, 184, 255, 0.42) inset;
+      }
+
+      .project-media {
+        aspect-ratio: 16 / 10;
+        display: grid;
+        place-items: center;
+        color: #cad1ef;
+        font-weight: 600;
+        background:
+          linear-gradient(145deg, rgba(0, 246, 255, 0.15), rgba(157, 77, 255, 0.15)),
+          repeating-linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.05) 0,
+            rgba(255, 255, 255, 0.05) 12px,
+            rgba(255, 255, 255, 0.02) 12px,
+            rgba(255, 255, 255, 0.02) 24px
+          );
+      }
+
+      .project-info {
+        padding: 0.95rem 1rem 1.1rem;
+      }
+
+      .project-info h3 {
+        margin-bottom: 0.45rem;
+        font-size: 1.02rem;
+      }
+
+      .project-info p {
+        color: var(--text-soft);
+        font-size: 0.95rem;
+        line-height: 1.85;
+      }
+
+      .spacer {
+        height: 10vh;
+      }
+
+      #contact {
+        margin-top: 6.5rem;
+      }
+
+      .floating-contact {
+        position: fixed;
+        right: 18px;
+        bottom: 22px;
+        z-index: 12;
+        text-decoration: none;
+        color: #f9fcff;
+        font-weight: 700;
+        font-size: 0.96rem;
+        padding: 0.82rem 1.1rem;
+        border-radius: 999px;
+        border: 1px solid rgba(0, 246, 255, 0.75);
+        background:
+          linear-gradient(135deg, rgba(0, 246, 255, 0.2), rgba(143, 61, 255, 0.35)),
+          rgba(11, 16, 34, 0.82);
+        box-shadow:
+          0 10px 28px rgba(0, 0, 0, 0.4),
+          0 0 16px rgba(0, 246, 255, 0.65),
+          0 0 34px rgba(255, 62, 215, 0.35);
+        transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+      }
+
+      .floating-contact:hover {
+        transform: translateY(-3px) scale(1.05);
+        filter: saturate(125%);
+        box-shadow:
+          0 14px 36px rgba(0, 0, 0, 0.45),
+          0 0 24px rgba(0, 246, 255, 0.85),
+          0 0 48px rgba(255, 62, 215, 0.55);
+      }
+
+      .pricing {
+        margin-top: 0;
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+      }
+
+      .pricing-card {
+        position: relative;
+        padding: 1.1rem 1rem 1rem;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background:
+          linear-gradient(165deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04)),
+          rgba(9, 13, 28, 0.6);
+        backdrop-filter: blur(15px) saturate(118%);
+        box-shadow:
+          0 20px 42px rgba(18, 8, 38, 0.24),
+          0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+        overflow: hidden;
+        transition:
+          transform 320ms cubic-bezier(0.2, 0.8, 0.2, 1),
+          box-shadow 320ms ease,
+          border-color 320ms ease;
+      }
+
+      .pricing-card::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: inherit;
+        background:
+          radial-gradient(circle at 22% 20%, rgba(0, 246, 255, 0.26), transparent 48%),
+          radial-gradient(circle at 82% 20%, rgba(255, 62, 215, 0.24), transparent 45%);
+        opacity: 0.34;
+        pointer-events: none;
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-6px) scale(1.02);
+        border-color: rgba(122, 109, 255, 0.64);
+        box-shadow:
+          0 22px 46px rgba(18, 8, 38, 0.34),
+          0 0 24px rgba(122, 109, 255, 0.2),
+          0 0 0 1px rgba(89, 184, 255, 0.4) inset;
+      }
+
+      .pricing-card h3 {
+        font-size: 1.08rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 0 12px rgba(0, 246, 255, 0.45);
+      }
+
+      .pricing-desc {
+        color: var(--text-soft);
+        font-size: 0.95rem;
+        line-height: 1.85;
+      }
+
+      .pricing-list {
+        margin-top: 0.75rem;
+        list-style: none;
+        display: grid;
+        gap: 0.35rem;
+        color: #e8edff;
+        font-size: 0.93rem;
+      }
+
+      .pricing-list li::before {
+        content: "✦";
+        margin-inline-end: 0.42rem;
+        color: var(--neon-cyan);
+        text-shadow: 0 0 8px rgba(0, 246, 255, 0.7);
+      }
+
+      .faq {
+        margin-top: 0;
+      }
+
+      .faq-list {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .faq-item {
+        border-radius: 14px;
+        border: 1px solid rgba(0, 246, 255, 0.26);
+        background:
+          linear-gradient(160deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+          rgba(9, 13, 28, 0.62);
+        backdrop-filter: blur(9px);
+        overflow: hidden;
+      }
+
+      .faq-question {
+        width: 100%;
+        border: 0;
+        cursor: pointer;
+        text-align: right;
+        font: inherit;
+        color: var(--text-main);
+        padding: 0.95rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.8rem;
+        background: transparent;
+      }
+
+      .faq-question span {
+        font-weight: 600;
+      }
+
+      .faq-icon {
+        color: var(--neon-cyan);
+        font-size: 1.2rem;
+        line-height: 1;
+        text-shadow: 0 0 12px rgba(0, 246, 255, 0.7);
+        transition: transform 260ms ease;
+      }
+
+      .faq-answer-wrap {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 380ms ease, opacity 300ms ease;
+      }
+
+      .faq-answer {
+        padding: 0 1rem 0.95rem;
+        color: var(--text-soft);
+        line-height: 1.9;
+        font-size: 0.95rem;
+      }
+
+      .faq-item.open .faq-answer-wrap {
+        max-height: 180px;
+        opacity: 1;
+      }
+
+      .faq-item.open .faq-icon {
+        transform: rotate(45deg);
+      }
+
+      .contact-form-wrap {
+        padding: 1rem;
+      }
+
+      .contact-form {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .contact-form label {
+        font-size: 0.92rem;
+        color: #eaf0ff;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        border: 1px solid rgba(0, 246, 255, 0.35);
+        border-radius: 12px;
+        background: rgba(3, 6, 16, 0.65);
+        color: var(--text-main);
+        font: inherit;
+        padding: 0.72rem 0.8rem;
+        outline: none;
+        transition: border-color 200ms ease, box-shadow 200ms ease;
+      }
+
+      .contact-form textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        border-color: rgba(0, 246, 255, 0.85);
+        box-shadow: 0 0 0 3px rgba(0, 246, 255, 0.14);
+      }
+
+      .submit-btn {
+        margin-top: 0.3rem;
+        border: 0;
+        cursor: pointer;
+        color: #f6f9ff;
+        font-weight: 700;
+        font: inherit;
+        border-radius: 12px;
+        padding: 0.78rem 1rem;
+        background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+        box-shadow: 0 0 24px rgba(0, 246, 255, 0.35);
+        transition: transform 180ms ease, box-shadow 200ms ease;
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow:
+          0 0 30px rgba(0, 246, 255, 0.5),
+          0 0 48px rgba(255, 62, 215, 0.34);
+      }
+
+      #confetti-canvas {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 30;
+      }
+
+      .success-toast {
+        position: fixed;
+        left: 50%;
+        top: 10%;
+        transform: translate(-50%, -18px) scale(0.92);
+        opacity: 0;
+        z-index: 31;
+        border-radius: 14px;
+        border: 1px solid rgba(0, 246, 255, 0.7);
+        background:
+          linear-gradient(150deg, rgba(0, 246, 255, 0.2), rgba(143, 61, 255, 0.32)),
+          rgba(5, 10, 24, 0.9);
+        color: #f7fbff;
+        padding: 0.9rem 1.1rem;
+        box-shadow:
+          0 0 20px rgba(0, 246, 255, 0.5),
+          0 0 38px rgba(255, 62, 215, 0.38);
+        transition: opacity 300ms ease, transform 300ms ease;
+      }
+
+      .success-toast.show {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0) scale(0.985);
+        filter: blur(8px);
+        transition:
+          transform 800ms cubic-bezier(0.2, 0.8, 0.2, 1),
+          opacity 800ms ease,
+          filter 800ms ease;
+        will-change: transform, opacity, filter;
+      }
+
+      .reveal.from-left {
+        transform: translate3d(0, 30px, 0) scale(0.985);
+      }
+
+      .reveal.from-right {
+        transform: translate3d(0, 30px, 0) scale(0.985);
+      }
+
+      .reveal.from-bottom {
+        transform: translate3d(0, 30px, 0) scale(0.985);
+      }
+
+      .zoom-reveal {
+        transform: translate3d(0, 34px, 0) scale(0.96);
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+        filter: blur(0);
+      }
+
+      @media (max-width: 900px) {
+        .content {
+          width: min(1180px, 94%);
+        }
+        .pricing-grid,
+        .projects-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 680px) {
+        .content {
+          padding-top: 4.2rem;
+          padding-bottom: 5rem;
+        }
+        .hero {
+          min-height: 84vh;
+        }
+        .subtitle {
+          line-height: 1.7;
+        }
+        .pricing-grid,
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+        .project-card,
+        .pricing-card,
+        .faq-item {
+          border-radius: 14px;
+        }
+        .floating-contact {
+          right: 12px;
+          bottom: 14px;
+          font-size: 0.9rem;
+          padding: 0.72rem 0.95rem;
+        }
+      }
+
+      @media (max-width: 420px) {
+        h1 {
+          font-size: 2rem;
+        }
+        .badge {
+          font-size: 0.83rem;
+        }
+        .cta {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <canvas id="neon-canvas" aria-hidden="true"></canvas>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+    <div id="success-toast" class="success-toast">הפרטים נשלחו בהצלחה! נחזור אליך בהקדם 🎉</div>
+    <a
+      class="floating-contact"
+      href="https://wa.me/[הטלפון שלך]?text=%D7%94%D7%99%D7%99%20%D7%93%D7%91%D7%99%D7%A8%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%91%D7%A0%D7%99%D7%99%D7%AA%20%D7%90%D7%AA%D7%A8"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="פתח שיחת וואטסאפ"
+      >WhatsApp</a
+    >
+    <main class="scroll-3d">
+      <section class="scene">
+        <div class="layer layer-back"></div>
+        <div class="layer layer-mid"></div>
+        <div class="layer layer-front"></div>
+
+        <div class="content">
+          <header class="hero">
+            <span class="badge reveal from-left parallax-text">Portfolio / דף תדמית</span>
+            <h1 id="main-title" class="typing-caret parallax-text"></h1>
+            <p class="subtitle reveal from-right parallax-text">
+              אני בונה אתרים מודרניים, מהירים ומדויקים לעסק שלך - משלב האפיון ועד אתר חי באוויר.
+              עיצוב ממוקד המרות, חוויית משתמש חלקה ופיתוח ברמה גבוהה.
+            </p>
+            <a class="cta reveal from-bottom parallax-text" href="#works">לצפייה בעבודות</a>
+          </header>
+
+          <section id="works" class="projects">
+            <h2 class="section-title reveal from-left parallax-text">העבודות שלי</h2>
+            <div class="projects-grid">
+              <article class="project-card reveal zoom-reveal parallax-card">
+                <div class="project-media reveal from-bottom">מקום לתמונה 01</div>
+                <div class="project-info">
+                  <h3>אתר תדמית לחברת שירותים</h3>
+                  <p>פיתוח אתר מהיר עם אזורי תוכן דינמיים ומראה יוקרתי.</p>
+                </div>
+              </article>
+
+              <article class="project-card reveal zoom-reveal parallax-card">
+                <div class="project-media reveal from-bottom">מקום לתמונה 02</div>
+                <div class="project-info">
+                  <h3>דף נחיתה לקמפיין</h3>
+                  <p>פוקוס על הנעה לפעולה, אופטימיזציה לניידים ושיפור יחס המרה.</p>
+                </div>
+              </article>
+
+              <article class="project-card reveal zoom-reveal parallax-card">
+                <div class="project-media reveal from-bottom">מקום לתמונה 03</div>
+                <div class="project-info">
+                  <h3>מיתוג דיגיטלי לעסק</h3>
+                  <p>שילוב של שפה ויזואלית אחידה עם חוויית משתמש נקייה וברורה.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="pricing">
+            <h2 class="section-title reveal from-right parallax-text">חבילות שירות</h2>
+            <div class="pricing-grid">
+              <article class="pricing-card reveal zoom-reveal parallax-card">
+                <h3>בניית אתרי תדמית</h3>
+                <p class="pricing-desc">אתר ייצוגי מלא לעסק עם מיתוג ייחודי וביצועים גבוהים.</p>
+                <ul class="pricing-list">
+                  <li>עיצוב מותאם אישית</li>
+                  <li>רספונסיביות מלאה למובייל</li>
+                  <li>חיבור לטפסי יצירת קשר</li>
+                </ul>
+              </article>
+
+              <article class="pricing-card reveal zoom-reveal parallax-card">
+                <h3>דפי נחיתה</h3>
+                <p class="pricing-desc">דפים ממוקדי המרה לקמפיינים עם מסרים ברורים ו־CTA חזק.</p>
+                <ul class="pricing-list">
+                  <li>מבנה המכוון ללידים</li>
+                  <li>טעינה מהירה ואופטימיזציה</li>
+                  <li>התאמה לקידום ממומן</li>
+                </ul>
+              </article>
+
+              <article class="pricing-card reveal zoom-reveal parallax-card">
+                <h3>אוטומציות</h3>
+                <p class="pricing-desc">ייעול תהליכים עסקיים עם אינטגרציות וכלים שחוסכים זמן.</p>
+                <ul class="pricing-list">
+                  <li>חיבור מערכות וטפסים</li>
+                  <li>התראות ותהליכים אוטומטיים</li>
+                  <li>שיפור זרימת עבודה יומיומית</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="faq" id="faq">
+            <h2 class="section-title reveal from-left parallax-text">שאלות ותשובות</h2>
+            <div class="faq-list">
+              <article class="faq-item reveal from-left">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  <span>תוך כמה זמן אתר תדמית מוכן לאוויר?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-wrap">
+                  <p class="faq-answer">
+                    ברוב המקרים בין 7 ל-21 ימי עבודה, תלוי בהיקף התוכן, עיצוב והתאמות מיוחדות.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item reveal from-bottom">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  <span>האם אפשר לקבל דף נחיתה עם חיבור ללידים ווואטסאפ?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-wrap">
+                  <p class="faq-answer">
+                    כן. ניתן לחבר טפסים, וואטסאפ, אימייל והתראות אוטומטיות כך שכל ליד נכנס מיד לטיפול.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item reveal from-right">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  <span>מה כולל שירות אוטומציות לעסק?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-wrap">
+                  <p class="faq-answer">
+                    אפיון תהליך, חיבור בין מערכות, יצירת פעולות אוטומטיות וחיסכון משמעותי בזמן עבודה יומיומי.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section id="contact" class="faq">
+            <h2 class="section-title reveal from-right parallax-text">צור קשר</h2>
+            <div class="faq-item contact-form-wrap reveal from-bottom">
+              <form id="contact-form" class="contact-form">
+                <label for="name">שם</label>
+                <input id="name" name="name" type="text" placeholder="השם שלך" required />
+
+                <label for="phone">טלפון</label>
+                <input id="phone" name="phone" type="tel" placeholder="050-0000000" required />
+
+                <label for="site-need">איזה אתר אתה צריך?</label>
+                <textarea id="site-need" name="siteNeed" placeholder="ספר לי בקצרה על האתר הרצוי..." required></textarea>
+
+                <button class="submit-btn" type="submit">שלח</button>
+              </form>
+            </div>
+          </section>
+
+          <div class="spacer"></div>
+        </div>
+      </section>
+    </main>
+    <script>
+      (function () {
+        const titleText = "דביר - בניית אתרים ופתרונות טכנולוגיים";
+        const titleEl = document.getElementById("main-title");
+        let index = 0;
+
+        function typeTitle() {
+          if (!titleEl) return;
+          if (index <= titleText.length) {
+            titleEl.textContent = titleText.slice(0, index);
+            index += 1;
+            setTimeout(typeTitle, 70);
+          } else {
+            titleEl.classList.remove("typing-caret");
+          }
+        }
+        typeTitle();
+
+        const scrollRoot = document.querySelector(".scroll-3d");
+        const neonCanvas = document.getElementById("neon-canvas");
+        const layers = {
+          back: document.querySelector(".layer-back"),
+          mid: document.querySelector(".layer-mid"),
+          front: document.querySelector(".layer-front"),
+        };
+
+        function strongParallax() {
+          const y = scrollRoot ? scrollRoot.scrollTop : window.scrollY;
+          const yBack = y * -0.08;
+          const yMid = y * -0.05;
+          const yFront = y * -0.03;
+          if (layers.back) {
+            layers.back.style.transform =
+              "translate3d(0," + yBack + "px,-1.6px) scale(2.8) rotateX(10deg)";
+          }
+          if (layers.mid) {
+            layers.mid.style.transform =
+              "translate3d(0," + yMid + "px,-0.85px) scale(2) rotateY(-9deg)";
+          }
+          if (layers.front) {
+            layers.front.style.transform =
+              "translate3d(0," + yFront + "px,-0.35px) scale(1.42) rotateX(-5deg)";
+          }
+          if (neonCanvas) {
+            neonCanvas.style.transform = "translate3d(0," + y * -0.02 + "px,0)";
+          }
+        }
+
+        if (scrollRoot) {
+          scrollRoot.addEventListener("scroll", strongParallax, { passive: true });
+        } else {
+          window.addEventListener("scroll", strongParallax, { passive: true });
+        }
+        strongParallax();
+
+        const revealItems = document.querySelectorAll(".reveal");
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.22 }
+        );
+        revealItems.forEach((el) => revealObserver.observe(el));
+
+        const faqButtons = document.querySelectorAll(".faq-question");
+        faqButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const item = button.closest(".faq-item");
+            if (!item) return;
+            const isOpen = item.classList.contains("open");
+
+            faqButtons.forEach((btn) => {
+              const parent = btn.closest(".faq-item");
+              if (!parent) return;
+              parent.classList.remove("open");
+              btn.setAttribute("aria-expanded", "false");
+            });
+
+            if (!isOpen) {
+              item.classList.add("open");
+              button.setAttribute("aria-expanded", "true");
+            }
+          });
+        });
+
+        const canvas = document.getElementById("neon-canvas");
+        const ctx = canvas ? canvas.getContext("2d") : null;
+        const nodes = [];
+        const nodeCount = 54;
+        const nodeSpeed = 0.12;
+
+        function resizeCanvas() {
+          if (!canvas) return;
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+
+        function seedNodes() {
+          if (!canvas) return;
+          nodes.length = 0;
+          for (let i = 0; i < nodeCount; i += 1) {
+            nodes.push({
+              x: Math.random() * canvas.width,
+              y: Math.random() * canvas.height,
+              vx: (Math.random() - 0.5) * nodeSpeed,
+              vy: (Math.random() - 0.5) * nodeSpeed,
+            });
+          }
+        }
+
+        function drawNetwork() {
+          if (!ctx || !canvas) return;
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          ctx.strokeStyle = "rgba(122, 109, 255, 0.18)";
+          ctx.lineWidth = 0.65;
+          for (let i = 0; i < nodes.length; i += 1) {
+            const a = nodes[i];
+            a.x += a.vx;
+            a.y += a.vy;
+            if (a.x < 0 || a.x > canvas.width) a.vx *= -1;
+            if (a.y < 0 || a.y > canvas.height) a.vy *= -1;
+
+            for (let j = i + 1; j < nodes.length; j += 1) {
+              const b = nodes[j];
+              const dx = a.x - b.x;
+              const dy = a.y - b.y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < 130) {
+                ctx.globalAlpha = (1 - dist / 130) * 0.45;
+                ctx.beginPath();
+                ctx.moveTo(a.x, a.y);
+                ctx.lineTo(b.x, b.y);
+                ctx.stroke();
+              }
+            }
+          }
+          ctx.globalAlpha = 1;
+
+          for (let i = 0; i < nodes.length; i += 1) {
+            const n = nodes[i];
+            ctx.beginPath();
+            ctx.fillStyle = "rgba(89, 184, 255, 0.55)";
+            ctx.arc(n.x, n.y, 1.6, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          requestAnimationFrame(drawNetwork);
+        }
+        seedNodes();
+        drawNetwork();
+        window.addEventListener("resize", seedNodes);
+
+        const cursorGlow = document.querySelector(".cursor-glow");
+        let glowX = window.innerWidth / 2;
+        let glowY = window.innerHeight / 2;
+        let targetX = glowX;
+        let targetY = glowY;
+
+        window.addEventListener("mousemove", (e) => {
+          targetX = e.clientX;
+          targetY = e.clientY;
+        });
+
+        function animateGlow() {
+          if (cursorGlow) {
+            glowX += (targetX - glowX) * 0.09;
+            glowY += (targetY - glowY) * 0.09;
+            cursorGlow.style.left = glowX + "px";
+            cursorGlow.style.top = glowY + "px";
+          }
+          requestAnimationFrame(animateGlow);
+        }
+        animateGlow();
+
+        const contactForm = document.getElementById("contact-form");
+        const successToast = document.getElementById("success-toast");
+        const confettiCanvas = document.getElementById("confetti-canvas");
+        const confettiCtx = confettiCanvas ? confettiCanvas.getContext("2d") : null;
+        let confettiPieces = [];
+        let confettiFrame = null;
+
+        function resizeConfettiCanvas() {
+          if (!confettiCanvas) return;
+          confettiCanvas.width = window.innerWidth;
+          confettiCanvas.height = window.innerHeight;
+        }
+        resizeConfettiCanvas();
+        window.addEventListener("resize", resizeConfettiCanvas);
+
+        function launchConfetti() {
+          if (!confettiCtx || !confettiCanvas) return;
+          confettiPieces = [];
+          const colors = ["#00f6ff", "#8f3dff", "#ff3ed7", "#ffffff", "#7af7b3"];
+
+          for (let i = 0; i < 170; i += 1) {
+            confettiPieces.push({
+              x: Math.random() * confettiCanvas.width,
+              y: -20 - Math.random() * confettiCanvas.height * 0.2,
+              vx: (Math.random() - 0.5) * 4.2,
+              vy: 2 + Math.random() * 3.8,
+              size: 4 + Math.random() * 7,
+              rot: Math.random() * Math.PI,
+              spin: (Math.random() - 0.5) * 0.25,
+              color: colors[Math.floor(Math.random() * colors.length)],
+              life: 160 + Math.random() * 55,
+            });
+          }
+
+          let frameCount = 0;
+          function renderConfetti() {
+            if (!confettiCtx || !confettiCanvas) return;
+            confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+            frameCount += 1;
+
+            confettiPieces.forEach((p) => {
+              p.x += p.vx;
+              p.y += p.vy;
+              p.vy += 0.02;
+              p.rot += p.spin;
+              p.life -= 1;
+
+              confettiCtx.save();
+              confettiCtx.translate(p.x, p.y);
+              confettiCtx.rotate(p.rot);
+              confettiCtx.fillStyle = p.color;
+              confettiCtx.shadowBlur = 10;
+              confettiCtx.shadowColor = p.color;
+              confettiCtx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.62);
+              confettiCtx.restore();
+            });
+
+            confettiPieces = confettiPieces.filter(
+              (p) => p.life > 0 && p.y < confettiCanvas.height + 30
+            );
+
+            if (confettiPieces.length > 0 && frameCount < 240) {
+              confettiFrame = requestAnimationFrame(renderConfetti);
+            } else {
+              confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+              confettiFrame = null;
+            }
+          }
+
+          if (confettiFrame) {
+            cancelAnimationFrame(confettiFrame);
+          }
+          renderConfetti();
+        }
+
+        if (contactForm) {
+          contactForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            if (successToast) {
+              successToast.classList.add("show");
+              setTimeout(() => {
+                successToast.classList.remove("show");
+              }, 2400);
+            }
+            launchConfetti();
+            contactForm.reset();
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
