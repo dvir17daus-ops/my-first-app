@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# לאחר פרסום עם דומיין קבוע: הוסף שורה
+# Sitemap: https://YOUR-DOMAIN/sitemap.xml

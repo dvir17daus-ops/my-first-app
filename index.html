@@ -7,6 +7,11 @@
       name="description"
       content="דביר — בניית אתרי תדמית, דפי נחיתה ואוטומציות. עיצוב מודרני, ביצועים גבוהים וליווי מקצה לקצה."
     />
+    <meta name="robots" content="index, follow" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#060917" />
+    <link rel="canonical" href="/" />
+    <meta id="meta-og-url" property="og:url" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="he_IL" />
     <meta property="og:title" content="דביר | בניית אתרים ופתרונות טכנולוגיים" />
@@ -19,16 +24,35 @@
       content="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&h=630&fit=crop&q=80"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23060917'/%3E%3Crect x='7' y='7' width='18' height='18' rx='2' fill='none' stroke='%2300d2ff' stroke-width='1.2'/%3E%3Ctext x='16' y='21.5' text-anchor='middle' fill='%23ffffff' font-size='12' font-family='system-ui,sans-serif' font-weight='300'%3ED%3C/text%3E%3C/svg%3E"
+    <meta name="twitter:title" content="דביר | בניית אתרים ופתרונות טכנולוגיים" />
+    <meta
+      name="twitter:description"
+      content="אתרים מודרניים, מהירים ומדויקים לעסק שלך — משלב האפיון ועד העלייה לאוויר."
     />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&h=630&fit=crop&q=80"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <title>דביר | בניית אתרים ופתרונות טכנולוגיים</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "D Digital Studio — דביר",
+        "alternateName": "דביר — בניית אתרים",
+        "description": "בניית אתרי תדמית, דפי נחיתה ואוטומציות. עיצוב מודרני, ביצועים גבוהים וליווי מקצה לקצה.",
+        "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&h=630&fit=crop&q=80",
+        "telephone": "+972-52-524-0271",
+        "areaServed": { "@type": "Country", "name": "IL" },
+        "availableLanguage": ["Hebrew"],
+        "priceRange": "$$"
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@200;300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@200;300;400&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -54,12 +78,100 @@
         font-family: "Heebo", "Segoe UI", Arial, sans-serif;
         color: var(--text-main);
         background:
-          radial-gradient(circle at 12% 10%, rgba(122, 109, 255, 0.14), transparent 38%),
-          radial-gradient(circle at 88% 16%, rgba(89, 184, 255, 0.1), transparent 40%),
+          radial-gradient(circle at 12% 10%, rgba(122, 109, 255, 0.1), transparent 40%),
+          radial-gradient(circle at 88% 18%, rgba(89, 184, 255, 0.08), transparent 42%),
           linear-gradient(180deg, #070a16 0%, #080b18 45%, #090d1a 100%);
         min-height: 100vh;
         overflow-x: hidden;
         text-rendering: optimizeLegibility;
+      }
+
+      /* Slow ambient aurora — sits under the network canvas */
+      .ambient-sheen {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+        pointer-events: none;
+        isolation: isolate;
+      }
+
+      .ambient-sheen__orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(72px);
+        opacity: 0.42;
+        will-change: transform;
+        mix-blend-mode: screen;
+      }
+
+      .ambient-sheen__orb--a {
+        width: min(78vmin, 680px);
+        height: min(78vmin, 680px);
+        left: -12%;
+        top: -8%;
+        background: radial-gradient(
+          circle at 40% 45%,
+          rgba(89, 184, 255, 0.55) 0%,
+          rgba(89, 184, 255, 0.08) 45%,
+          transparent 68%
+        );
+        animation: ambient-drift-a 72s ease-in-out infinite alternate;
+      }
+
+      .ambient-sheen__orb--b {
+        width: min(88vmin, 760px);
+        height: min(88vmin, 760px);
+        right: -18%;
+        top: 22%;
+        background: radial-gradient(
+          circle at 55% 50%,
+          rgba(122, 109, 255, 0.5) 0%,
+          rgba(159, 123, 255, 0.12) 48%,
+          transparent 70%
+        );
+        animation: ambient-drift-b 96s ease-in-out infinite alternate;
+      }
+
+      .ambient-sheen__orb--c {
+        width: min(70vmin, 600px);
+        height: min(70vmin, 600px);
+        left: 18%;
+        bottom: -14%;
+        background: radial-gradient(
+          circle at 50% 40%,
+          rgba(159, 123, 255, 0.38) 0%,
+          rgba(89, 184, 255, 0.14) 52%,
+          transparent 72%
+        );
+        animation: ambient-drift-c 110s ease-in-out infinite alternate;
+      }
+
+      @keyframes ambient-drift-a {
+        0% {
+          transform: translate3d(0, 0, 0) scale(1);
+        }
+        100% {
+          transform: translate3d(12vw, 14vh, 0) scale(1.12);
+        }
+      }
+
+      @keyframes ambient-drift-b {
+        0% {
+          transform: translate3d(0, 0, 0) scale(1.05);
+        }
+        100% {
+          transform: translate3d(-10vw, 12vh, 0) scale(1.08);
+        }
+      }
+
+      @keyframes ambient-drift-c {
+        0% {
+          transform: translate3d(0, 0, 0) scale(1);
+        }
+        100% {
+          transform: translate3d(8vw, -11vh, 0) scale(1.15);
+        }
       }
 
       .scroll-3d {
@@ -74,10 +186,10 @@
       #neon-canvas {
         position: fixed;
         inset: 0;
-        z-index: 0;
+        z-index: 1;
         pointer-events: none;
         will-change: transform;
-        opacity: 0.65;
+        opacity: 0.62;
       }
 
       .scene {
@@ -169,31 +281,56 @@
         display: inline-flex;
         align-items: center;
         flex-shrink: 0;
-        font-family: "Inter", sans-serif;
-        font-weight: 200;
-        font-size: clamp(0.68rem, 1.9vw, 0.82rem);
-        letter-spacing: 4px;
-        color: #fff;
-        text-transform: uppercase;
         text-decoration: none;
-        white-space: nowrap;
+        color: inherit;
+        transition: opacity 0.2s ease;
       }
 
       .site-nav .logo:hover {
-        opacity: 0.92;
+        opacity: 0.94;
       }
 
-      .site-nav .logo-mark {
-        border: 1px solid #00d2ff;
-        padding: 2px 8px;
-        margin-inline-end: 5px;
-        line-height: 1.1;
-        box-shadow: 0 0 12px rgba(0, 210, 255, 0.22);
+      .site-nav .logo:hover .logo-mark-svg {
+        filter: drop-shadow(0 0 10px rgba(89, 184, 255, 0.35));
       }
 
-      .site-nav .logo-text {
+      .logo-lockup {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.65rem;
+      }
+
+      .logo-mark-svg {
+        flex-shrink: 0;
+        width: clamp(32px, 7.5vw, 38px);
+        height: clamp(32px, 7.5vw, 38px);
+        display: block;
+      }
+
+      .logo-type {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        line-height: 1.08;
+        gap: 0.05rem;
+      }
+
+      .logo-type-primary {
+        font-family: "Inter", system-ui, sans-serif;
+        font-weight: 300;
+        font-size: clamp(0.76rem, 2vw, 0.9rem);
+        letter-spacing: 0.06em;
+        color: #f7f9ff;
+      }
+
+      .logo-type-secondary {
+        font-family: "Inter", system-ui, sans-serif;
         font-weight: 200;
-        letter-spacing: 4px;
+        font-size: clamp(0.58rem, 1.45vw, 0.68rem);
+        letter-spacing: 0.42em;
+        text-transform: uppercase;
+        color: rgba(205, 212, 243, 0.58);
       }
 
       .nav-links {
@@ -1191,19 +1328,20 @@
         .nav-links a {
           font-size: 0.82rem;
         }
-        .site-nav .logo {
-          letter-spacing: 2px;
+        .logo-type-primary {
+          letter-spacing: 0.04em;
         }
-        .site-nav .logo-text {
-          letter-spacing: 2px;
-        }
-        .site-nav .logo-mark {
-          padding: 2px 5px;
-          margin-inline-end: 3px;
+        .logo-type-secondary {
+          letter-spacing: 0.28em;
         }
       }
 
       @media (prefers-reduced-motion: reduce) {
+        .ambient-sheen__orb {
+          animation: none;
+          opacity: 0.22;
+        }
+
         .typing-caret::after {
           animation: none;
           opacity: 1;
@@ -1233,16 +1371,55 @@
     </style>
   </head>
   <body>
+    <div class="ambient-sheen" aria-hidden="true">
+      <span class="ambient-sheen__orb ambient-sheen__orb--a"></span>
+      <span class="ambient-sheen__orb ambient-sheen__orb--b"></span>
+      <span class="ambient-sheen__orb ambient-sheen__orb--c"></span>
+    </div>
     <a class="skip-link" href="#main-title">דלג לתוכן הראשי</a>
     <header class="site-nav" role="banner">
-      <a
-        class="logo"
-        href="#main-title"
-        dir="ltr"
-        lang="en"
-        aria-label="D Digital Studio — מעבר לראש העמוד"
-        ><span class="logo-mark" aria-hidden="true">D</span> <span class="logo-text">DIGITAL.STUDIO</span></a
-      >
+      <a class="logo" href="#main-title" dir="ltr" lang="en" aria-label="D Digital Studio — מעבר לראש העמוד">
+        <span class="logo-lockup">
+          <svg
+            class="logo-mark-svg"
+            width="38"
+            height="38"
+            viewBox="0 0 40 40"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <defs>
+              <linearGradient id="logoNavStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#59b8ff" />
+                <stop offset="52%" stop-color="#7a6dff" />
+                <stop offset="100%" stop-color="#9f7bff" />
+              </linearGradient>
+            </defs>
+            <rect
+              x="3"
+              y="3"
+              width="34"
+              height="34"
+              rx="9"
+              fill="rgba(6, 9, 23, 0.45)"
+              stroke="url(#logoNavStroke)"
+              stroke-width="1.15"
+            />
+            <path
+              fill="none"
+              stroke="url(#logoNavStroke)"
+              stroke-width="1.45"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M14.5 12v16H19c4.8 0 8.5-3.4 8.5-8s-3.7-8-8.5-8h-4.5z"
+            />
+          </svg>
+          <span class="logo-type">
+            <span class="logo-type-primary">D Digital</span>
+            <span class="logo-type-secondary">Studio</span>
+          </span>
+        </span>
+      </a>
       <nav class="nav-links" aria-label="ניווט ראשי">
         <a href="#works">עבודות</a>
         <a href="#about">אודות</a>
@@ -1646,6 +1823,7 @@
         <!-- עדכן לינקדאין ומייל אמיתיים -->
         <div class="footer-links">
           <a href="#contact">צור קשר</a>
+          <a href="privacy.html">מדיניות פרטיות</a>
           <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a id="footer-email" href="mailto:hello@example.com">hello@example.com</a>
         </div>
@@ -1655,6 +1833,16 @@
       (function () {
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         const WA_PHONE = "972525240271";
+
+        const pageUrl = window.location.href.replace(/[?#].*$/, "");
+        const canonicalLink = document.querySelector('link[rel="canonical"]');
+        if (canonicalLink) {
+          canonicalLink.setAttribute("href", pageUrl);
+        }
+        const ogUrlMeta = document.getElementById("meta-og-url");
+        if (ogUrlMeta) {
+          ogUrlMeta.setAttribute("content", pageUrl);
+        }
 
         const footerYear = document.getElementById("footer-year");
         if (footerYear) {
