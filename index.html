@@ -3,7 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="דביר — בניית אתרי תדמית, דפי נחיתה ואוטומציות. עיצוב מודרני, ביצועים גבוהים וליווי מקצה לקצה."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="he_IL" />
+    <meta property="og:title" content="דביר | בניית אתרים ופתרונות טכנולוגיים" />
+    <meta
+      property="og:description"
+      content="אתרים מודרניים, מהירים ומדויקים לעסק שלך — משלב האפיון ועד העלייה לאוויר."
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&h=630&fit=crop&q=80"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23060917'/%3E%3Crect x='7' y='7' width='18' height='18' rx='2' fill='none' stroke='%2300d2ff' stroke-width='1.2'/%3E%3Ctext x='16' y='21.5' text-anchor='middle' fill='%23ffffff' font-size='12' font-family='system-ui,sans-serif' font-weight='300'%3ED%3C/text%3E%3C/svg%3E"
+    />
     <title>דביר | בניית אתרים ופתרונות טכנולוגיים</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
         --bg-main: #060917;
@@ -13,6 +40,8 @@
         --neon-cyan: #59b8ff;
         --neon-purple: #7a6dff;
         --neon-pink: #9f7bff;
+        --nav-h: 3.35rem;
+        --scroll-pad: calc(var(--nav-h) + 0.75rem);
       }
 
       * {
@@ -22,7 +51,7 @@
       }
 
       body {
-        font-family: "Segoe UI", "Heebo", Arial, sans-serif;
+        font-family: "Heebo", "Segoe UI", Arial, sans-serif;
         color: var(--text-main);
         background:
           radial-gradient(circle at 12% 10%, rgba(122, 109, 255, 0.14), transparent 38%),
@@ -90,6 +119,106 @@
         filter: blur(1px);
       }
 
+      .skip-link {
+        position: fixed;
+        top: 0.65rem;
+        right: 0.65rem;
+        z-index: 100;
+        padding: 0.45rem 0.75rem;
+        border-radius: 10px;
+        background: rgba(5, 10, 24, 0.95);
+        border: 1px solid rgba(0, 246, 255, 0.5);
+        color: var(--text-main);
+        font-size: 0.88rem;
+        font-weight: 600;
+        text-decoration: none;
+        clip-path: inset(50%);
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .skip-link:focus {
+        clip-path: none;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        outline: 2px solid var(--neon-cyan);
+        outline-offset: 3px;
+      }
+
+      .site-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 40;
+        height: var(--nav-h);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 clamp(0.85rem, 3vw, 1.6rem);
+        border-bottom: 1px solid rgba(89, 184, 255, 0.12);
+        background: rgba(6, 9, 23, 0.72);
+        backdrop-filter: blur(14px) saturate(125%);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      }
+
+      .site-nav .logo {
+        display: inline-flex;
+        align-items: center;
+        flex-shrink: 0;
+        font-family: "Inter", sans-serif;
+        font-weight: 200;
+        font-size: clamp(0.68rem, 1.9vw, 0.82rem);
+        letter-spacing: 4px;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .site-nav .logo:hover {
+        opacity: 0.92;
+      }
+
+      .site-nav .logo-mark {
+        border: 1px solid #00d2ff;
+        padding: 2px 8px;
+        margin-inline-end: 5px;
+        line-height: 1.1;
+        box-shadow: 0 0 12px rgba(0, 210, 255, 0.22);
+      }
+
+      .site-nav .logo-text {
+        font-weight: 200;
+        letter-spacing: 4px;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.35rem 0.85rem;
+      }
+
+      .nav-links a {
+        color: var(--text-soft);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 0.28rem 0.15rem;
+        border-radius: 8px;
+        transition: color 180ms ease, text-shadow 180ms ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--text-main);
+        text-shadow: 0 0 12px rgba(0, 246, 255, 0.45);
+      }
+
       .cursor-glow {
         position: fixed;
         top: 0;
@@ -110,7 +239,19 @@
         z-index: 3;
         width: min(1100px, 92%);
         margin: 0 auto;
-        padding: 5.5rem 0 7rem;
+        padding: calc(5.5rem + var(--nav-h) * 0.35) 0 7rem;
+      }
+
+      #works,
+      #about,
+      #process,
+      #sectors,
+      #pricing,
+      #testimonials,
+      #tips,
+      #faq,
+      #contact {
+        scroll-margin-top: var(--scroll-pad);
       }
 
       .content > section {
@@ -205,6 +346,291 @@
           0 0 28px rgba(0, 246, 255, 0.3);
       }
 
+      .hero-stats {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 0.65rem;
+        margin-top: 0.35rem;
+      }
+
+      .hero-stat {
+        flex: 1 1 140px;
+        min-width: 0;
+        padding: 0.75rem 0.95rem;
+        border-radius: 14px;
+        border: 1px solid rgba(122, 109, 255, 0.35);
+        background:
+          linear-gradient(155deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)),
+          rgba(9, 13, 28, 0.55);
+        backdrop-filter: blur(10px);
+      }
+
+      .hero-stat strong {
+        display: block;
+        font-size: clamp(1.45rem, 3.2vw, 1.85rem);
+        font-weight: 700;
+        color: var(--neon-cyan);
+        text-shadow: 0 0 18px rgba(89, 184, 255, 0.45);
+        line-height: 1.15;
+        margin-bottom: 0.25rem;
+      }
+
+      .hero-stat span {
+        font-size: 0.88rem;
+        color: var(--text-soft);
+        line-height: 1.45;
+      }
+
+      .hero-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin-top: 0.5rem;
+      }
+
+      .hero-chip {
+        font-size: 0.82rem;
+        font-weight: 500;
+        padding: 0.38rem 0.72rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #dce3ff;
+        background: rgba(15, 21, 43, 0.55);
+      }
+
+      .value-line {
+        max-width: 52ch;
+        font-size: clamp(1.05rem, 2.2vw, 1.22rem);
+        font-weight: 600;
+        color: #e8eeff;
+        line-height: 1.55;
+        text-wrap: balance;
+        text-shadow: 0 0 20px rgba(89, 184, 255, 0.2);
+      }
+
+      .hero-cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.65rem;
+        margin-top: 0.35rem;
+      }
+
+      .hero-cta-row .cta {
+        margin-top: 0;
+      }
+
+      .cta.secondary {
+        background: rgba(15, 21, 43, 0.75);
+        border: 1px solid rgba(89, 184, 255, 0.45);
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+          0 8px 22px rgba(0, 0, 0, 0.28);
+      }
+
+      .cta.secondary:hover {
+        border-color: rgba(0, 246, 255, 0.75);
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+          0 10px 26px rgba(0, 0, 0, 0.35),
+          0 0 20px rgba(0, 246, 255, 0.22);
+      }
+
+      .section-lead,
+      .section-honest-note {
+        color: var(--text-soft);
+        font-size: 0.95rem;
+        line-height: 1.85;
+        max-width: 62ch;
+        margin: -0.65rem 0 1.15rem;
+      }
+
+      .section-honest-note {
+        padding: 0.65rem 0.85rem;
+        border-radius: 12px;
+        border: 1px dashed rgba(89, 184, 255, 0.35);
+        background: rgba(0, 246, 255, 0.04);
+        margin-bottom: 1.1rem;
+      }
+
+      .about-layout {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1.25rem 1.35rem;
+        align-items: start;
+        padding: 1.15rem 1.2rem;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background:
+          linear-gradient(165deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)),
+          rgba(9, 13, 28, 0.55);
+        backdrop-filter: blur(12px);
+      }
+
+      .about-avatar {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 18px;
+        display: grid;
+        place-items: center;
+        font-size: 1.65rem;
+        font-weight: 800;
+        color: var(--neon-cyan);
+        background: linear-gradient(145deg, rgba(0, 246, 255, 0.2), rgba(122, 109, 255, 0.28));
+        border: 1px solid rgba(89, 184, 255, 0.45);
+        box-shadow: 0 0 24px rgba(89, 184, 255, 0.2);
+      }
+
+      .about-text p + p {
+        margin-top: 0.75rem;
+      }
+
+      .about-text p {
+        color: var(--text-soft);
+        line-height: 1.95;
+        font-size: 0.98rem;
+      }
+
+      .process-steps {
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .process-step {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.85rem 1rem;
+        align-items: start;
+        padding: 1rem 1.05rem;
+        border-radius: 16px;
+        border: 1px solid rgba(0, 246, 255, 0.22);
+        background: rgba(9, 13, 28, 0.5);
+      }
+
+      .step-num {
+        width: 2.35rem;
+        height: 2.35rem;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        font-size: 1rem;
+        color: var(--bg-main);
+        background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+        box-shadow: 0 0 16px rgba(89, 184, 255, 0.35);
+      }
+
+      .process-step h3 {
+        font-size: 1.05rem;
+        font-weight: 600;
+        margin-bottom: 0.35rem;
+        letter-spacing: 0.3px;
+      }
+
+      .process-step p {
+        color: var(--text-soft);
+        font-size: 0.93rem;
+        line-height: 1.85;
+      }
+
+      .sectors-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .sectors-list li {
+        padding: 0.5rem 0.95rem;
+        border-radius: 999px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #e8edff;
+        border: 1px solid rgba(122, 109, 255, 0.35);
+        background: rgba(15, 21, 43, 0.65);
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1rem;
+      }
+
+      .testimonial-card {
+        margin: 0;
+        padding: 1.05rem 1.1rem;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background:
+          linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+          rgba(15, 18, 34, 0.72);
+      }
+
+      .testimonial-card p {
+        color: var(--text-main);
+        font-size: 0.98rem;
+        line-height: 1.9;
+        font-style: normal;
+      }
+
+      .testimonial-card p::before {
+        content: "“";
+        color: var(--neon-cyan);
+        font-size: 1.4rem;
+        line-height: 0;
+        margin-inline-end: 0.15rem;
+      }
+
+      .testimonial-meta {
+        margin-top: 0.85rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 0.88rem;
+        color: var(--text-soft);
+      }
+
+      .testimonial-meta strong {
+        display: block;
+        color: #eaf0ff;
+        font-size: 0.93rem;
+        margin-bottom: 0.15rem;
+      }
+
+      .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 0.85rem;
+      }
+
+      .tip-card {
+        padding: 1rem 1.05rem;
+        border-radius: 14px;
+        border: 1px solid rgba(122, 109, 255, 0.28);
+        background: rgba(9, 13, 28, 0.52);
+      }
+
+      .tip-card h3 {
+        font-size: 0.98rem;
+        font-weight: 600;
+        margin-bottom: 0.45rem;
+        color: var(--neon-cyan);
+      }
+
+      .tip-card p {
+        font-size: 0.9rem;
+        color: var(--text-soft);
+        line-height: 1.85;
+      }
+
+      .privacy-note {
+        margin-top: 0.75rem;
+        font-size: 0.78rem;
+        color: rgba(205, 212, 243, 0.82);
+        line-height: 1.65;
+        max-width: 52ch;
+      }
+
       .section-title {
         font-size: clamp(1.6rem, 3vw, 2.2rem);
         font-weight: 500;
@@ -248,20 +674,77 @@
       }
 
       .project-media {
+        position: relative;
         aspect-ratio: 16 / 10;
-        display: grid;
-        place-items: center;
-        color: #cad1ef;
+        overflow: hidden;
+        background: #0a0e1f;
+      }
+
+      .project-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transform: scale(1.02);
+        transition: transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+
+      .project-card:hover .project-media img {
+        transform: scale(1.07);
+      }
+
+      .project-media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(180deg, transparent 55%, rgba(6, 9, 23, 0.55) 100%);
+        opacity: 0.85;
+      }
+
+      .project-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin-top: 0.65rem;
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.35rem;
+        padding: 0.45rem 0.75rem;
+        border-radius: 10px;
+        font-size: 0.86rem;
         font-weight: 600;
-        background:
-          linear-gradient(145deg, rgba(0, 246, 255, 0.15), rgba(157, 77, 255, 0.15)),
-          repeating-linear-gradient(
-            45deg,
-            rgba(255, 255, 255, 0.05) 0,
-            rgba(255, 255, 255, 0.05) 12px,
-            rgba(255, 255, 255, 0.02) 12px,
-            rgba(255, 255, 255, 0.02) 24px
-          );
+        text-decoration: none;
+        border: 1px solid rgba(0, 246, 255, 0.45);
+        color: var(--text-main);
+        background: rgba(0, 246, 255, 0.1);
+        transition:
+          transform 200ms ease,
+          box-shadow 200ms ease,
+          border-color 200ms ease;
+      }
+
+      .project-link:hover {
+        transform: translateY(-2px);
+        border-color: rgba(0, 246, 255, 0.85);
+        box-shadow: 0 0 16px rgba(0, 246, 255, 0.28);
+      }
+
+      .project-link.secondary {
+        border-color: rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text-soft);
+        font-weight: 500;
+      }
+
+      .project-link.secondary:hover {
+        color: var(--text-main);
+        border-color: rgba(122, 109, 255, 0.55);
+        box-shadow: 0 0 14px rgba(122, 109, 255, 0.2);
       }
 
       .project-info {
@@ -281,6 +764,55 @@
 
       .spacer {
         height: 10vh;
+      }
+
+      .site-footer {
+        position: relative;
+        z-index: 4;
+        margin-top: 0;
+        padding: 2rem clamp(1rem, 4vw, 2rem) 2.25rem;
+        border-top: 1px solid rgba(89, 184, 255, 0.14);
+        background: linear-gradient(180deg, rgba(6, 9, 23, 0.2), rgba(6, 9, 23, 0.85));
+      }
+
+      .site-footer-inner {
+        width: min(1100px, 92%);
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .site-footer p {
+        color: var(--text-soft);
+        font-size: 0.9rem;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem 1.1rem;
+      }
+
+      .footer-links a {
+        color: var(--neon-cyan);
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: text-shadow 180ms ease;
+      }
+
+      .footer-links a:hover {
+        text-shadow: 0 0 12px rgba(0, 246, 255, 0.55);
+      }
+
+      .form-hint {
+        margin-top: 0.35rem;
+        font-size: 0.82rem;
+        color: var(--text-soft);
+        line-height: 1.5;
       }
 
       #contact {
@@ -459,7 +991,7 @@
       }
 
       .faq-item.open .faq-answer-wrap {
-        max-height: 180px;
+        max-height: 260px;
         opacity: 1;
       }
 
@@ -536,10 +1068,10 @@
       .success-toast {
         position: fixed;
         left: 50%;
-        top: 10%;
+        top: calc(var(--nav-h) + 0.75rem);
         transform: translate(-50%, -18px) scale(0.92);
         opacity: 0;
-        z-index: 31;
+        z-index: 60;
         border-radius: 14px;
         border: 1px solid rgba(0, 246, 255, 0.7);
         background:
@@ -612,6 +1144,14 @@
         .subtitle {
           line-height: 1.7;
         }
+        .about-layout {
+          grid-template-columns: 1fr;
+          text-align: center;
+          justify-items: center;
+        }
+        .about-text {
+          text-align: center;
+        }
         .pricing-grid,
         .projects-grid {
           grid-template-columns: 1fr;
@@ -640,15 +1180,83 @@
           width: 100%;
           text-align: center;
         }
+        .hero-cta-row {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .hero-cta-row .cta {
+          width: 100%;
+          text-align: center;
+        }
+        .nav-links a {
+          font-size: 0.82rem;
+        }
+        .site-nav .logo {
+          letter-spacing: 2px;
+        }
+        .site-nav .logo-text {
+          letter-spacing: 2px;
+        }
+        .site-nav .logo-mark {
+          padding: 2px 5px;
+          margin-inline-end: 3px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .typing-caret::after {
+          animation: none;
+          opacity: 1;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
+          filter: none;
+          transition: none;
+        }
+
+        .project-card:hover .project-media img {
+          transform: scale(1.02);
+        }
+
+        .project-card,
+        .pricing-card,
+        .cta,
+        .floating-contact,
+        .submit-btn,
+        .project-link {
+          transition: none;
+        }
       }
 
     </style>
   </head>
   <body>
+    <a class="skip-link" href="#main-title">דלג לתוכן הראשי</a>
+    <header class="site-nav" role="banner">
+      <a
+        class="logo"
+        href="#main-title"
+        dir="ltr"
+        lang="en"
+        aria-label="D Digital Studio — מעבר לראש העמוד"
+        ><span class="logo-mark" aria-hidden="true">D</span> <span class="logo-text">DIGITAL.STUDIO</span></a
+      >
+      <nav class="nav-links" aria-label="ניווט ראשי">
+        <a href="#works">עבודות</a>
+        <a href="#about">אודות</a>
+        <a href="#process">תהליך</a>
+        <a href="#pricing">חבילות</a>
+        <a href="#testimonials">המלצות</a>
+        <a href="#faq">שאלות</a>
+        <a href="#contact">צור קשר</a>
+      </nav>
+    </header>
     <canvas id="neon-canvas" aria-hidden="true"></canvas>
     <div class="cursor-glow" aria-hidden="true"></div>
     <canvas id="confetti-canvas" aria-hidden="true"></canvas>
-    <div id="success-toast" class="success-toast">הפרטים נשלחו בהצלחה! נחזור אליך בהקדם 🎉</div>
+    <div id="success-toast" class="success-toast">נפתח וואטסאפ עם ההודעה — נשמח לחזור אליך בהקדם 🎉</div>
     <a
       class="floating-contact"
       href="https://wa.me/972525240271?text=%D7%94%D7%99%D7%99%20%D7%93%D7%91%D7%99%D7%A8%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%91%D7%A0%D7%99%D7%99%D7%AA%20%D7%90%D7%AA%D7%A8"
@@ -667,43 +1275,195 @@
           <header class="hero">
             <span class="badge reveal from-left parallax-text">Portfolio / דף תדמית</span>
             <h1 id="main-title" class="typing-caret parallax-text"></h1>
+            <p class="value-line reveal from-left parallax-text">
+              אתרים ודפי נחיתה שמסדרים לך נוכחות דיגיטלית ברורה — ומובילים גולשים לפנייה או לרכישה.
+            </p>
             <p class="subtitle reveal from-right parallax-text">
               אני בונה אתרים מודרניים, מהירים ומדויקים לעסק שלך - משלב האפיון ועד אתר חי באוויר.
               עיצוב ממוקד המרות, חוויית משתמש חלקה ופיתוח ברמה גבוהה.
             </p>
-            <a class="cta reveal from-bottom parallax-text" href="#works">לצפייה בעבודות</a>
+            <div class="hero-cta-row reveal from-bottom parallax-text">
+              <a class="cta" href="#contact">קבעו שיחת היכרות קצרה</a>
+              <a class="cta secondary" href="#works">לצפייה בעבודות</a>
+            </div>
+            <div class="hero-stats reveal from-bottom parallax-text">
+              <div class="hero-stat">
+                <strong>24 שעות</strong>
+                <span>זמן מענה מקסימלי לפניות — בדרך כלל הרבה לפני.</span>
+              </div>
+            </div>
+            <div class="hero-chips reveal from-bottom parallax-text" aria-label="יתרונות">
+              <span class="hero-chip">עברית ו־RTL מלא</span>
+              <span class="hero-chip">מותאם למובייל</span>
+              <span class="hero-chip">ביצועים ומהירות טעינה</span>
+            </div>
           </header>
 
           <section id="works" class="projects">
             <h2 class="section-title reveal from-left parallax-text">העבודות שלי</h2>
             <div class="projects-grid">
               <article class="project-card reveal zoom-reveal parallax-card">
-                <div class="project-media reveal from-bottom">מקום לתמונה 01</div>
+                <div class="project-media reveal from-bottom">
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80"
+                    width="900"
+                    height="563"
+                    loading="lazy"
+                    decoding="async"
+                    alt="לוח בקרה ואנליטיקה — דוגמה לאתר תדמית לחברת שירותים"
+                  />
+                </div>
                 <div class="project-info">
                   <h3>אתר תדמית לחברת שירותים</h3>
                   <p>פיתוח אתר מהיר עם אזורי תוכן דינמיים ומראה יוקרתי.</p>
+                  <div class="project-actions">
+                    <a class="project-link" href="#contact">בקשו הצעה לפרויקט דומה</a>
+                    <a
+                      class="project-link secondary"
+                      href="https://github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >GitHub (דוגמה)</a
+                    >
+                  </div>
                 </div>
               </article>
 
               <article class="project-card reveal zoom-reveal parallax-card">
-                <div class="project-media reveal from-bottom">מקום לתמונה 02</div>
+                <div class="project-media reveal from-bottom">
+                  <img
+                    src="https://images.unsplash.com/photo-1555421689-d68471e189f2?w=900&q=80"
+                    width="900"
+                    height="563"
+                    loading="lazy"
+                    decoding="async"
+                    alt="צוות סביב מסך — דוגמה לדף נחיתה לקמפיין"
+                  />
+                </div>
                 <div class="project-info">
                   <h3>דף נחיתה לקמפיין</h3>
                   <p>פוקוס על הנעה לפעולה, אופטימיזציה לניידים ושיפור יחס המרה.</p>
+                  <div class="project-actions">
+                    <a class="project-link" href="#contact">בקשו הצעה לפרויקט דומה</a>
+                    <a
+                      class="project-link secondary"
+                      href="https://github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >GitHub (דוגמה)</a
+                    >
+                  </div>
                 </div>
               </article>
 
               <article class="project-card reveal zoom-reveal parallax-card">
-                <div class="project-media reveal from-bottom">מקום לתמונה 03</div>
+                <div class="project-media reveal from-bottom">
+                  <img
+                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80"
+                    width="900"
+                    height="563"
+                    loading="lazy"
+                    decoding="async"
+                    alt="שיתוף פעולה בפרויקט — דוגמה למיתוג דיגיטלי לעסק"
+                  />
+                </div>
                 <div class="project-info">
                   <h3>מיתוג דיגיטלי לעסק</h3>
                   <p>שילוב של שפה ויזואלית אחידה עם חוויית משתמש נקייה וברורה.</p>
+                  <div class="project-actions">
+                    <a class="project-link" href="#contact">בקשו הצעה לפרויקט דומה</a>
+                    <a
+                      class="project-link secondary"
+                      href="https://github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >GitHub (דוגמה)</a
+                    >
+                  </div>
                 </div>
               </article>
             </div>
           </section>
 
-          <section class="pricing">
+          <section id="about" class="about-block">
+            <h2 class="section-title reveal from-left parallax-text">מי עומד מאחורי הקוד</h2>
+            <div class="about-layout reveal from-bottom parallax-text">
+              <div class="about-avatar" aria-hidden="true">ד</div>
+              <div class="about-text">
+                <p>
+                  אני דביר, מפתח ומעצב ממשקים — מתמחה באתרי תדמית, דפי נחיתה וחיבורים טכנולוגיים שחוסכים
+                  זמן לעסק. אני מאמין בשקיפות: זמנים משוערים, מה כלול בחבילה, ואיך נדע שהפרויקט הצליח.
+                </p>
+                <p>
+                  כל פרויקט נבנה סביב המטרה שלך — יותר פניות, יותר סדר במערכות, או נוכחות מקצועית שתואמת
+                  את מה שהלקוחות שלך מצפים לראות לפני שהם מתקשרים.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="process" class="process-block">
+            <h2 class="section-title reveal from-right parallax-text">איך נעבוד ביחד</h2>
+            <p class="section-lead reveal from-left parallax-text">
+              תהליך מסודר כדי שתדעו מה קורה בכל שלב — בלי הפתעות.
+            </p>
+            <div class="process-steps">
+              <article class="process-step reveal from-left parallax-text">
+                <span class="step-num" aria-hidden="true">1</span>
+                <div>
+                  <h3>אפיון ומטרות</h3>
+                  <p>
+                    שיחה קצרה, הבנת קהל יעד והמרה רצויה — מגדירים יחד מה האתר חייב להשיג ומהי רשימת
+                    התכנים.
+                  </p>
+                </div>
+              </article>
+              <article class="process-step reveal from-right parallax-text">
+                <span class="step-num" aria-hidden="true">2</span>
+                <div>
+                  <h3>עיצוב וחוויית משתמש</h3>
+                  <p>
+                    מבנה עמודים, טיפוגרפיה וצבעים שמשרתים את המותג. תקבלו תחושה ברורה של המראה לפני
+                    הפיתוח.
+                  </p>
+                </div>
+              </article>
+              <article class="process-step reveal from-left parallax-text">
+                <span class="step-num" aria-hidden="true">3</span>
+                <div>
+                  <h3>פיתוח ובדיקות</h3>
+                  <p>
+                    בנייה מהירה ונקייה, התאמה לנייד, בדיקות טפסים וקישורים — ורגע לפני העלייה לאוויר
+                    לתיקונים אחרונים.
+                  </p>
+                </div>
+              </article>
+              <article class="process-step reveal from-bottom parallax-text">
+                <span class="step-num" aria-hidden="true">4</span>
+                <div>
+                  <h3>עלייה לאוויר וליווי</h3>
+                  <p>
+                    חיבור דומיין, ניטור בסיסי והדרכה קצרה איך לעדכן תוכן. נשארים בקשר לשאלות אחרי השקה.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section id="sectors" class="sectors-block">
+            <h2 class="section-title reveal from-left parallax-text">למי זה מתאים</h2>
+            <p class="section-lead reveal from-right parallax-text">
+              אם נופלים לאחת הקטגוריות האלה — סביר שיש לנו שפה משותפת ותהליך שיעבוד טוב גם אצלכם.
+            </p>
+            <ul class="sectors-list reveal from-bottom parallax-text">
+              <li>עוסקים מורשים ועסקים קטנים</li>
+              <li>חברות שירותים וסוכנויות</li>
+              <li>סטארטאפים בשלב MVP</li>
+              <li>קמפיינים שצריכים דף נחיתה אחד חד</li>
+            </ul>
+          </section>
+
+          <section id="pricing" class="pricing">
             <h2 class="section-title reveal from-right parallax-text">חבילות שירות</h2>
             <div class="pricing-grid">
               <article class="pricing-card reveal zoom-reveal parallax-card">
@@ -734,6 +1494,65 @@
                   <li>התראות ותהליכים אוטומטיים</li>
                   <li>שיפור זרימת עבודה יומיומית</li>
                 </ul>
+              </article>
+            </div>
+          </section>
+
+          <section id="testimonials" class="testimonials-block">
+            <h2 class="section-title reveal from-left parallax-text">מה אומרים הלקוחות</h2>
+            <p class="section-honest-note reveal from-right parallax-text">
+              להלן <strong>דוגמאות למבנה המלצה</strong> — מומלץ להחליף בציטוטים אמיתיים (עם שם ותפקיד) כשיש
+              לכם המלצות מלקוחות.
+            </p>
+            <div class="testimonials-grid">
+              <blockquote class="testimonial-card reveal from-left parallax-text">
+                <p>
+                  קיבלנו אתר נקי ומהיר. תוך שבועיים כבר היו יותר פניות דרך הטופס — בלי לשנות את
+                  הקמפיינים.
+                </p>
+                <footer class="testimonial-meta">
+                  <strong>יוסי כ.</strong>
+                  <span>בעלים, שירותים לעסקים (דוגמה)</span>
+                </footer>
+              </blockquote>
+              <blockquote class="testimonial-card reveal from-right parallax-text">
+                <p>
+                  דביר הסביר בצורה פשוטה מה כל שלב אומר, ועמד בזמנים. הרגשנו שיש מישהו שמחזיק את הפרויקט
+                  מהתחלה ועד הסוף.
+                </p>
+                <footer class="testimonial-meta">
+                  <strong>מיכל ר.</strong>
+                  <span>שיווק, חברת הדרכות (דוגמה)</span>
+                </footer>
+              </blockquote>
+            </div>
+          </section>
+
+          <section id="tips" class="tips-block">
+            <h2 class="section-title reveal from-right parallax-text">לפני שבונים אתר</h2>
+            <p class="section-lead reveal from-left parallax-text">
+              שלושה דברים שכדאי להחליט עליהם מראש — חוסכים זמן וכסף בפרויקט.
+            </p>
+            <div class="tips-grid">
+              <article class="tip-card reveal from-left parallax-text">
+                <h3>מה המטרה העסקית?</h3>
+                <p>
+                  פניות בוואטסאפ, הרשמה לאירוע, או רק מיתוג? כשהמטרה ברורה — העיצוב והטקסטים נשענים עליה.
+                </p>
+              </article>
+              <article class="tip-card reveal from-bottom parallax-text">
+                <h3>תוכן אמיתי מנצח</h3>
+                <p>
+                  צילומים שלכם, טקסטים שאתם כותבים בשפה של הלקוח. אפשר לשפר ניסוח — אבל הבסיס צריך לבוא
+                  מכם.
+                </p>
+              </article>
+              <article class="tip-card reveal from-right parallax-text">
+                <h3>דומיין ומייל מקצועי</h3>
+                <p>
+                  כתובת אתר ומייל תחת אותו שם דומיין מעלים אמון. אם אין עדיין — נעזור לבחור ולחבר ביום
+                  ההשקה.
+                </p>
               </article>
             </div>
           </section>
@@ -776,6 +1595,19 @@
                   </p>
                 </div>
               </article>
+
+              <article class="faq-item reveal from-left">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  <span>מה קורה לפרטים שאני משאיר בטופס?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer-wrap">
+                  <p class="faq-answer">
+                    הטופס בונה הודעה שתיפתח אצלך בוואטסאפ — אין שמירה בשרת של האתר. השימוש בפרטים הוא לחזרה
+                    אליך בלבד; אם תרצה מסמך פרטיות מורחב או הסכמה לשיווק — נוסיף בהתאם לצורך.
+                  </p>
+                </div>
+              </article>
             </div>
           </section>
 
@@ -792,7 +1624,14 @@
                 <label for="site-need">איזה אתר אתה צריך?</label>
                 <textarea id="site-need" name="siteNeed" placeholder="ספר לי בקצרה על האתר הרצוי..." required></textarea>
 
-                <button class="submit-btn" type="submit">שלח</button>
+                <button class="submit-btn" type="submit">שלח בוואטסאפ</button>
+                <p class="form-hint">
+                  השליחה תפתח את וואטסאפ עם ההודעה שלך — אפשר לערוך לפני שליחה סופית.
+                </p>
+                <p id="privacy-brief" class="privacy-note">
+                  הפרטים נועדים ליצירת קשר בלבד ולא יועברו לצד שלישי. השליחה נפתחת בוואטסאפ לפי בחירתך;
+                  שמירת השיחה כפופה למדיניות וואטסאפ.
+                </p>
               </form>
             </div>
           </section>
@@ -801,8 +1640,27 @@
         </div>
       </section>
     </main>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p>© <span id="footer-year"></span> דביר — בניית אתרים ופתרונות טכנולוגיים</p>
+        <!-- עדכן לינקדאין ומייל אמיתיים -->
+        <div class="footer-links">
+          <a href="#contact">צור קשר</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a id="footer-email" href="mailto:hello@example.com">hello@example.com</a>
+        </div>
+      </div>
+    </footer>
     <script>
       (function () {
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const WA_PHONE = "972525240271";
+
+        const footerYear = document.getElementById("footer-year");
+        if (footerYear) {
+          footerYear.textContent = String(new Date().getFullYear());
+        }
+
         const titleText = "דביר - בניית אתרים ופתרונות טכנולוגיים";
         const titleEl = document.getElementById("main-title");
         let index = 0;
@@ -817,7 +1675,15 @@
             titleEl.classList.remove("typing-caret");
           }
         }
-        typeTitle();
+
+        if (titleEl) {
+          if (reduceMotion) {
+            titleEl.textContent = titleText;
+            titleEl.classList.remove("typing-caret");
+          } else {
+            typeTitle();
+          }
+        }
 
         const scrollRoot = document.querySelector(".scroll-3d");
         const neonCanvas = document.getElementById("neon-canvas");
@@ -849,26 +1715,51 @@
           }
         }
 
-        if (scrollRoot) {
-          scrollRoot.addEventListener("scroll", strongParallax, { passive: true });
-        } else {
-          window.addEventListener("scroll", strongParallax, { passive: true });
+        if (!reduceMotion) {
+          if (scrollRoot) {
+            scrollRoot.addEventListener("scroll", strongParallax, { passive: true });
+          } else {
+            window.addEventListener("scroll", strongParallax, { passive: true });
+          }
+          strongParallax();
         }
-        strongParallax();
+
+        document.addEventListener("click", function (e) {
+          const a = e.target.closest("a[href^='#']");
+          if (!a || !scrollRoot) return;
+          const href = a.getAttribute("href");
+          if (!href || href === "#" || href.length < 2) return;
+          const id = href.slice(1);
+          const target = document.getElementById(id);
+          if (!target || !scrollRoot.contains(target)) return;
+          e.preventDefault();
+          const nav = document.querySelector(".site-nav");
+          const pad = nav ? nav.offsetHeight + 12 : 72;
+          const top =
+            target.getBoundingClientRect().top -
+            scrollRoot.getBoundingClientRect().top +
+            scrollRoot.scrollTop -
+            pad;
+          scrollRoot.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? "auto" : "smooth" });
+        });
 
         const revealItems = document.querySelectorAll(".reveal");
-        const revealObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                revealObserver.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.22 }
-        );
-        revealItems.forEach((el) => revealObserver.observe(el));
+        if (reduceMotion) {
+          revealItems.forEach((el) => el.classList.add("visible"));
+        } else {
+          const revealObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                  revealObserver.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.22 }
+          );
+          revealItems.forEach((el) => revealObserver.observe(el));
+        }
 
         const faqButtons = document.querySelectorAll(".faq-question");
         faqButtons.forEach((button) => {
@@ -894,19 +1785,25 @@
         const canvas = document.getElementById("neon-canvas");
         const ctx = canvas ? canvas.getContext("2d") : null;
         const nodes = [];
-        const nodeCount = 54;
         const nodeSpeed = 0.12;
+
+        function networkNodeCount() {
+          if (reduceMotion) return 0;
+          const w = window.innerWidth;
+          if (w < 520) return 22;
+          if (w < 900) return 34;
+          return 54;
+        }
 
         function resizeCanvas() {
           if (!canvas) return;
           canvas.width = window.innerWidth;
           canvas.height = window.innerHeight;
         }
-        resizeCanvas();
-        window.addEventListener("resize", resizeCanvas);
 
         function seedNodes() {
           if (!canvas) return;
+          const nodeCount = networkNodeCount();
           nodes.length = 0;
           for (let i = 0; i < nodeCount; i += 1) {
             nodes.push({
@@ -918,8 +1815,15 @@
           }
         }
 
+        let networkFrame = null;
+
         function drawNetwork() {
-          if (!ctx || !canvas) return;
+          networkFrame = null;
+          if (!ctx || !canvas || nodes.length === 0) return;
+          if (document.hidden) {
+            return;
+          }
+
           ctx.clearRect(0, 0, canvas.width, canvas.height);
 
           ctx.strokeStyle = "rgba(122, 109, 255, 0.18)";
@@ -955,11 +1859,36 @@
             ctx.fill();
           }
 
-          requestAnimationFrame(drawNetwork);
+          networkFrame = requestAnimationFrame(drawNetwork);
         }
-        seedNodes();
-        drawNetwork();
-        window.addEventListener("resize", seedNodes);
+
+        function startNetwork() {
+          if (!ctx || !canvas || reduceMotion) return;
+          resizeCanvas();
+          seedNodes();
+          if (networkFrame) cancelAnimationFrame(networkFrame);
+          networkFrame = requestAnimationFrame(drawNetwork);
+        }
+
+        if (!reduceMotion) {
+          startNetwork();
+          window.addEventListener("resize", function () {
+            resizeCanvas();
+            seedNodes();
+          });
+          document.addEventListener("visibilitychange", function () {
+            if (document.hidden) {
+              if (networkFrame) {
+                cancelAnimationFrame(networkFrame);
+                networkFrame = null;
+              }
+            } else if (ctx && nodes.length > 0 && networkFrame == null) {
+              networkFrame = requestAnimationFrame(drawNetwork);
+            }
+          });
+        } else if (canvas) {
+          canvas.style.display = "none";
+        }
 
         const cursorGlow = document.querySelector(".cursor-glow");
         let glowX = window.innerWidth / 2;
@@ -967,21 +1896,25 @@
         let targetX = glowX;
         let targetY = glowY;
 
-        window.addEventListener("mousemove", (e) => {
-          targetX = e.clientX;
-          targetY = e.clientY;
-        });
+        if (!reduceMotion) {
+          window.addEventListener("mousemove", (e) => {
+            targetX = e.clientX;
+            targetY = e.clientY;
+          });
 
-        function animateGlow() {
-          if (cursorGlow) {
-            glowX += (targetX - glowX) * 0.09;
-            glowY += (targetY - glowY) * 0.09;
-            cursorGlow.style.left = glowX + "px";
-            cursorGlow.style.top = glowY + "px";
+          function animateGlow() {
+            if (cursorGlow) {
+              glowX += (targetX - glowX) * 0.09;
+              glowY += (targetY - glowY) * 0.09;
+              cursorGlow.style.left = glowX + "px";
+              cursorGlow.style.top = glowY + "px";
+            }
+            requestAnimationFrame(animateGlow);
           }
-          requestAnimationFrame(animateGlow);
+          animateGlow();
+        } else if (cursorGlow) {
+          cursorGlow.style.opacity = "0";
         }
-        animateGlow();
 
         const contactForm = document.getElementById("contact-form");
         const successToast = document.getElementById("success-toast");
@@ -1058,16 +1991,40 @@
           renderConfetti();
         }
 
+        function buildWhatsAppUrl() {
+          const nameEl = document.getElementById("name");
+          const phoneEl = document.getElementById("phone");
+          const needEl = document.getElementById("site-need");
+          const name = nameEl ? nameEl.value.trim() : "";
+          const phone = phoneEl ? phoneEl.value.trim() : "";
+          const siteNeed = needEl ? needEl.value.trim() : "";
+          const body =
+            "היי דביר, שלחתי פרטים מהאתר שלך:\n" +
+            "שם: " +
+            name +
+            "\n" +
+            "טלפון: " +
+            phone +
+            "\n" +
+            "איזה אתר צריך: " +
+            siteNeed;
+          return "https://wa.me/" + WA_PHONE + "?text=" + encodeURIComponent(body);
+        }
+
         if (contactForm) {
           contactForm.addEventListener("submit", (e) => {
             e.preventDefault();
+            const url = buildWhatsAppUrl();
+            window.open(url, "_blank", "noopener,noreferrer");
             if (successToast) {
               successToast.classList.add("show");
               setTimeout(() => {
                 successToast.classList.remove("show");
               }, 2400);
             }
-            launchConfetti();
+            if (!reduceMotion) {
+              launchConfetti();
+            }
             contactForm.reset();
           });
         }
