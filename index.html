@@ -12,8 +12,22 @@
     <meta name="theme-color" content="#060917" />
     <link rel="canonical" href="/" />
     <meta id="meta-og-url" property="og:url" content="" />
+    <script>
+      (function () {
+        var u = window.location.href.replace(/[?#].*$/, "");
+        var c = document.querySelector('link[rel="canonical"]');
+        if (c) {
+          c.setAttribute("href", u);
+        }
+        var o = document.getElementById("meta-og-url");
+        if (o) {
+          o.setAttribute("content", u);
+        }
+      })();
+    </script>
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="he_IL" />
+    <meta property="og:site_name" content="D Digital Studio" />
     <meta property="og:title" content="דביר | בניית אתרים ופתרונות טכנולוגיים" />
     <meta
       property="og:description"
@@ -768,6 +782,20 @@
         max-width: 52ch;
       }
 
+      .privacy-note a {
+        color: var(--neon-cyan);
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(89, 184, 255, 0.35);
+        margin-inline-start: 0.2rem;
+        transition: border-color 0.2s ease, color 0.2s ease;
+      }
+
+      .privacy-note a:hover {
+        color: #8ed4ff;
+        border-bottom-color: rgba(89, 184, 255, 0.6);
+      }
+
       .section-title {
         font-size: clamp(1.6rem, 3vw, 2.2rem);
         font-weight: 500;
@@ -1384,7 +1412,7 @@
             class="logo-mark-svg"
             width="38"
             height="38"
-            viewBox="0 0 40 40"
+            viewBox="0 0 32 32"
             aria-hidden="true"
             focusable="false"
           >
@@ -1396,22 +1424,20 @@
               </linearGradient>
             </defs>
             <rect
-              x="3"
-              y="3"
-              width="34"
-              height="34"
+              width="32"
+              height="32"
               rx="9"
-              fill="rgba(6, 9, 23, 0.45)"
+              fill="rgba(6, 9, 23, 0.42)"
               stroke="url(#logoNavStroke)"
-              stroke-width="1.15"
+              stroke-width="1.1"
             />
             <path
               fill="none"
               stroke="url(#logoNavStroke)"
-              stroke-width="1.45"
+              stroke-width="1.32"
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M14.5 12v16H19c4.8 0 8.5-3.4 8.5-8s-3.7-8-8.5-8h-4.5z"
+              d="M11.5 9.5v13h4.2c3.7 0 6.8-2.7 6.8-6.5s-3.1-6.5-6.8-6.5h-4.2z"
             />
           </svg>
           <span class="logo-type">
@@ -1808,6 +1834,7 @@
                 <p id="privacy-brief" class="privacy-note">
                   הפרטים נועדים ליצירת קשר בלבד ולא יועברו לצד שלישי. השליחה נפתחת בוואטסאפ לפי בחירתך;
                   שמירת השיחה כפופה למדיניות וואטסאפ.
+                  <a href="privacy.html">מדיניות פרטיות מלאה</a>
                 </p>
               </form>
             </div>
@@ -1833,16 +1860,6 @@
       (function () {
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         const WA_PHONE = "972525240271";
-
-        const pageUrl = window.location.href.replace(/[?#].*$/, "");
-        const canonicalLink = document.querySelector('link[rel="canonical"]');
-        if (canonicalLink) {
-          canonicalLink.setAttribute("href", pageUrl);
-        }
-        const ogUrlMeta = document.getElementById("meta-og-url");
-        if (ogUrlMeta) {
-          ogUrlMeta.setAttribute("content", pageUrl);
-        }
 
         const footerYear = document.getElementById("footer-year");
         if (footerYear) {
