@@ -1015,6 +1015,458 @@
           0 0 48px rgba(255, 62, 215, 0.55);
       }
 
+      body.lead-bar-on .floating-contact {
+        bottom: calc(74px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .lead-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 11;
+        padding: 0.62rem 0.75rem calc(0.62rem + env(safe-area-inset-bottom, 0px));
+        background:
+          linear-gradient(180deg, rgba(6, 9, 23, 0.08), rgba(8, 11, 22, 0.94)),
+          rgba(9, 13, 28, 0.92);
+        backdrop-filter: blur(16px) saturate(118%);
+        border-top: 1px solid rgba(89, 184, 255, 0.38);
+        box-shadow: 0 -10px 36px rgba(0, 0, 0, 0.42);
+        transform: translateY(110%);
+        transition: transform 340ms cubic-bezier(0.2, 0.8, 0.2, 1);
+        pointer-events: none;
+      }
+
+      .lead-bar.lead-bar--visible {
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .lead-bar.lead-bar--dismissed {
+        display: none;
+      }
+
+      .lead-bar-inner {
+        width: min(1100px, 100%);
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.65rem 1rem;
+      }
+
+      .lead-bar-text {
+        flex: 1 1 220px;
+        margin: 0;
+        font-size: 0.92rem;
+        color: var(--text-soft);
+        line-height: 1.45;
+        text-align: center;
+      }
+
+      .lead-bar-text strong {
+        color: var(--text-main);
+        font-weight: 700;
+      }
+
+      .lead-bar-cta {
+        flex: 0 1 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+        padding: 0.62rem 1rem;
+        border-radius: 999px;
+        color: #f9fcff;
+        border: 1px solid rgba(0, 246, 255, 0.55);
+        background: linear-gradient(135deg, rgba(0, 246, 255, 0.22), rgba(143, 61, 255, 0.38));
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
+        transition: transform 180ms ease, box-shadow 200ms ease;
+        white-space: nowrap;
+      }
+
+      .lead-bar-cta:hover {
+        transform: translateY(-2px);
+        box-shadow:
+          0 10px 28px rgba(0, 0, 0, 0.4),
+          0 0 18px rgba(0, 246, 255, 0.35);
+      }
+
+      .lead-bar-dismiss {
+        flex: 0 0 auto;
+        border: 0;
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text-soft);
+        width: 2rem;
+        height: 2rem;
+        border-radius: 999px;
+        cursor: pointer;
+        font-size: 1.35rem;
+        line-height: 1;
+        display: grid;
+        place-items: center;
+        transition: background 160ms ease, color 160ms ease;
+      }
+
+      .lead-bar-dismiss:hover {
+        background: rgba(255, 255, 255, 0.12);
+        color: var(--text-main);
+      }
+
+      body.lead-bar-on .site-footer {
+        padding-bottom: calc(2.25rem + 76px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .hero-alt-cta {
+        margin-top: 0.85rem;
+        font-size: 0.92rem;
+        color: var(--text-soft);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.35rem 0.55rem;
+      }
+
+      .hero-tel {
+        color: var(--neon-cyan);
+        font-weight: 700;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(89, 184, 255, 0.45);
+        transition: border-color 160ms ease, text-shadow 160ms ease;
+      }
+
+      .hero-tel:hover {
+        border-bottom-color: rgba(0, 246, 255, 0.85);
+        text-shadow: 0 0 14px rgba(0, 246, 255, 0.45);
+      }
+
+      .hero-alt-sep {
+        opacity: 0.55;
+        user-select: none;
+      }
+
+      .contact-lead-strip {
+        margin: -0.35rem 0 1rem;
+        padding: 0.75rem 0.95rem;
+        border-radius: 14px;
+        border: 1px solid rgba(122, 109, 255, 0.35);
+        background:
+          linear-gradient(155deg, rgba(122, 109, 255, 0.12), rgba(89, 184, 255, 0.06)),
+          rgba(9, 13, 28, 0.45);
+        font-size: 0.95rem;
+        color: var(--text-soft);
+        line-height: 1.65;
+        max-width: 62ch;
+      }
+
+      .contact-lead-strip strong {
+        color: #e8eeff;
+      }
+
+      .label-optional {
+        font-weight: 400;
+        opacity: 0.78;
+      }
+
+      .contact-quick-actions {
+        margin: 0 0 1.15rem;
+        padding: 1.05rem 1.1rem;
+        border-radius: 16px;
+        border: 1px solid rgba(89, 184, 255, 0.32);
+        background:
+          linear-gradient(165deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+          rgba(9, 13, 28, 0.58);
+      }
+
+      .contact-quick-actions h3 {
+        font-size: 1.02rem;
+        margin: 0 0 0.75rem;
+        font-weight: 600;
+        color: var(--text-main);
+      }
+
+      .calendly-row {
+        margin-bottom: 1rem;
+      }
+
+      .cta-calendly {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.45rem;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.95rem;
+        padding: 0.72rem 1.15rem;
+        border-radius: 999px;
+        color: #f4f7ff;
+        border: 1px solid rgba(122, 109, 255, 0.55);
+        background:
+          linear-gradient(135deg, rgba(122, 109, 255, 0.35), rgba(89, 184, 255, 0.22)),
+          rgba(11, 16, 34, 0.75);
+        box-shadow: 0 8px 26px rgba(0, 0, 0, 0.32);
+        transition: transform 180ms ease, box-shadow 200ms ease;
+      }
+
+      .cta-calendly:hover {
+        transform: translateY(-2px);
+        box-shadow:
+          0 12px 32px rgba(0, 0, 0, 0.38),
+          0 0 22px rgba(122, 109, 255, 0.35);
+      }
+
+      .calendly-note {
+        margin: 0.55rem 0 0;
+        font-size: 0.84rem;
+        color: var(--text-soft);
+        line-height: 1.5;
+      }
+
+      .quick-wa-label {
+        display: block;
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: #dce3ff;
+        margin-bottom: 0.55rem;
+      }
+
+      .quick-wa-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .wa-quick-link {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: 0.86rem;
+        font-weight: 600;
+        padding: 0.55rem 0.85rem;
+        border-radius: 999px;
+        border: 1px solid rgba(0, 246, 255, 0.38);
+        color: #e8eeff;
+        background: rgba(3, 6, 16, 0.55);
+        transition:
+          border-color 180ms ease,
+          background 180ms ease,
+          transform 180ms ease;
+      }
+
+      .wa-quick-link:hover {
+        border-color: rgba(0, 246, 255, 0.75);
+        background: rgba(0, 246, 255, 0.08);
+        transform: translateY(-1px);
+      }
+
+      .pricing-wa-wrap {
+        margin-top: 0.85rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .pricing-wa-wrap .wa-quick-link {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.88rem;
+      }
+
+      .hp-field {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* Cute scroll mascot — desktop: mid-left; mobile: compact bottom-left */
+      .scroll-mascot {
+        --mascot-rx: 5deg;
+        --mascot-ry: -12deg;
+        --mascot-drift: 0px;
+        position: fixed;
+        /* מעל קנבס הקונפטי (30) ומתחת לניווט (40) — אחרת השכבה השקופה מכסה את הדמות */
+        z-index: 32;
+        left: clamp(8px, 2.2vw, 26px);
+        top: 50%;
+        width: 118px;
+        pointer-events: none;
+        transform: translate3d(0, calc(-50% + var(--mascot-drift)), 0);
+        will-change: transform;
+      }
+
+      .scroll-mascot__stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.42rem;
+      }
+
+      .scroll-mascot__shadow {
+        width: 52px;
+        height: 10px;
+        border-radius: 50%;
+        margin-top: -0.15rem;
+        background: radial-gradient(
+          ellipse at center,
+          rgba(0, 0, 0, 0.42) 0%,
+          rgba(0, 0, 0, 0.18) 45%,
+          transparent 72%
+        );
+        filter: blur(2px);
+        opacity: 0.85;
+      }
+
+      .scroll-mascot__bob {
+        animation: mascot-bob 4.5s ease-in-out infinite;
+        transform-origin: 50% 100%;
+      }
+
+      @keyframes mascot-bob {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      .scroll-mascot__tilt {
+        transform-style: preserve-3d;
+        perspective: 500px;
+        transform: rotateX(var(--mascot-rx)) rotateY(var(--mascot-ry));
+        transition: transform 0.62s cubic-bezier(0.2, 0.8, 0.2, 1);
+        filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.35));
+      }
+
+      .scroll-mascot__svg {
+        display: block;
+        width: 108px;
+        height: auto;
+      }
+
+      .scroll-mascot__hint {
+        margin: 0;
+        font-size: 0.74rem;
+        font-weight: 500;
+        color: var(--text-soft);
+        text-align: center;
+        line-height: 1.38;
+        max-width: 11rem;
+        padding: 0.48rem 0.55rem;
+        border-radius: 11px;
+        background:
+          linear-gradient(165deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)),
+          rgba(9, 13, 28, 0.82);
+        border: 1px solid rgba(89, 184, 255, 0.28);
+        backdrop-filter: blur(10px);
+        transition: opacity 0.35s ease;
+      }
+
+      .scroll-mascot[data-zone="hero"] {
+        --mascot-rx: 6deg;
+        --mascot-ry: -14deg;
+      }
+
+      .scroll-mascot[data-zone="works"] {
+        --mascot-rx: 2deg;
+        --mascot-ry: 16deg;
+      }
+
+      .scroll-mascot[data-zone="about"] {
+        --mascot-rx: -4deg;
+        --mascot-ry: -10deg;
+      }
+
+      .scroll-mascot[data-zone="process"] {
+        --mascot-rx: 8deg;
+        --mascot-ry: 6deg;
+      }
+
+      .scroll-mascot[data-zone="sectors"] {
+        --mascot-rx: -2deg;
+        --mascot-ry: 14deg;
+      }
+
+      .scroll-mascot[data-zone="pricing"] {
+        --mascot-rx: 5deg;
+        --mascot-ry: -18deg;
+      }
+
+      .scroll-mascot[data-zone="testimonials"] {
+        --mascot-rx: -6deg;
+        --mascot-ry: 8deg;
+      }
+
+      .scroll-mascot[data-zone="tips"] {
+        --mascot-rx: 4deg;
+        --mascot-ry: 12deg;
+      }
+
+      .scroll-mascot[data-zone="faq"] {
+        --mascot-rx: 7deg;
+        --mascot-ry: -8deg;
+      }
+
+      .scroll-mascot[data-zone="contact"] {
+        --mascot-rx: -3deg;
+        --mascot-ry: 18deg;
+      }
+
+      @keyframes mascot-bob-mobile {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-4px);
+        }
+      }
+
+      @media (max-width: 899px) {
+        .scroll-mascot {
+          top: auto;
+          bottom: calc(4.85rem + env(safe-area-inset-bottom, 0px));
+          left: max(6px, env(safe-area-inset-left, 0px));
+          width: 76px;
+          transform: translate3d(0, var(--mascot-drift), 0);
+        }
+
+        body.lead-bar-on .scroll-mascot {
+          bottom: calc(8.15rem + env(safe-area-inset-bottom, 0px));
+        }
+
+        .scroll-mascot__bob {
+          animation-name: mascot-bob-mobile;
+          animation-duration: 5.2s;
+        }
+
+        .scroll-mascot__svg {
+          width: 68px;
+        }
+
+        .scroll-mascot__shadow {
+          width: 36px;
+          height: 8px;
+        }
+
+        .scroll-mascot__hint {
+          display: none;
+        }
+
+        .scroll-mascot__tilt {
+          filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.32));
+        }
+      }
+
       .pricing {
         margin-top: 0;
       }
@@ -1179,7 +1631,8 @@
       }
 
       .contact-form input,
-      .contact-form textarea {
+      .contact-form textarea,
+      .contact-form select {
         width: 100%;
         border: 1px solid rgba(0, 246, 255, 0.35);
         border-radius: 12px;
@@ -1191,13 +1644,26 @@
         transition: border-color 200ms ease, box-shadow 200ms ease;
       }
 
+      .contact-form select {
+        cursor: pointer;
+        appearance: none;
+        background-image: linear-gradient(45deg, transparent 50%, rgba(89, 184, 255, 0.85) 50%),
+          linear-gradient(135deg, rgba(89, 184, 255, 0.85) 50%, transparent 50%);
+        background-position:
+          calc(100% - 1.15rem) calc(50% - 3px),
+          calc(100% - 0.72rem) calc(50% - 3px);
+        background-size: 6px 6px, 6px 6px;
+        background-repeat: no-repeat;
+      }
+
       .contact-form textarea {
         min-height: 110px;
         resize: vertical;
       }
 
       .contact-form input:focus,
-      .contact-form textarea:focus {
+      .contact-form textarea:focus,
+      .contact-form select:focus {
         border-color: rgba(0, 246, 255, 0.85);
         box-shadow: 0 0 0 3px rgba(0, 246, 255, 0.14);
       }
@@ -1332,6 +1798,19 @@
           font-size: 0.9rem;
           padding: 0.72rem 0.95rem;
         }
+
+        body.lead-bar-on .floating-contact {
+          bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+        }
+
+        .lead-bar-text {
+          font-size: 0.88rem;
+          flex-basis: 100%;
+        }
+
+        .lead-bar-inner {
+          gap: 0.55rem;
+        }
       }
 
       @media (max-width: 420px) {
@@ -1365,6 +1844,10 @@
       }
 
       @media (prefers-reduced-motion: reduce) {
+        .lead-bar {
+          transition: none;
+        }
+
         .ambient-sheen__orb {
           animation: none;
           opacity: 0.22;
@@ -1393,6 +1876,10 @@
         .submit-btn,
         .project-link {
           transition: none;
+        }
+
+        .scroll-mascot {
+          display: none;
         }
       }
 
@@ -1468,6 +1955,86 @@
       aria-label="פתח שיחת וואטסאפ"
       >WhatsApp</a
     >
+    <div id="lead-bar" class="lead-bar" role="region" aria-label="הזמנה מהירה להצעת מחיר">
+      <div class="lead-bar-inner">
+        <p class="lead-bar-text">
+          רוצים <strong>הצעת מחיר רלוונטית תוך 24 שעות</strong>? מלאו טופס קצר — נחזור עם כיוון ומחיר.
+        </p>
+        <a class="lead-bar-cta" href="#contact">לטופס — דקה בלבד</a>
+        <button type="button" class="lead-bar-dismiss" aria-label="סגור את הסרגל">×</button>
+      </div>
+    </div>
+    <aside class="scroll-mascot" id="scroll-mascot" data-zone="hero" aria-hidden="true">
+      <div class="scroll-mascot__stack">
+        <div class="scroll-mascot__bob">
+          <div class="scroll-mascot__tilt">
+            <svg
+              class="scroll-mascot__svg"
+              viewBox="0 0 100 118"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <defs>
+                <linearGradient id="mascot-body" x1="22" y1="12" x2="88" y2="108" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#59b8ff" />
+                  <stop offset="0.45" stop-color="#7a6dff" />
+                  <stop offset="1" stop-color="#9f7bff" />
+                </linearGradient>
+                <linearGradient id="mascot-ant" x1="50" y1="0" x2="50" y2="24" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#8eb8ff" />
+                  <stop offset="1" stop-color="#59b8ff" />
+                </linearGradient>
+              </defs>
+              <ellipse cx="77" cy="14" rx="5" ry="5" fill="url(#mascot-ant)" opacity="0.95" />
+              <ellipse cx="23" cy="14" rx="5" ry="5" fill="url(#mascot-ant)" opacity="0.95" />
+              <path
+                d="M76 14 Q83 4 88 2"
+                stroke="rgba(180,200,255,0.55)"
+                stroke-width="2.2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M24 14 Q17 4 12 2"
+                stroke="rgba(180,200,255,0.55)"
+                stroke-width="2.2"
+                stroke-linecap="round"
+              />
+              <rect x="14" y="22" width="72" height="72" rx="26" fill="url(#mascot-body)" />
+              <rect
+                x="14"
+                y="22"
+                width="72"
+                height="72"
+                rx="26"
+                stroke="rgba(255,255,255,0.14)"
+                stroke-width="1.2"
+              />
+              <ellipse cx="38" cy="52" rx="11" ry="13" fill="#0a1026" />
+              <ellipse cx="62" cy="52" rx="11" ry="13" fill="#0a1026" />
+              <ellipse cx="41" cy="48" rx="4" ry="4.5" fill="#ffffff" opacity="0.92" />
+              <ellipse cx="65" cy="48" rx="4" ry="4.5" fill="#ffffff" opacity="0.92" />
+              <ellipse cx="39" cy="54" rx="2.2" ry="2.4" fill="#59b8ff" opacity="0.55" />
+              <ellipse cx="63" cy="54" rx="2.2" ry="2.4" fill="#59b8ff" opacity="0.55" />
+              <path
+                d="M42 76 Q50 82 58 76"
+                stroke="#0a1026"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                opacity="0.88"
+              />
+              <ellipse cx="30" cy="68" rx="5" ry="3.5" fill="#ff7eb3" opacity="0.35" />
+              <ellipse cx="70" cy="68" rx="5" ry="3.5" fill="#ff7eb3" opacity="0.35" />
+              <rect x="38" y="94" width="24" height="14" rx="7" fill="rgba(10,16,38,0.35)" />
+              <rect x="41" y="97" width="6" height="8" rx="2" fill="#59b8ff" opacity="0.65" />
+              <rect x="53" y="97" width="6" height="8" rx="2" fill="#59b8ff" opacity="0.65" />
+            </svg>
+          </div>
+        </div>
+        <div class="scroll-mascot__shadow" aria-hidden="true"></div>
+        <p class="scroll-mascot__hint" id="mascot-hint">היי! יש לי טיפים בכל קטע — גללו איתי.</p>
+      </div>
+    </aside>
     <main class="scroll-3d">
       <section class="scene">
         <div class="layer layer-back"></div>
@@ -1487,6 +2054,14 @@
             </p>
             <div class="hero-cta-row reveal from-bottom parallax-text">
               <a class="cta" href="#contact">קבעו שיחת היכרות קצרה</a>
+              <a
+                class="cta secondary"
+                data-calendly-link
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                >קביעת זמן ביומן</a
+              >
               <a class="cta secondary" href="#works">לצפייה בעבודות</a>
             </div>
             <div class="hero-stats reveal from-bottom parallax-text">
@@ -1500,6 +2075,11 @@
               <span class="hero-chip">מותאם למובייל</span>
               <span class="hero-chip">ביצועים ומהירות טעינה</span>
             </div>
+            <p class="hero-alt-cta reveal from-bottom parallax-text">
+              <a class="hero-tel" href="tel:+972525240271">052-524-0271</a>
+              <span class="hero-alt-sep" aria-hidden="true">·</span>
+              <span>חיוג ישיר או השארת פרטים בטופס — מה שנוח לך.</span>
+            </p>
           </header>
 
           <section id="works" class="projects">
@@ -1677,6 +2257,16 @@
                   <li>רספונסיביות מלאה למובייל</li>
                   <li>חיבור לטפסי יצירת קשר</li>
                 </ul>
+                <p class="pricing-wa-wrap">
+                  <a
+                    class="wa-quick-link"
+                    data-wa-quick="site"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >וואטסאפ — אתר תדמית</a
+                  >
+                </p>
               </article>
 
               <article class="pricing-card reveal zoom-reveal parallax-card">
@@ -1687,6 +2277,16 @@
                   <li>טעינה מהירה ואופטימיזציה</li>
                   <li>התאמה לקידום ממומן</li>
                 </ul>
+                <p class="pricing-wa-wrap">
+                  <a
+                    class="wa-quick-link"
+                    data-wa-quick="landing"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >וואטסאפ — דף נחיתה</a
+                  >
+                </p>
               </article>
 
               <article class="pricing-card reveal zoom-reveal parallax-card">
@@ -1697,6 +2297,16 @@
                   <li>התראות ותהליכים אוטומטיים</li>
                   <li>שיפור זרימת עבודה יומיומית</li>
                 </ul>
+                <p class="pricing-wa-wrap">
+                  <a
+                    class="wa-quick-link"
+                    data-wa-quick="automation"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >וואטסאפ — אוטומציות</a
+                  >
+                </p>
               </article>
             </div>
           </section>
@@ -1816,18 +2426,111 @@
 
           <section id="contact" class="faq">
             <h2 class="section-title reveal from-right parallax-text">צור קשר</h2>
+            <p class="contact-lead-strip reveal from-left parallax-text">
+              טופס קצר שמסנן רעש: נדע איזה סוג פרויקט מתאים, מה התקציב ומתי זה דחוף — ונחזור עם
+              <strong>הצעה ממוקדת</strong> (בדרך כלל תוך 24 שעות).
+            </p>
+            <div class="contact-quick-actions reveal from-bottom parallax-text">
+              <h3>בוחרים איך להמשיך</h3>
+              <div class="calendly-row">
+                <a
+                  class="cta-calendly"
+                  data-calendly-link
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >קביעת שיחת היכרות ביומן (Calendly)</a
+                >
+                <p class="calendly-note">
+                  מתאים כשאתם רוצים לקבוע חלון זמן קבוע — בלי להתכתב לפני.
+                  <span lang="en">Calendly</span> נפתח בלשונית חדשה; עדכנו את הקישור בקוד לכתובת האירוע שלכם.
+                </p>
+              </div>
+              <span class="quick-wa-label">וואטסאפ מהיר לפי סוג הפרויקט</span>
+              <div class="quick-wa-grid">
+                <a
+                  class="wa-quick-link"
+                  data-wa-quick="site"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >תדמית / פורטפוליו</a
+                >
+                <a
+                  class="wa-quick-link"
+                  data-wa-quick="landing"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >דף נחיתה</a
+                >
+                <a
+                  class="wa-quick-link"
+                  data-wa-quick="automation"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >אוטומציות</a
+                >
+              </div>
+            </div>
             <div class="faq-item contact-form-wrap reveal from-bottom">
-              <form id="contact-form" class="contact-form">
-                <label for="name">שם</label>
+              <form id="contact-form" class="contact-form" autocomplete="on">
+                <input
+                  id="company-url"
+                  class="hp-field"
+                  type="text"
+                  name="company_url"
+                  tabindex="-1"
+                  autocomplete="off"
+                  aria-hidden="true"
+                />
+
+                <label for="project-type">סוג פרויקט</label>
+                <select id="project-type" name="projectType" required>
+                  <option value="" disabled selected>בחרו — עוזר לנו להבין מה אתם צריכים</option>
+                  <option value="site">אתר תדמית / פורטפוליו</option>
+                  <option value="landing">דף נחיתה / קמפיין</option>
+                  <option value="automation">אוטומציות / אינטגרציות</option>
+                  <option value="unsure">לא בטוחים — רוצים ייעוץ קצר</option>
+                </select>
+
+                <label for="name">שם מלא</label>
                 <input id="name" name="name" type="text" placeholder="השם שלך" required />
 
-                <label for="phone">טלפון</label>
-                <input id="phone" name="phone" type="tel" placeholder="050-0000000" required />
+                <label for="phone">טלפון (לחזרה והצעה)</label>
+                <input id="phone" name="phone" type="tel" placeholder="050-0000000" required inputmode="tel" />
 
-                <label for="site-need">איזה אתר אתה צריך?</label>
-                <textarea id="site-need" name="siteNeed" placeholder="ספר לי בקצרה על האתר הרצוי..." required></textarea>
+                <label for="business-name">שם העסק או התחום <span class="label-optional">(אופציונלי)</span></label>
+                <input
+                  id="business-name"
+                  name="businessName"
+                  type="text"
+                  placeholder="למשל: סטודיו לכושר / חנות ורודה"
+                />
 
-                <button class="submit-btn" type="submit">שלח בוואטסאפ</button>
+                <label for="budget">תקציב משוער</label>
+                <select id="budget" name="budget">
+                  <option value="" selected>בוחרים טווח — אפשר לשנות אחר כך</option>
+                  <option value="up3">עד ₪3,000</option>
+                  <option value="3to8">₪3,000–8,000</option>
+                  <option value="8to15">₪8,000–15,000</option>
+                  <option value="15plus">מעל ₪15,000</option>
+                  <option value="unknown">עדיין לא יודעים</option>
+                </select>
+
+                <label for="timeline">לוח זמנים</label>
+                <select id="timeline" name="timeline">
+                  <option value="" selected>מתי צריכים את זה חי? (אופציונלי)</option>
+                  <option value="asap">בהקדם האפשרי</option>
+                  <option value="month">תוך חודש</option>
+                  <option value="flexible">גמיש</option>
+                </select>
+
+                <label for="site-need">מה צריך להשיג? (מטרות ותוכן)</label>
+                <textarea id="site-need" name="siteNeed" placeholder="למשל: לידים לוואטסאפ, תיאור השירות, דוגמאות לעבודות..." required></textarea>
+
+                <button class="submit-btn" type="submit">פתח וואטסאפ עם כל הפרטים</button>
                 <p class="form-hint">
                   השליחה תפתח את וואטסאפ עם ההודעה שלך — אפשר לערוך לפני שליחה סופית.
                 </p>
@@ -1860,6 +2563,39 @@
       (function () {
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         const WA_PHONE = "972525240271";
+        const CALENDLY_BOOKING_URL = "https://calendly.com/d-digital-studio/intro";
+        const WA_QUICK_MSG = {
+          site:
+            "היי דביר, הגעתי מהאתר ומעוניין/ת באתר תדמית / פורטפוליו. אשמח להצעה ולפרטים על התהליך.",
+          landing:
+            "היי דביר, הגעתי מהאתר ומעוניין/ת בדף נחיתה / קמפיין. אשמח להצעה והכוונה קצרה.",
+          automation:
+            "היי דביר, הגעתי מהאתר ומעוניין/ת באוטומציות / אינטגרציות לעסק. אשמח לשיחת היכרות קצרה.",
+        };
+
+        function waQuickUrl(key) {
+          const text = WA_QUICK_MSG[key];
+          if (!text) {
+            return "#";
+          }
+          return "https://wa.me/" + WA_PHONE + "?text=" + encodeURIComponent(text);
+        }
+
+        document.querySelectorAll("a[data-calendly-link]").forEach(function (a) {
+          a.setAttribute("href", CALENDLY_BOOKING_URL);
+        });
+
+        document.querySelectorAll("a[data-wa-quick]").forEach(function (a) {
+          const key = a.getAttribute("data-wa-quick");
+          if (key && WA_QUICK_MSG[key]) {
+            a.setAttribute("href", waQuickUrl(key));
+          }
+        });
+
+        const leadBar = document.getElementById("lead-bar");
+        if (leadBar && sessionStorage.getItem("leadBarDismissed") === "1") {
+          leadBar.classList.add("lead-bar--dismissed");
+        }
 
         const footerYear = document.getElementById("footer-year");
         if (footerYear) {
@@ -1891,6 +2627,125 @@
         }
 
         const scrollRoot = document.querySelector(".scroll-3d");
+        const scrollMascot = document.getElementById("scroll-mascot");
+        const mascotHint = document.getElementById("mascot-hint");
+        const MASCOT_LABELS = {
+          hero: "היי! אני כאן בצד — גללו לעבודות.",
+          works: "פה רואים פרויקטים שנבחרו.",
+          about: "קצת רקע על מי שבונה לכם.",
+          process: "ככה נעבוד ביחד, צעד־אחר־צעד.",
+          sectors: "בודקים אם זה מתאים לעסק שלכם.",
+          pricing: "החבילות — כדי להבין מה כלול.",
+          testimonials: "המלצות — לפני שמחליטים.",
+          tips: "טיפים קצרים לפני שמתחילים.",
+          faq: "שאלות שחוזרות על עצמן.",
+          contact: "פה כבר מדברים — טופס וקישורים.",
+        };
+        const mascotZones = [
+          { id: "hero", el: document.querySelector(".hero") },
+          { id: "works", el: document.getElementById("works") },
+          { id: "about", el: document.getElementById("about") },
+          { id: "process", el: document.getElementById("process") },
+          { id: "sectors", el: document.getElementById("sectors") },
+          { id: "pricing", el: document.getElementById("pricing") },
+          { id: "testimonials", el: document.getElementById("testimonials") },
+          { id: "tips", el: document.getElementById("tips") },
+          { id: "faq", el: document.getElementById("faq") },
+          { id: "contact", el: document.getElementById("contact") },
+        ].filter(function (z) {
+          return z.el;
+        });
+
+        function pickMascotZone() {
+          if (!scrollMascot || !scrollRoot || reduceMotion) {
+            return;
+          }
+          const mid = window.innerHeight * (window.innerWidth < 900 ? 0.28 : 0.36);
+          let bestId = "hero";
+          let bestDist = Infinity;
+          mascotZones.forEach(function (z) {
+            const r = z.el.getBoundingClientRect();
+            const center = (r.top + r.bottom) / 2;
+            const dist = Math.abs(center - mid);
+            if (dist < bestDist) {
+              bestDist = dist;
+              bestId = z.id;
+            }
+          });
+          if (scrollMascot.dataset.zone !== bestId) {
+            scrollMascot.dataset.zone = bestId;
+            if (mascotHint) {
+              mascotHint.textContent = MASCOT_LABELS[bestId] || "";
+            }
+          }
+        }
+
+        function updateMascotFromScroll() {
+          if (!scrollMascot || !scrollRoot || reduceMotion) {
+            return;
+          }
+          const max = scrollRoot.scrollHeight - scrollRoot.clientHeight;
+          const p = max > 0 ? scrollRoot.scrollTop / max : 0;
+          const narrow = window.innerWidth < 900;
+          const driftAmp = narrow ? 18 : 92;
+          const drift = (p - 0.5) * driftAmp;
+          scrollMascot.style.setProperty("--mascot-drift", drift + "px");
+          pickMascotZone();
+        }
+
+        let heroInView = true;
+        let contactInView = false;
+
+        function syncLeadBar() {
+          if (!leadBar || leadBar.classList.contains("lead-bar--dismissed")) {
+            document.body.classList.remove("lead-bar-on");
+            return;
+          }
+          const show = !heroInView && !contactInView;
+          leadBar.classList.toggle("lead-bar--visible", show);
+          document.body.classList.toggle("lead-bar-on", show);
+        }
+
+        if (leadBar && scrollRoot) {
+          const leadDismiss = leadBar.querySelector(".lead-bar-dismiss");
+          const heroEl = document.querySelector(".hero");
+          const contactEl = document.getElementById("contact");
+          const ioOpts = { root: scrollRoot, threshold: 0.14 };
+
+          if (heroEl) {
+            const heroIo = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                heroInView = entry.isIntersecting;
+                syncLeadBar();
+              });
+            }, ioOpts);
+            heroIo.observe(heroEl);
+          }
+
+          if (contactEl) {
+            const contactIo = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                contactInView = entry.isIntersecting;
+                syncLeadBar();
+              });
+            }, ioOpts);
+            contactIo.observe(contactEl);
+          }
+
+          requestAnimationFrame(function () {
+            syncLeadBar();
+          });
+
+          if (leadDismiss) {
+            leadDismiss.addEventListener("click", function () {
+              sessionStorage.setItem("leadBarDismissed", "1");
+              leadBar.classList.add("lead-bar--dismissed");
+              leadBar.classList.remove("lead-bar--visible");
+              document.body.classList.remove("lead-bar-on");
+            });
+          }
+        }
+
         const neonCanvas = document.getElementById("neon-canvas");
         const layers = {
           back: document.querySelector(".layer-back"),
@@ -1918,6 +2773,7 @@
           if (neonCanvas) {
             neonCanvas.style.transform = "translate3d(0," + y * -0.02 + "px,0)";
           }
+          updateMascotFromScroll();
         }
 
         if (!reduceMotion) {
@@ -1927,6 +2783,13 @@
             window.addEventListener("scroll", strongParallax, { passive: true });
           }
           strongParallax();
+          window.addEventListener(
+            "resize",
+            function () {
+              updateMascotFromScroll();
+            },
+            { passive: true }
+          );
         }
 
         document.addEventListener("click", function (e) {
@@ -2196,22 +3059,48 @@
           renderConfetti();
         }
 
+        function selectSummary(id) {
+          const el = document.getElementById(id);
+          if (!el) {
+            return "לא צוין";
+          }
+          if (!el.value) {
+            return "לא צוין";
+          }
+          const opt = el.options[el.selectedIndex];
+          return opt ? opt.textContent.replace(/\s+/g, " ").trim() : "לא צוין";
+        }
+
         function buildWhatsAppUrl() {
           const nameEl = document.getElementById("name");
           const phoneEl = document.getElementById("phone");
           const needEl = document.getElementById("site-need");
+          const businessEl = document.getElementById("business-name");
           const name = nameEl ? nameEl.value.trim() : "";
           const phone = phoneEl ? phoneEl.value.trim() : "";
           const siteNeed = needEl ? needEl.value.trim() : "";
+          const business = businessEl ? businessEl.value.trim() : "";
           const body =
-            "היי דביר, שלחתי פרטים מהאתר שלך:\n" +
+            "היי דביר, שלחתי פרטים מהטופס באתר:\n" +
+            "סוג פרויקט: " +
+            selectSummary("project-type") +
+            "\n" +
             "שם: " +
             name +
             "\n" +
             "טלפון: " +
             phone +
             "\n" +
-            "איזה אתר צריך: " +
+            "עסק / תחום: " +
+            (business || "לא צוין") +
+            "\n" +
+            "תקציב משוער: " +
+            selectSummary("budget") +
+            "\n" +
+            "לוח זמנים: " +
+            selectSummary("timeline") +
+            "\n" +
+            "מה צריך להשיג / תוכן: " +
             siteNeed;
           return "https://wa.me/" + WA_PHONE + "?text=" + encodeURIComponent(body);
         }
@@ -2219,6 +3108,10 @@
         if (contactForm) {
           contactForm.addEventListener("submit", (e) => {
             e.preventDefault();
+            const hpEl = document.getElementById("company-url");
+            if (hpEl && hpEl.value.trim()) {
+              return;
+            }
             const url = buildWhatsAppUrl();
             window.open(url, "_blank", "noopener,noreferrer");
             if (successToast) {
