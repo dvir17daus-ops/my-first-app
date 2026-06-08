@@ -1,2690 +1,755 @@
-<!doctype html>
-<html lang="he" dir="rtl">
+<!DOCTYPE html>
+<html class="dark" lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="דביר — בניית אתרי תדמית, דפי נחיתה, אוטומציות ובוטים מבוססי AI לעסקים. עיצוב יוקרתי, ביצועים גבוהים וליווי מקצה לקצה."
-    />
+    <meta name="description" content="דביר — בניית אתרי תדמית, דפי נחיתה, אוטומציות ובוטים מבוססי AI לעסקים. עיצוב יוקרתי, ביצועים גבוהים וליווי מקצה לקצה." />
     <meta name="robots" content="index, follow" />
-    <meta name="color-scheme" content="light" />
-    <meta name="theme-color" content="#fffdfb" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#131314" />
     <link rel="canonical" href="/" />
     <meta id="meta-og-url" property="og:url" content="" />
     <script>
       (function () {
         var u = window.location.href.replace(/[?#].*$/, "");
         var c = document.querySelector('link[rel="canonical"]');
-        if (c) {
-          c.setAttribute("href", u);
-        }
+        if (c) c.setAttribute("href", u);
         var o = document.getElementById("meta-og-url");
-        if (o) {
-          o.setAttribute("content", u);
-        }
+        if (o) o.setAttribute("content", u);
       })();
     </script>
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="he_IL" />
     <meta property="og:site_name" content="D Digital Studio" />
     <meta property="og:title" content="דביר | בניית אתרים, אוטומציות ובוטים" />
-    <meta
-      property="og:description"
-      content="אתרים, דפי נחיתה, אוטומציות ובוטים חכמים לעסק שלך — משלב האפיון ועד העלייה לאוויר."
-    />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=630&fit=crop&q=80"
-    />
+    <meta property="og:description" content="אתרים, דפי נחיתה, אוטומציות ובוטים חכמים לעסק שלך — משלב האפיון ועד העלייה לאוויר." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=630&fit=crop&q=80" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="דביר | בניית אתרים, אוטומציות ובוטים" />
-    <meta
-      name="twitter:description"
-      content="אתרים, דפי נחיתה, אוטומציות ובוטים חכמים לעסק שלך — משלב האפיון ועד העלייה לאוויר."
-    />
-    <meta
-      name="twitter:image"
-      content="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=630&fit=crop&q=80"
-    />
+    <meta name="twitter:description" content="אתרים, דפי נחיתה, אוטומציות ובוטים חכמים לעסק שלך — משלב האפיון ועד העלייה לאוויר." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=630&fit=crop&q=80" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <title>דביר | בניית אתרים, אוטומציות ובוטים</title>
+    <title>D Digital Studio | הנדסת ביצועים ואוטומציה עסקית מתקדמת</title>
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "D Digital Studio — דביר",
-        "alternateName": "דביר — בניית אתרים",
-        "description": "בניית אתרי תדמית, דפי נחיתה, אוטומציות ובוטים מבוססי AI. עיצוב יוקרתי, ביצועים גבוהים וליווי מקצה לקצה.",
-        "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=630&fit=crop&q=80",
-        "telephone": "+972-52-524-0271",
-        "areaServed": { "@type": "Country", "name": "IL" },
-        "availableLanguage": ["Hebrew"],
-        "priceRange": "$$",
-        "makesOffer": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "בניית אתרי תדמית" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "דפי נחיתה לקמפיינים" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "אוטומציות ואינטגרציות לעסק" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "בוטים וצ'אטבוטים מבוססי AI" } }
-        ]
-      }
+      {"@context":"https://schema.org","@type":"ProfessionalService","name":"D Digital Studio — דביר","alternateName":"דביר — בניית אתרים","description":"בניית אתרי תדמית, דפי נחיתה, אוטומציות ובוטים מבוססי AI. עיצוב יוקרתי, ביצועים גבוהים וליווי מקצה לקצה.","image":"https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=630&fit=crop&q=80","telephone":"+972-52-524-0271","areaServed":{"@type":"Country","name":"IL"},"availableLanguage":["Hebrew"],"priceRange":"$$","makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"בניית אתרי תדמית"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"דפי נחיתה לקמפיינים"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"אוטומציות ואינטגרציות לעסק"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"בוטים וצ'אטבוטים מבוססי AI"}}]}
     </script>
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "תוך כמה זמן אתר תדמית מוכן לאוויר?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "ברוב המקרים בין 7 ל-21 ימי עבודה, תלוי בהיקף התוכן, עיצוב והתאמות מיוחדות."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "האם אפשר לקבל דף נחיתה עם חיבור ללידים ווואטסאפ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "כן. ניתן לחבר טפסים, וואטסאפ, אימייל והתראות אוטומטיות כך שכל ליד נכנס מיד לטיפול."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "מה כולל שירות אוטומציות לעסק?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "אפיון תהליך, חיבור בין מערכות, יצירת פעולות אוטומטיות וחיסכון משמעותי בזמן עבודה יומיומי."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "מה בוט מבוסס AI יכול לעשות לעסק שלי?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "בוט חכם לוואטסאפ או לאתר עונה ללקוחות מסביב לשעון, משיב על שאלות נפוצות, מתאם פגישות ואוסף לידים ישירות למערכות שלך."
-            }
-          }
-        ]
-      }
+      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"תוך כמה זמן אתר תדמית מוכן לאוויר?","acceptedAnswer":{"@type":"Answer","text":"ברוב המקרים בין 7 ל-21 ימי עבודה, תלוי בהיקף התוכן, עיצוב והתאמות מיוחדות."}},{"@type":"Question","name":"האם אפשר לקבל דף נחיתה עם חיבור ללידים ווואטסאפ?","acceptedAnswer":{"@type":"Answer","text":"כן. ניתן לחבר טפסים, וואטסאפ, אימייל והתראות אוטומטיות כך שכל ליד נכנס מיד לטיפול."}},{"@type":"Question","name":"מה כולל שירות אוטומציות לעסק?","acceptedAnswer":{"@type":"Answer","text":"אפיון תהליך, חיבור בין מערכות, יצירת פעולות אוטומטיות וחיסכון משמעותי בזמן עבודה יומיומי."}},{"@type":"Question","name":"מה בוט מבוסס AI יכול לעשות לעסק שלי?","acceptedAnswer":{"@type":"Answer","text":"בוט חכם לוואטסאפ או לאתר עונה ללקוחות מסביב לשעון, משיב על שאלות נפוצות, מתאם פגישות ואוסף לידים ישירות למערכות שלך."}}]}
     </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Geist:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#c8c6c7",
+                        "surface-container-lowest": "#0e0e0f",
+                        "on-tertiary-container": "#292a2c",
+                        "on-primary-fixed": "#3b0900",
+                        "on-secondary": "#303031",
+                        "on-primary-fixed-variant": "#862201",
+                        "on-surface-variant": "#dfc0b7",
+                        "surface-tint": "#ffb5a0",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "surface-dim": "#131314",
+                        "on-secondary-fixed-variant": "#474647",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#e3e2e4",
+                        "surface-bright": "#39393a",
+                        "on-tertiary-fixed": "#1a1c1d",
+                        "inverse-surface": "#e5e2e3",
+                        "primary-fixed": "#ffdbd1",
+                        "surface-container-low": "#1c1b1c",
+                        "outline": "#a78b83",
+                        "on-primary": "#601500",
+                        "surface-container": "#201f20",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "surface": "#131314",
+                        "on-secondary-container": "#bab8b9",
+                        "tertiary-container": "#909093",
+                        "on-tertiary-fixed-variant": "#464749",
+                        "secondary-fixed": "#e5e2e3",
+                        "background": "#131314",
+                        "inverse-on-surface": "#313031",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "on-background": "#e5e2e3",
+                        "inverse-primary": "#a73918",
+                        "primary": "#d95d39",
+                        "on-tertiary": "#2f3032",
+                        "secondary-container": "#49494a",
+                        "primary-container": "#d95d39",
+                        "on-surface": "#e5e2e3",
+                        "tertiary-fixed-dim": "#c7c6c8",
+                        "tertiary": "#c7c6c8",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "outline-variant": "#58423c",
+                        "on-primary-container": "#ffffff",
+                        "surface-container-highest": "#353436",
+                        "surface-variant": "#353436",
+                        "surface-container-high": "#2a2a2b",
+                        "border-glass": "rgba(255, 255, 255, 0.08)",
+                        "surface-glass": "rgba(255, 255, 255, 0.03)",
+                        "text-muted": "#A1A1AA"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "md": "24px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "margin-desktop": "40px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "stack-lg": "64px",
+                        "stack-md": "32px",
+                        "stack-sm": "16px"
+                    },
+                    "fontFamily": {
+                        "code-sm": ["Geist"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-md": ["Geist"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Geist"],
+                        "button-text": ["Geist"],
+                        "body-sm": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "code-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "button-text": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
     <style>
-      :root {
-        --obsidian: #000000;
-        --bg: #fffdfb;
-        --bg-2: #fff6ec;
-        --surface: #ffffff;
-        --surface-2: #fff4e8;
-        --text: #2a2018;
-        --text-muted: #6f6358;
-        --text-dim: #9c8f80;
-        --accent: #f07a2e;
-        --accent-light: #e0671f;
-        --accent-soft: #ff9a4d;
-        --gradient-accent: linear-gradient(135deg, #ffb454 0%, #ff924d 52%, #ff7a59 100%);
-        --glass: rgba(255, 255, 255, 0.62);
-        --glass-strong: rgba(255, 255, 255, 0.8);
-        --glass-border: rgba(40, 28, 16, 0.1);
-        --accent-border: rgba(240, 122, 46, 0.4);
-        --accent-glow: 0 0 22px rgba(255, 154, 77, 0.28), 0 18px 40px rgba(150, 80, 20, 0.14);
-        --shadow-soft: 0 18px 44px rgba(120, 70, 25, 0.12);
-        --glass-btn-blur: blur(36px) saturate(240%) contrast(1.04);
-        --glass-btn-border: rgba(255, 255, 255, 0.52);
-        --glass-btn-shine:
-          linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.62) 0%,
-            rgba(255, 255, 255, 0.14) 20%,
-            transparent 46%
-          ),
-          radial-gradient(
-            ellipse 130% 90% at 50% -30%,
-            rgba(255, 255, 255, 0.28) 0%,
-            transparent 68%
-          );
-        --glass-btn-droplet: radial-gradient(
-          ellipse 70% 55% at 30% 24%,
-          rgba(255, 255, 255, 0.98) 0%,
-          rgba(255, 255, 255, 0.42) 32%,
-          transparent 68%
-        );
-        --glass-btn-shadow:
-          inset 0 2px 1.5px rgba(255, 255, 255, 1),
-          inset 0 -2px 4px rgba(255, 150, 80, 0.07),
-          inset 1.5px 0 2px rgba(255, 255, 255, 0.35),
-          inset -1px 0 2px rgba(255, 255, 255, 0.18),
-          0 6px 22px rgba(100, 60, 20, 0.05),
-          0 1px 4px rgba(0, 0, 0, 0.03);
-        --glass-btn-bg-clear: linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.14) 0%,
-          rgba(255, 255, 255, 0.05) 45%,
-          rgba(255, 255, 255, 0.1) 100%
-        );
-        --glass-btn-bg-warm: linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.12) 0%,
-          rgba(255, 190, 130, 0.06) 48%,
-          rgba(255, 255, 255, 0.08) 100%
-        );
-        --radius-lg: 26px;
-        --radius: 18px;
-        --radius-sm: 14px;
-        --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
-        --nav-h: 4rem;
-        --maxw: 1140px;
-        --font-body: "Heebo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        --font-display: "Frank Ruhl Libre", "Heebo", Georgia, serif;
-        --font-latin: "Cormorant Garamond", "Frank Ruhl Libre", Georgia, serif;
-      }
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: calc(var(--nav-h) + 1rem);
-        -webkit-text-size-adjust: 100%;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
+        :root {
+            --scroll: 0;
         }
-      }
-
-      body {
-        font-family: var(--font-body);
-        color: var(--text);
-        background: var(--bg);
-        line-height: 1.65;
-        min-height: 100vh;
-        overflow-x: hidden;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      /* Base background gradient */
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        z-index: -3;
-        background: linear-gradient(180deg, #fffdfb 0%, #fff7f0 55%, #fff2e6 100%);
-      }
-
-      /* Living animated aurora — drifts slowly and shifts on scroll */
-      .bg-aurora {
-        position: fixed;
-        inset: -20vh -10vw;
-        z-index: -1;
-        pointer-events: none;
-        overflow: hidden;
-        transform: translate3d(0, var(--aurora-shift, 0px), 0);
-        transition: transform 0.1s linear;
-      }
-
-      .bg-aurora__orb {
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(100px);
-        opacity: 0.55;
-        will-change: transform;
-        mix-blend-mode: multiply;
-      }
-
-      .bg-aurora__orb--1 {
-        width: 52vmax;
-        height: 52vmax;
-        top: -18vmax;
-        inset-inline-start: -10vmax;
-        background: radial-gradient(circle, rgba(255, 173, 92, 0.5), transparent 64%);
-        animation: aurora-drift-1 26s ease-in-out infinite alternate;
-      }
-
-      .bg-aurora__orb--2 {
-        width: 46vmax;
-        height: 46vmax;
-        top: 8vmax;
-        inset-inline-end: -12vmax;
-        background: radial-gradient(circle, rgba(255, 138, 101, 0.42), transparent 64%);
-        animation: aurora-drift-2 32s ease-in-out infinite alternate;
-      }
-
-      .bg-aurora__orb--3 {
-        width: 40vmax;
-        height: 40vmax;
-        bottom: -16vmax;
-        inset-inline-start: 22vmax;
-        background: radial-gradient(circle, rgba(255, 206, 140, 0.4), transparent 64%);
-        animation: aurora-drift-3 38s ease-in-out infinite alternate;
-      }
-
-      @keyframes aurora-drift-1 {
-        from {
-          transform: translate3d(0, 0, 0) scale(1);
+        body {
+            background-color: #131314;
+            color: #e5e2e3;
+            font-family: 'Hanken Grotesk', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
-        to {
-          transform: translate3d(8vmax, 6vmax, 0) scale(1.15);
-        }
-      }
-      @keyframes aurora-drift-2 {
-        from {
-          transform: translate3d(0, 0, 0) scale(1.05);
-        }
-        to {
-          transform: translate3d(-7vmax, 5vmax, 0) scale(1.18);
-        }
-      }
-      @keyframes aurora-drift-3 {
-        from {
-          transform: translate3d(0, 0, 0) scale(1);
-        }
-        to {
-          transform: translate3d(5vmax, -6vmax, 0) scale(1.12);
-        }
-      }
 
-      @media (prefers-reduced-motion: reduce) {
-        .bg-aurora,
-        .bg-aurora__orb {
-          animation: none !important;
-          transition: none !important;
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .bg-aurora__orb {
-          opacity: 0.35;
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
         }
-      }
 
-      a {
-        color: inherit;
-      }
+        .glass-card:hover {
+            border-color: rgba(217, 93, 57, 0.4);
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
 
-      img {
-        max-width: 100%;
-        display: block;
-      }
+        .liquid-glass-btn {
+            background: rgba(217, 93, 57, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
 
-      .container {
-        width: 100%;
-        max-width: var(--maxw);
-        margin-inline: auto;
-        padding-inline: clamp(1.15rem, 4vw, 2.25rem);
-      }
+        .liquid-glass-btn:hover {
+            transform: scale(1.05);
+            border-color: rgba(217, 93, 57, 0.6);
+            box-shadow: 0 0 25px rgba(217, 93, 57, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .liquid-glass-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transform: rotate(45deg);
+            transition: 0.6s;
+        }
+
+        .liquid-glass-btn:hover::after {
+            left: 100%;
+        }
+
+        .text-glow-orange {
+            text-shadow: 0 0 20px rgba(217, 93, 57, 0.4);
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+
+        .parallax-target {
+            transform: translateY(calc(var(--scroll) * 0.3px));
+        }
+
+        .reveal-left { transform: translateX(-50px); opacity: 0; }
+        .reveal-right { transform: translateX(50px); opacity: 0; }
+        .revealed { transform: translateX(0); opacity: 1; }
+
+        .magnetic-link {
+            transition: transform 0.2s ease-out;
+            display: inline-block;
+        }
+
+        [dir="rtl"] .material-symbols-outlined {
+            transform: scaleX(-1);
+        }
+        
+        .video-overlay {
+            background: linear-gradient(0deg, rgba(19, 19, 20, 0.95) 0%, rgba(19, 19, 20, 0.4) 50%, rgba(19, 19, 20, 0.8) 100%);
+        }
+
+        .chat-widget-container {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 440px; /* Enhanced 'ענקי' size */
+            max-width: 90vw;
+        }
+        
+        .chat-glow {
+            box-shadow: 0 0 50px rgba(217, 93, 57, 0.25);
+        }
+
+        .floating-anim {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @media (max-width: 640px) {
+            .chat-widget-container {
+                width: calc(100% - 32px);
+                right: 16px;
+                left: 16px;
+            }
+        }
+    
 
       .skip-link {
-        position: fixed;
-        top: 0.6rem;
-        right: 0.6rem;
-        z-index: 200;
-        padding: 0.5rem 0.85rem;
-        border-radius: 10px;
-        background: var(--accent);
-        color: #000;
-        font-weight: 700;
-        font-size: 0.9rem;
-        text-decoration: none;
-        transform: translateY(-150%);
-        transition: transform 0.2s var(--ease);
+        position: fixed; top: 0.6rem; right: 0.6rem; z-index: 200;
+        padding: 0.5rem 0.85rem; border-radius: 10px;
+        background: #d95d39; color: #fff; font-weight: 700; font-size: 0.9rem;
+        text-decoration: none; transform: translateY(-150%); transition: transform 0.2s ease;
       }
-
-      .skip-link:focus {
-        transform: translateY(0);
-      }
-
+      .skip-link:focus { transform: translateY(0); }
       .scroll-progress {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 2px;
-        width: 100%;
-        transform: scaleX(0);
-        transform-origin: 0 50%;
-        z-index: 90;
-        background: var(--gradient-accent);
-        will-change: transform;
-        pointer-events: none;
+        position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 60;
+        background: rgba(255,255,255,0.06); transform-origin: left;
       }
-      html[dir="rtl"] .scroll-progress {
-        transform-origin: 100% 50%;
+      html[dir="rtl"] .scroll-progress { transform-origin: right; }
+      .scroll-progress-bar {
+        height: 100%; width: 100%; background: #d95d39;
+        transform: scaleX(0); transform-origin: inherit; transition: transform 0.1s linear;
       }
-
-      /* ---------- Navigation ---------- */
-      .site-nav {
-        position: fixed;
-        inset: 0 0 auto 0;
-        z-index: 80;
-        height: var(--nav-h);
-        display: flex;
-        align-items: center;
-        background: rgba(255, 253, 251, 0.78);
-        backdrop-filter: blur(24px) saturate(160%);
-        -webkit-backdrop-filter: blur(24px) saturate(160%);
-        border-bottom: 1px solid var(--glass-border);
-      }
-
-      .nav-inner {
-        width: 100%;
-        max-width: var(--maxw);
-        margin-inline: auto;
-        padding-inline: clamp(1.15rem, 4vw, 2.25rem);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-      }
-
-      .logo {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.6rem;
-        text-decoration: none;
-        flex-shrink: 0;
-      }
-
-      .logo-mark {
-        width: 32px;
-        height: 32px;
-      }
-
-      .logo-type {
-        display: flex;
-        flex-direction: column;
-        line-height: 1.05;
-      }
-
-      .logo-type b {
-        font-family: var(--font-latin);
-        font-size: 1.15rem;
-        font-weight: 600;
-        letter-spacing: 0.02em;
-        color: var(--text);
-      }
-
-      .logo-type span {
-        font-size: 0.56rem;
-        letter-spacing: 0.36em;
-        text-transform: uppercase;
-        color: var(--accent-soft);
-      }
-
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: clamp(1rem, 2.4vw, 1.9rem);
-      }
-
-      .nav-links a {
-        text-decoration: none;
-        color: var(--text-muted);
-        font-size: 0.92rem;
-        font-weight: 500;
-        transition: color 0.18s var(--ease);
-      }
-
-      .nav-links a:hover,
-      .nav-links a.is-active {
-        color: var(--text);
-      }
-
-      .nav-cta {
-        display: inline-flex;
-        align-items: center;
-        padding: 0.5rem 1.2rem;
-        border-radius: 999px;
-        background: var(--glass-btn-bg-warm);
-        backdrop-filter: var(--glass-btn-blur);
-        -webkit-backdrop-filter: var(--glass-btn-blur);
-        border: 1px solid var(--glass-btn-border);
-        border-bottom-color: rgba(255, 255, 255, 0.22);
-        color: var(--accent) !important;
-        font-size: 0.9rem;
-        font-weight: 700;
-        text-decoration: none;
-        box-shadow: var(--glass-btn-shadow);
-        position: relative;
-        overflow: hidden;
-        isolation: isolate;
-        transition: box-shadow 0.35s var(--ease), transform 0.25s var(--ease), background 0.35s var(--ease);
-      }
-
-      .nav-cta::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        border-radius: inherit;
-        background: var(--glass-btn-shine);
-        pointer-events: none;
-      }
-
-      .nav-cta::after {
-        content: "";
-        position: absolute;
-        width: 36%;
-        height: 40%;
-        top: 10%;
-        inset-inline-start: 16%;
-        z-index: -1;
-        border-radius: 50%;
-        background: var(--glass-btn-droplet);
-        pointer-events: none;
-        animation: droplet-shimmer 5s ease-in-out infinite;
-      }
-
-      .nav-cta:hover {
-        transform: translateY(-1px) scale(1.01);
-        background: linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.18) 0%,
-          rgba(255, 190, 130, 0.09) 48%,
-          rgba(255, 255, 255, 0.12) 100%
-        );
-        box-shadow:
-          inset 0 2px 1.5px rgba(255, 255, 255, 1),
-          inset 0 -2px 5px rgba(255, 150, 80, 0.1),
-          0 10px 28px rgba(200, 105, 35, 0.1);
-      }
-
-      .nav-cta:active {
-        transform: translateY(0) scale(0.98);
-        box-shadow:
-          inset 0 3px 10px rgba(200, 100, 40, 0.12),
-          inset 0 1px 0 rgba(255, 255, 255, 0.75);
-      }
-
-      .nav-toggle {
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        gap: 5px;
-        width: 42px;
-        height: 42px;
-        border: 0;
-        background: transparent;
-        cursor: pointer;
-      }
-
-      .nav-toggle span {
-        display: block;
-        width: 22px;
-        height: 2px;
-        margin-inline: auto;
-        background: var(--text);
-        border-radius: 2px;
-        transition: transform 0.25s var(--ease), opacity 0.25s var(--ease);
-      }
-
-      .nav-toggle[aria-expanded="true"] span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-      }
-      .nav-toggle[aria-expanded="true"] span:nth-child(2) {
-        opacity: 0;
-      }
-      .nav-toggle[aria-expanded="true"] span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-      }
-
-      /* ---------- Buttons ---------- */
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.4rem;
-        padding: 0.9rem 1.7rem;
-        border-radius: 999px;
-        font-family: var(--font-body);
-        font-size: 1rem;
-        font-weight: 600;
-        text-decoration: none;
-        cursor: pointer;
-        border: 1px solid var(--glass-btn-border);
-        position: relative;
-        overflow: hidden;
-        isolation: isolate;
-        backdrop-filter: var(--glass-btn-blur);
-        -webkit-backdrop-filter: var(--glass-btn-blur);
-        box-shadow: var(--glass-btn-shadow);
-        transition: box-shadow 0.3s var(--ease), transform 0.2s var(--ease),
-          border-color 0.25s var(--ease), color 0.2s var(--ease), background 0.3s var(--ease);
-      }
-
-      .btn::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        border-radius: inherit;
-        background: var(--glass-btn-shine);
-        pointer-events: none;
-      }
-
-      .btn::after {
-        content: "";
-        position: absolute;
-        width: 34%;
-        height: 38%;
-        top: 9%;
-        inset-inline-start: 15%;
-        z-index: -1;
-        border-radius: 50%;
-        background: var(--glass-btn-droplet);
-        pointer-events: none;
-        animation: droplet-shimmer 5.5s ease-in-out infinite;
-      }
-
-      .btn > * {
-        position: relative;
-        z-index: 1;
-      }
-
-      @keyframes droplet-shimmer {
-        0%,
-        100% {
-          transform: translate(0, 0) scale(1);
-          opacity: 0.82;
+      .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+      #nav-toggle { display: none; }
+      @media (max-width: 767px) {
+        #nav-toggle {
+          display: flex; flex-direction: column; justify-content: center; gap: 5px;
+          width: 42px; height: 42px; padding: 8px; border-radius: 12px;
+          border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04);
+          cursor: pointer;
         }
-        50% {
-          transform: translate(2px, 1px) scale(1.04);
-          opacity: 1;
+        #nav-toggle span { display: block; height: 2px; background: #e5e2e3; border-radius: 2px; transition: transform 0.25s ease, opacity 0.25s ease; }
+        #nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        #nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+        #nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        #nav-links {
+          position: fixed; top: 72px; left: 16px; right: 16px;
+          display: none; flex-direction: column; gap: 0;
+          padding: 12px; border-radius: 16px;
+          background: rgba(19,19,20,0.95); border: 1px solid rgba(255,255,255,0.1);
+          backdrop-filter: blur(24px); z-index: 49;
         }
-      }
-
-      /* Liquid glass — water droplet (primary) */
-      .btn-primary {
-        background: var(--glass-btn-bg-warm);
-        border-bottom-color: rgba(255, 255, 255, 0.2);
-        color: var(--accent);
-        font-weight: 700;
-      }
-
-      .btn-primary:hover {
-        transform: translateY(-2px) scale(1.01);
-        background: linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.2) 0%,
-          rgba(255, 190, 130, 0.1) 48%,
-          rgba(255, 255, 255, 0.14) 100%
-        );
-        box-shadow:
-          inset 0 2px 1.5px rgba(255, 255, 255, 1),
-          inset 0 -2px 5px rgba(255, 150, 80, 0.1),
-          0 12px 32px rgba(200, 105, 35, 0.1);
-      }
-
-      .btn-primary:active {
-        transform: translateY(0) scale(0.98);
-        box-shadow:
-          inset 0 4px 12px rgba(200, 100, 40, 0.14),
-          inset 0 1px 0 rgba(255, 255, 255, 0.8);
-      }
-
-      /* Liquid glass — water droplet (secondary) */
-      .btn-secondary {
-        background: var(--glass-btn-bg-clear);
-        border-bottom-color: rgba(255, 255, 255, 0.18);
-        color: var(--text);
-      }
-
-      .btn-secondary:hover {
-        border-color: rgba(255, 255, 255, 0.65);
-        color: var(--accent);
-        transform: translateY(-2px) scale(1.01);
-        background: linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.22) 0%,
-          rgba(255, 255, 255, 0.08) 45%,
-          rgba(255, 255, 255, 0.16) 100%
-        );
-        box-shadow:
-          inset 0 2px 1.5px rgba(255, 255, 255, 1),
-          0 12px 28px rgba(120, 70, 25, 0.08);
-      }
-
-      .btn-secondary:active {
-        transform: translateY(0) scale(0.98);
-        box-shadow:
-          inset 0 4px 12px rgba(120, 70, 25, 0.08),
-          inset 0 1px 0 rgba(255, 255, 255, 0.8);
-      }
-
-      .btn-ghost {
-        background: transparent;
-        color: var(--accent);
-        padding: 0;
-        font-weight: 600;
-        font-size: 0.95rem;
-      }
-
-      .btn-ghost:hover {
-        color: var(--accent-light);
-      }
-
-      /* ---------- Sections ---------- */
-      .section {
-        padding-block: clamp(3.75rem, 8.5vw, 7rem);
-        position: relative;
-      }
-
-      .section--alt {
-        background: var(--bg-2);
-        border-block: 1px solid var(--glass-border);
-      }
-
-      .section-head {
-        max-width: 680px;
-        margin-bottom: clamp(2.25rem, 5vw, 3.5rem);
-      }
-
-      .eyebrow {
-        display: inline-block;
-        font-size: 0.74rem;
-        font-weight: 600;
-        letter-spacing: 0.32em;
-        text-transform: uppercase;
-        color: var(--accent);
-        margin-bottom: 1rem;
-      }
-
-      .section-title {
-        font-family: var(--font-display);
-        font-weight: 700;
-        font-size: clamp(2rem, 5vw, 3.1rem);
-        line-height: 1.12;
-        letter-spacing: -0.01em;
-      }
-
-      .section-lead {
-        margin-top: 1rem;
-        font-size: clamp(1.02rem, 2vw, 1.18rem);
-        color: var(--text-muted);
-        line-height: 1.65;
-      }
-
-      /* ---------- Hero ---------- */
-      .hero {
-        padding-top: calc(var(--nav-h) + clamp(3rem, 8vw, 6rem));
-        padding-bottom: clamp(3rem, 7vw, 5rem);
-        text-align: center;
-      }
-
-      .hero-inner {
-        max-width: 920px;
-        margin-inline: auto;
-      }
-
-      .hero .eyebrow {
-        font-size: 0.78rem;
-      }
-
-      .hero h1 {
-        font-family: var(--font-display);
-        font-size: clamp(2.5rem, 7.5vw, 5rem);
-        font-weight: 900;
-        letter-spacing: -0.015em;
-        line-height: 1.08;
-      }
-
-      .accent-text {
-        background: linear-gradient(110deg, #ff9a4d 0%, #ff7a59 28%, #ffb454 55%, #ff7a59 78%, #ff9a4d 100%);
-        background-size: 240% auto;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        animation: accent-shimmer 7s linear infinite;
-      }
-
-      @keyframes accent-shimmer {
-        to {
-          background-position: -240% center;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .accent-text {
-          animation: none;
-        }
-      }
-
-      /* Cursor-follow spotlight on cards */
-      .work-card,
-      .price-card,
-      .step,
-      .tip {
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 6px 22px rgba(120, 70, 25, 0.06);
-      }
-
-      .work-card::after,
-      .price-card::after,
-      .step::after,
-      .tip::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        pointer-events: none;
-        z-index: 2;
-        background: radial-gradient(
-          260px circle at var(--mx, 50%) var(--my, 50%),
-          rgba(255, 154, 77, 0.18),
-          transparent 60%
-        );
-        opacity: 0;
-        transition: opacity 0.35s var(--ease);
-      }
-
-      .work-card:hover::after,
-      .price-card:hover::after,
-      .step:hover::after,
-      .tip:hover::after {
-        opacity: 1;
-      }
-
-      .hero-sub {
-        margin-top: 1.5rem;
-        font-size: clamp(1.1rem, 2.3vw, 1.38rem);
-        color: var(--text-muted);
-        max-width: 640px;
-        margin-inline: auto;
-        line-height: 1.6;
-      }
-
-      .hero-services {
-        margin-top: 1.85rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.6rem;
-        justify-content: center;
-      }
-
-      .hero-service {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.55rem;
-        padding: 0.6rem 1.05rem;
-        border-radius: 999px;
-        border: 1px solid var(--glass-btn-border);
-        border-bottom-color: rgba(255, 255, 255, 0.18);
-        background: var(--glass-btn-bg-clear);
-        backdrop-filter: var(--glass-btn-blur);
-        -webkit-backdrop-filter: var(--glass-btn-blur);
-        color: var(--text);
-        text-decoration: none;
-        font-size: 0.95rem;
-        font-weight: 600;
-        box-shadow: var(--glass-btn-shadow);
-        position: relative;
-        overflow: hidden;
-        isolation: isolate;
-        transition: border-color 0.25s var(--ease), color 0.2s var(--ease),
-          transform 0.2s var(--ease), box-shadow 0.25s var(--ease), background 0.3s var(--ease);
-      }
-
-      .hero-service::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        border-radius: inherit;
-        background: var(--glass-btn-shine);
-        pointer-events: none;
-      }
-
-      .hero-service::after {
-        content: "";
-        position: absolute;
-        width: 32%;
-        height: 36%;
-        top: 10%;
-        inset-inline-start: 14%;
-        z-index: -1;
-        border-radius: 50%;
-        background: var(--glass-btn-droplet);
-        pointer-events: none;
-        animation: droplet-shimmer 6s ease-in-out infinite;
-      }
-
-      .hero-service svg {
-        width: 18px;
-        height: 18px;
-        color: var(--accent);
-        flex-shrink: 0;
-        position: relative;
-        z-index: 1;
-      }
-
-      .hero-service:hover {
-        transform: translateY(-2px) scale(1.01);
-        background: var(--glass-btn-bg-warm);
-        border-color: rgba(255, 255, 255, 0.65);
-        color: var(--accent);
-        box-shadow:
-          inset 0 2px 1.5px rgba(255, 255, 255, 1),
-          0 10px 24px rgba(200, 105, 35, 0.09);
-      }
-
-      .hero-actions {
-        margin-top: 2rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.85rem;
-        justify-content: center;
-      }
-
-      .hero-tel {
-        margin-top: 1.25rem;
-        font-size: 0.95rem;
-        color: var(--text-dim);
-      }
-
-      .hero-tel a {
-        color: var(--accent);
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-      .hero-stats {
-        margin-top: clamp(3rem, 7vw, 4.5rem);
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.15rem;
-        max-width: 780px;
-        margin-inline: auto;
-      }
-
-      .hero-stat {
-        padding: 1.5rem 1.1rem;
-        border-radius: var(--radius);
-        background: var(--glass);
-        border: 1px solid var(--glass-border);
-        backdrop-filter: blur(12px);
-      }
-
-      .hero-stat strong {
-        display: block;
-        font-family: var(--font-display);
-        font-size: clamp(1.5rem, 3.5vw, 2rem);
-        font-weight: 700;
-        color: var(--accent-light);
-        letter-spacing: -0.01em;
-      }
-
-      .hero-stat span {
-        display: block;
-        margin-top: 0.4rem;
-        font-size: 0.84rem;
-        color: var(--text-dim);
-        line-height: 1.5;
-      }
-
-      /* ---------- Grids ---------- */
-      .grid {
-        display: grid;
-        gap: 1.5rem;
-      }
-      .grid-4 {
-        grid-template-columns: repeat(4, 1fr);
-      }
-      .grid-3 {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      /* ---------- Work cards ---------- */
-      .work-card {
-        background: var(--surface);
-        border: 1px solid var(--glass-border);
-        border-radius: var(--radius);
-        overflow: hidden;
-        transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease),
-          border-color 0.4s var(--ease);
-      }
-
-      .work-card:hover {
-        transform: translateY(-6px);
-        border-color: var(--accent-border);
-        box-shadow: var(--accent-glow);
-      }
-
-      .work-media {
-        aspect-ratio: 16 / 10;
-        overflow: hidden;
-        background: var(--surface-2);
-      }
-
-      .work-media img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.92;
-        transition: transform 0.6s var(--ease), opacity 0.4s var(--ease);
-      }
-
-      .work-card:hover .work-media img {
-        transform: scale(1.05);
-        opacity: 1;
-      }
-
-      .work-body {
-        padding: 1.3rem 1.4rem 1.5rem;
-      }
-
-      .tag {
-        display: inline-block;
-        font-size: 0.7rem;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--accent);
-        border: 1px solid var(--accent-border);
-        padding: 0.22rem 0.65rem;
-        border-radius: 999px;
-        margin-bottom: 0.8rem;
-      }
-
-      .work-body h3 {
-        font-family: var(--font-display);
-        font-size: 1.3rem;
-        font-weight: 700;
-        margin-bottom: 0.45rem;
-      }
-
-      .work-body p {
-        color: var(--text-muted);
-        font-size: 0.95rem;
-        margin-bottom: 1rem;
-      }
-
-      /* ---------- About ---------- */
-      .about-grid {
-        display: grid;
-        grid-template-columns: 130px 1fr;
-        gap: 2rem;
-        align-items: center;
-        max-width: 860px;
-      }
-
-      .about-avatar {
-        width: 130px;
-        height: 130px;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        font-family: var(--font-display);
-        font-size: 3.4rem;
-        font-weight: 700;
-        color: #3a2208;
-        background: var(--gradient-accent);
-        box-shadow: var(--accent-glow);
-      }
-
-      .about-text p {
-        color: var(--text-muted);
-        font-size: 1.08rem;
-        margin-bottom: 0.9rem;
-      }
-
-      .about-text p:last-child {
-        margin-bottom: 0;
-      }
-
-      /* ---------- Process ---------- */
-      .steps {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.5rem;
-        counter-reset: step;
-      }
-
-      .step {
-        counter-increment: step;
-        padding: 1.6rem 1.4rem;
-        border-radius: var(--radius);
-        background: var(--glass);
-        border: 1px solid var(--glass-border);
-      }
-
-      .step-num {
-        font-family: var(--font-display);
-        font-size: 1.6rem;
-        font-weight: 700;
-        color: var(--accent);
-        margin-bottom: 0.75rem;
-      }
-
-      .step-num::before {
-        content: "0" counter(step);
-      }
-
-      .step h3 {
-        font-family: var(--font-display);
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin-bottom: 0.45rem;
-      }
-
-      .step p {
-        color: var(--text-muted);
-        font-size: 0.94rem;
-      }
-
-      /* ---------- Sectors ---------- */
-      .sectors {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.85rem;
-      }
-
-      .sectors li {
-        list-style: none;
-        padding: 0.75rem 1.3rem;
-        border-radius: 999px;
-        border: 1px solid var(--glass-border);
-        font-size: 0.98rem;
-        font-weight: 500;
-        background: var(--glass);
-        transition: border-color 0.25s var(--ease), color 0.2s var(--ease);
-      }
-
-      .sectors li:hover {
-        border-color: var(--accent-border);
-        color: var(--accent-light);
-      }
-
-      /* ---------- Pricing ---------- */
-      .price-card {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        background: var(--surface);
-        border: 1px solid var(--glass-border);
-        border-radius: var(--radius);
-        padding: 1.8rem 1.6rem;
-        transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease),
-          border-color 0.4s var(--ease);
-      }
-
-      .price-card:hover {
-        transform: translateY(-6px);
-        border-color: var(--accent-border);
-        box-shadow: var(--accent-glow);
-      }
-
-      .price-card--featured {
-        border-color: var(--accent-border);
-        background: linear-gradient(180deg, rgba(255, 154, 77, 0.12), var(--surface) 55%);
-      }
-
-      .price-badge {
-        position: absolute;
-        top: 1.6rem;
-        inset-inline-end: 1.6rem;
-        font-size: 0.66rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: #3a2208;
-        background: var(--gradient-accent);
-        padding: 0.25rem 0.65rem;
-        border-radius: 999px;
-      }
-
-      .price-card h3 {
-        font-family: var(--font-display);
-        font-size: 1.4rem;
-        font-weight: 700;
-        margin-bottom: 0.55rem;
-      }
-
-      .price-desc {
-        color: var(--text-muted);
-        font-size: 0.95rem;
-        margin-bottom: 1.2rem;
-      }
-
-      .price-list {
-        list-style: none;
-        display: grid;
-        gap: 0.65rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .price-list li {
-        position: relative;
-        padding-inline-start: 1.7rem;
-        font-size: 0.95rem;
-        color: var(--text-muted);
-      }
-
-      .price-list li::before {
-        content: "";
-        position: absolute;
-        inset-inline-start: 0;
-        top: 0.4em;
-        width: 7px;
-        height: 12px;
-        border: solid var(--accent);
-        border-width: 0 2px 2px 0;
-        transform: rotate(45deg);
-      }
-
-      .price-card .btn {
-        margin-top: auto;
-        width: 100%;
-        font-size: 0.95rem;
-        padding-block: 0.75rem;
-      }
-
-      /* ---------- Tips ---------- */
-      .tip {
-        padding: 1.7rem 1.5rem;
-        border-radius: var(--radius);
-        background: var(--glass);
-        border: 1px solid var(--glass-border);
-      }
-
-      .tip h3 {
-        font-family: var(--font-display);
-        font-size: 1.25rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-      }
-
-      .tip p {
-        color: var(--text-muted);
-        font-size: 0.95rem;
-      }
-
-      /* ---------- FAQ ---------- */
-      .faq-list {
-        max-width: 820px;
-      }
-
-      .faq-item {
-        border-bottom: 1px solid var(--glass-border);
-      }
-
-      .faq-q {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        padding: 1.35rem 0;
-        background: transparent;
-        border: 0;
-        cursor: pointer;
-        text-align: start;
-        font-family: var(--font-display);
-        font-size: 1.18rem;
-        font-weight: 700;
-        color: var(--text);
-      }
-
-      .faq-icon {
-        flex-shrink: 0;
-        width: 24px;
-        height: 24px;
-        position: relative;
-      }
-
-      .faq-icon::before,
-      .faq-icon::after {
-        content: "";
-        position: absolute;
-        background: var(--accent);
-        border-radius: 2px;
-      }
-
-      .faq-icon::before {
-        top: 11px;
-        left: 4px;
-        right: 4px;
-        height: 2px;
-      }
-
-      .faq-icon::after {
-        left: 11px;
-        top: 4px;
-        bottom: 4px;
-        width: 2px;
-        transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
-      }
-
-      .faq-q[aria-expanded="true"] .faq-icon::after {
-        transform: scaleY(0);
-        opacity: 0;
-      }
-
-      .faq-a {
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.4s var(--ease);
-      }
-
-      .faq-a p {
-        padding-bottom: 1.35rem;
-        color: var(--text-muted);
-        font-size: 1rem;
-        line-height: 1.7;
-      }
-
-      .faq-a a {
-        color: var(--accent);
-      }
-
-      /* ---------- Contact ---------- */
-      .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr 1.1fr;
-        gap: clamp(1.75rem, 4vw, 3rem);
-        align-items: start;
-      }
-
-      .contact-aside h3 {
-        font-family: var(--font-display);
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin: 1.75rem 0 0.85rem;
-      }
-
-      .contact-aside h3:first-child {
-        margin-top: 0;
-      }
-
-      .contact-note {
-        color: var(--text-dim);
-        font-size: 0.92rem;
-        margin-top: 0.55rem;
-      }
-
-      .contact-note a {
-        color: var(--accent);
-        text-decoration: none;
-        font-weight: 600;
-      }
-
-      .wa-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.65rem;
-        margin-top: 0.5rem;
-      }
-
-      .wa-quick-link:not(.btn) {
-        display: inline-flex;
-        align-items: center;
-        padding: 0.6rem 1.05rem;
-        border-radius: 999px;
-        border: 1px solid var(--glass-btn-border);
-        border-bottom-color: rgba(255, 255, 255, 0.18);
-        background: var(--glass-btn-bg-clear);
-        backdrop-filter: var(--glass-btn-blur);
-        -webkit-backdrop-filter: var(--glass-btn-blur);
-        color: var(--text);
-        text-decoration: none;
-        font-size: 0.9rem;
-        font-weight: 500;
-        box-shadow: var(--glass-btn-shadow);
-        position: relative;
-        overflow: hidden;
-        isolation: isolate;
-        transition: border-color 0.25s var(--ease), color 0.2s var(--ease),
-          transform 0.2s var(--ease), background 0.3s var(--ease), box-shadow 0.3s var(--ease);
-      }
-
-      .wa-quick-link:not(.btn)::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        border-radius: inherit;
-        background: var(--glass-btn-shine);
-        pointer-events: none;
-      }
-
-      .wa-quick-link:not(.btn)::after {
-        content: "";
-        position: absolute;
-        width: 32%;
-        height: 36%;
-        top: 10%;
-        inset-inline-start: 14%;
-        z-index: -1;
-        border-radius: 50%;
-        background: var(--glass-btn-droplet);
-        pointer-events: none;
-        animation: droplet-shimmer 6s ease-in-out infinite;
-      }
-
-      .wa-quick-link:not(.btn):hover {
-        transform: translateY(-1px) scale(1.01);
-        background: var(--glass-btn-bg-warm);
-        border-color: rgba(255, 255, 255, 0.65);
-        color: var(--accent);
-        box-shadow:
-          inset 0 2px 1.5px rgba(255, 255, 255, 1),
-          0 10px 24px rgba(200, 105, 35, 0.09);
-      }
-
-      .contact-form {
-        background: var(--surface);
-        border: 1px solid var(--glass-border);
-        border-radius: var(--radius-lg);
-        padding: clamp(1.5rem, 3vw, 2.2rem);
-        display: grid;
-        gap: 0.3rem;
-      }
-
-      .contact-form label {
-        font-size: 0.9rem;
-        font-weight: 600;
-        margin-top: 0.95rem;
-        color: var(--text);
-      }
-
-      .contact-form label:first-of-type {
-        margin-top: 0;
-      }
-
-      .label-optional {
-        font-weight: 400;
-        color: var(--text-dim);
-      }
-
-      .contact-form input,
-      .contact-form select,
-      .contact-form textarea {
-        width: 100%;
-        padding: 0.75rem 0.9rem;
-        border-radius: 12px;
-        border: 1px solid var(--glass-border);
-        background: rgba(40, 28, 16, 0.025);
-        color: var(--text);
-        font-family: inherit;
-        font-size: 1rem;
-        margin-top: 0.35rem;
-        transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
-      }
-
-      .contact-form input::placeholder,
-      .contact-form textarea::placeholder {
-        color: var(--text-dim);
-      }
-
-      .contact-form select option {
-        background: var(--surface-2);
-        color: var(--text);
-      }
-
-      .contact-form input:focus,
-      .contact-form select:focus,
-      .contact-form textarea:focus {
-        outline: none;
-        border-color: var(--accent-border);
-        box-shadow: 0 0 0 3px rgba(240, 122, 46, 0.2);
-      }
-
-      .contact-form textarea {
-        min-height: 110px;
-        resize: vertical;
-      }
-
-      .contact-form .btn {
-        margin-top: 1.3rem;
-      }
-
-      .hp-field {
-        position: absolute;
-        left: -9999px;
-        opacity: 0;
-        pointer-events: none;
-      }
-
-      .form-hint,
-      .privacy-note {
-        font-size: 0.85rem;
-        color: var(--text-dim);
-        margin-top: 0.75rem;
-        line-height: 1.55;
-      }
-
-      .privacy-note a {
-        color: var(--accent);
-      }
-
-      /* ---------- Footer ---------- */
-      .site-footer {
-        border-top: 1px solid var(--glass-border);
-        padding-block: 2.75rem;
-        background: var(--bg-2);
-      }
-
-      .footer-inner {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-      }
-
-      .footer-inner p {
-        color: var(--text-dim);
-        font-size: 0.9rem;
-      }
-
-      .footer-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.35rem;
-      }
-
-      .footer-links a {
-        color: var(--text-muted);
-        text-decoration: none;
-        font-size: 0.9rem;
-        transition: color 0.18s var(--ease);
-      }
-
-      .footer-links a:hover {
-        color: var(--accent-light);
-      }
-
-      /* ---------- Lead chat widget ---------- */
-      .chat-widget {
-        position: fixed;
-        inset-block-end: 1.25rem;
-        inset-inline-end: 1.25rem;
-        z-index: 75;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 0.85rem;
-      }
-
-      .chat-panel {
-        width: min(380px, calc(100vw - 2rem));
-        height: min(520px, calc(100dvh - 7rem));
-        display: flex;
-        flex-direction: column;
-        border-radius: 22px;
-        border: 1px solid rgba(255, 255, 255, 0.65);
-        background: rgba(255, 255, 255, 0.88);
-        backdrop-filter: blur(20px) saturate(180%);
-        -webkit-backdrop-filter: blur(20px) saturate(180%);
-        box-shadow:
-          0 24px 60px rgba(120, 70, 25, 0.18),
-          inset 0 1px 0 rgba(255, 255, 255, 0.95);
-        overflow: hidden;
-        transform: translateY(16px) scale(0.96);
-        opacity: 0;
-        pointer-events: none;
-        transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
-      }
-
-      .chat-panel.is-open {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      .chat-header {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 0.95rem 1rem;
-        border-bottom: 1px solid var(--glass-border);
-        background: linear-gradient(180deg, rgba(255, 236, 214, 0.55), rgba(255, 255, 255, 0.2));
-      }
-
-      .chat-header-avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        font-family: var(--font-display);
-        font-weight: 700;
-        font-size: 1.1rem;
-        color: #5e2e0b;
-        background: linear-gradient(135deg, #ffb454, #ff7a59);
-        box-shadow: 0 4px 12px rgba(200, 105, 35, 0.25);
-        flex-shrink: 0;
-      }
-
-      .chat-header-info {
-        flex: 1;
-        min-width: 0;
-      }
-
-      .chat-header-info strong {
-        display: block;
-        font-size: 0.95rem;
-        font-weight: 700;
-      }
-
-      .chat-status {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.35rem;
-        font-size: 0.78rem;
-        color: var(--text-dim);
-      }
-
-      .chat-status::before {
-        content: "";
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: #22c55e;
-        box-shadow: 0 0 6px rgba(34, 197, 94, 0.6);
-      }
-
-      .chat-close {
-        width: 32px;
-        height: 32px;
-        border: 0;
-        border-radius: 50%;
-        background: rgba(40, 28, 16, 0.06);
-        color: var(--text-muted);
-        font-size: 1.35rem;
-        line-height: 1;
-        cursor: pointer;
-        transition: background 0.2s var(--ease);
-      }
-
-      .chat-close:hover {
-        background: rgba(40, 28, 16, 0.12);
-      }
-
-      .chat-messages {
-        flex: 1;
-        overflow-y: auto;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.65rem;
-        scroll-behavior: smooth;
-      }
-
-      .chat-msg {
-        max-width: 88%;
-        padding: 0.7rem 0.9rem;
-        border-radius: 16px;
-        font-size: 0.92rem;
-        line-height: 1.55;
-        animation: chat-msg-in 0.35s var(--ease);
-      }
-
-      @keyframes chat-msg-in {
-        from {
-          opacity: 0;
-          transform: translateY(8px);
-        }
-        to {
-          opacity: 1;
-          transform: none;
-        }
-      }
-
-      .chat-msg--bot {
-        align-self: flex-start;
-        background: var(--bg-2);
-        border: 1px solid var(--glass-border);
-        color: var(--text);
-        border-end-end-radius: 4px;
-      }
-
-      .chat-msg--user {
-        align-self: flex-end;
-        background: linear-gradient(135deg, rgba(255, 180, 100, 0.35), rgba(255, 140, 80, 0.28));
-        border: 1px solid var(--accent-border);
-        color: var(--text);
-        border-end-start-radius: 4px;
-      }
-
-      .chat-msg--summary {
-        align-self: stretch;
-        max-width: 100%;
-        background: rgba(255, 248, 240, 0.9);
-        border: 1px dashed var(--accent-border);
-        font-size: 0.86rem;
-        white-space: pre-wrap;
-      }
-
-      .chat-footer {
-        padding: 0.75rem 1rem 1rem;
-        border-top: 1px solid var(--glass-border);
-        background: rgba(255, 255, 255, 0.5);
-      }
-
-      .chat-quick-replies {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.45rem;
-        margin-bottom: 0.55rem;
-      }
-
-      .chat-chip {
-        padding: 0.45rem 0.8rem;
-        border-radius: 999px;
-        border: 1px solid var(--glass-btn-border);
-        border-bottom-color: rgba(255, 255, 255, 0.18);
-        background: var(--glass-btn-bg-clear);
-        backdrop-filter: var(--glass-btn-blur);
-        -webkit-backdrop-filter: var(--glass-btn-blur);
-        color: var(--accent);
-        font-size: 0.82rem;
-        font-weight: 600;
-        cursor: pointer;
-        font-family: inherit;
-        box-shadow: var(--glass-btn-shadow);
-        position: relative;
-        overflow: hidden;
-        transition: background 0.25s var(--ease), transform 0.15s var(--ease), box-shadow 0.25s var(--ease);
-      }
-
-      .chat-chip::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        border-radius: inherit;
-        background: var(--glass-btn-shine);
-        pointer-events: none;
-      }
-
-      .chat-chip::after {
-        content: "";
-        position: absolute;
-        width: 30%;
-        height: 34%;
-        top: 12%;
-        inset-inline-start: 12%;
-        z-index: -1;
-        border-radius: 50%;
-        background: var(--glass-btn-droplet);
-        pointer-events: none;
-      }
-
-      .chat-chip:hover {
-        background: var(--glass-btn-bg-warm);
-        transform: translateY(-1px) scale(1.02);
-        box-shadow:
-          inset 0 2px 1.5px rgba(255, 255, 255, 1),
-          0 6px 16px rgba(200, 105, 35, 0.08);
-      }
-
-      .chat-text-row {
-        display: flex;
-        gap: 0.5rem;
-      }
-
-      .chat-text-row input {
-        flex: 1;
-        padding: 0.65rem 0.85rem;
-        border-radius: 12px;
-        border: 1px solid var(--glass-border);
-        background: #fff;
-        font-family: inherit;
-        font-size: 0.92rem;
-      }
-
-      .chat-text-row input:focus {
-        outline: none;
-        border-color: var(--accent-border);
-        box-shadow: 0 0 0 3px rgba(240, 122, 46, 0.15);
-      }
-
-      .chat-send-btn {
-        padding: 0.65rem 1rem;
-        border: 1px solid var(--glass-btn-border);
-        border-bottom-color: rgba(255, 255, 255, 0.2);
-        border-radius: 12px;
-        background: var(--glass-btn-bg-warm);
-        backdrop-filter: var(--glass-btn-blur);
-        -webkit-backdrop-filter: var(--glass-btn-blur);
-        color: var(--accent);
-        font-weight: 700;
-        font-size: 0.88rem;
-        cursor: pointer;
-        font-family: inherit;
-        box-shadow: var(--glass-btn-shadow);
-        position: relative;
-        overflow: hidden;
-        transition: background 0.25s var(--ease), transform 0.15s var(--ease);
-      }
-
-      .chat-send-btn::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        border-radius: inherit;
-        background: var(--glass-btn-shine);
-        pointer-events: none;
-      }
-
-      .chat-send-btn::after {
-        content: "";
-        position: absolute;
-        width: 28%;
-        height: 32%;
-        top: 10%;
-        inset-inline-start: 10%;
-        z-index: -1;
-        border-radius: 50%;
-        background: var(--glass-btn-droplet);
-        pointer-events: none;
-      }
-
-      .chat-send-btn:hover {
-        background: linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.2) 0%,
-          rgba(255, 190, 130, 0.1) 48%,
-          rgba(255, 255, 255, 0.14) 100%
-        );
-        transform: translateY(-1px) scale(1.02);
-      }
-
-      .chat-wa-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        width: 100%;
-        padding: 0.8rem 1rem;
-        border: 0;
-        border-radius: 14px;
-        background: #25d366;
-        color: #fff;
-        font-weight: 700;
-        font-size: 0.95rem;
-        cursor: pointer;
-        font-family: inherit;
-        text-decoration: none;
-        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
-        transition: transform 0.2s var(--ease);
-      }
-
-      .chat-wa-btn:hover {
-        transform: translateY(-2px);
-      }
-
-      .chat-progress {
-        height: 3px;
-        background: var(--glass-border);
-      }
-
-      .chat-progress-bar {
-        height: 100%;
-        background: var(--gradient-accent);
-        transition: width 0.4s var(--ease);
-      }
-
-      .chat-launcher {
-        width: 58px;
-        height: 58px;
-        border: 1px solid var(--glass-btn-border);
-        border-bottom-color: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
-        cursor: pointer;
-        display: grid;
-        place-items: center;
-        background: var(--glass-btn-bg-warm);
-        backdrop-filter: var(--glass-btn-blur);
-        -webkit-backdrop-filter: var(--glass-btn-blur);
-        box-shadow: var(--glass-btn-shadow);
-        color: var(--accent);
-        transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.3s var(--ease);
-        position: relative;
-        overflow: hidden;
-        isolation: isolate;
-      }
-
-      .chat-launcher::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        border-radius: inherit;
-        background: var(--glass-btn-shine);
-        pointer-events: none;
-      }
-
-      .chat-launcher::after {
-        content: "";
-        position: absolute;
-        width: 38%;
-        height: 38%;
-        top: 14%;
-        inset-inline-start: 18%;
-        z-index: -1;
-        border-radius: 50%;
-        background: var(--glass-btn-droplet);
-        pointer-events: none;
-        animation: droplet-shimmer 4.5s ease-in-out infinite;
-      }
-
-      .chat-launcher svg {
-        position: relative;
-        z-index: 1;
-      }
-
-      .chat-launcher:hover {
-        transform: translateY(-3px) scale(1.05);
-        background: linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.2) 0%,
-          rgba(255, 190, 130, 0.1) 48%,
-          rgba(255, 255, 255, 0.14) 100%
-        );
-        box-shadow:
-          inset 0 2px 1.5px rgba(255, 255, 255, 1),
-          0 14px 32px rgba(190, 95, 35, 0.12);
-      }
-
-      .chat-launcher.is-open {
-        transform: rotate(0deg);
-      }
-
-      .chat-launcher-pulse {
-        position: absolute;
-        inset: -4px;
-        border-radius: 50%;
-        border: 2px solid rgba(255, 154, 77, 0.5);
-        animation: chat-pulse 2.5s ease-out infinite;
-        pointer-events: none;
-      }
-
-      @keyframes chat-pulse {
-        0% {
-          transform: scale(1);
-          opacity: 0.7;
-        }
-        100% {
-          transform: scale(1.35);
-          opacity: 0;
-        }
-      }
-
-      .chat-launcher-label {
-        position: absolute;
-        inset-inline-end: calc(100% + 0.65rem);
-        white-space: nowrap;
-        padding: 0.45rem 0.75rem;
-        border-radius: 10px;
-        background: rgba(255, 255, 255, 0.95);
-        border: 1px solid var(--glass-border);
-        font-size: 0.82rem;
-        font-weight: 600;
-        color: var(--text);
-        box-shadow: var(--shadow-soft);
-        opacity: 0;
-        transform: translateX(8px);
-        transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
-        pointer-events: none;
-      }
-
-      html[dir="rtl"] .chat-launcher-label {
-        transform: translateX(-8px);
-      }
-
-      .chat-launcher:hover .chat-launcher-label,
-      .chat-launcher:focus-visible .chat-launcher-label {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      @media (max-width: 480px) {
-        .chat-widget {
-          inset-inline-end: 0.85rem;
-          inset-block-end: 0.85rem;
-        }
-        .chat-panel {
-          width: calc(100vw - 1.7rem);
-          height: min(70dvh, 520px);
-        }
-        .chat-launcher-label {
-          display: none;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .btn::after,
-        .nav-cta::after,
-        .hero-service::after,
-        .wa-quick-link:not(.btn)::after,
-        .chat-launcher::after {
-          animation: none;
-        }
-        .chat-launcher-pulse {
-          animation: none;
-        }
-        .chat-msg {
-          animation: none;
-        }
-      }
-
-      /* ---------- Toast ---------- */
+        #nav-links.open { display: flex; }
+        #nav-links a { padding: 14px 12px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        #nav-links a:last-child { border-bottom: 0; }
+        .nav-desktop-links { display: none !important; }
+      }
+      @media (min-width: 768px) { .nav-mobile-only { display: none !important; } }
       .toast {
-        position: fixed;
-        left: 50%;
-        top: calc(var(--nav-h) + 0.75rem);
-        transform: translate(-50%, -20px);
-        opacity: 0;
-        z-index: 100;
-        padding: 0.9rem 1.25rem;
-        border-radius: 14px;
-        background: rgba(255, 255, 255, 0.95);
-        border: 1px solid var(--accent-border);
-        backdrop-filter: blur(14px);
-        color: var(--text);
-        font-size: 0.95rem;
-        font-weight: 500;
-        box-shadow: var(--shadow-soft);
-        transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
-        pointer-events: none;
+        position: fixed; bottom: 6rem; left: 50%; transform: translateX(-50%) translateY(20px);
+        padding: 0.85rem 1.2rem; border-radius: 12px; z-index: 90;
+        background: rgba(32,31,32,0.95); border: 1px solid rgba(217,93,57,0.4);
+        color: #e5e2e3; font-size: 0.9rem; opacity: 0; pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
       }
-
-      .toast.show {
-        opacity: 1;
-        transform: translate(-50%, 0);
+      .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+      .chat-widget { position: fixed; bottom: 1.25rem; left: 1.25rem; z-index: 75; display: flex; flex-direction: column; align-items: flex-start; gap: 0.85rem; }
+      html[dir="rtl"] .chat-widget { left: auto; right: 1.25rem; align-items: flex-end; }
+      .chat-panel {
+        width: min(380px, calc(100vw - 2rem)); height: min(520px, calc(100dvh - 7rem));
+        display: flex; flex-direction: column; border-radius: 22px;
+        border: 1px solid rgba(255,255,255,0.1); background: rgba(32,31,32,0.92);
+        backdrop-filter: blur(24px); box-shadow: 0 24px 60px rgba(0,0,0,0.45), 0 0 40px rgba(217,93,57,0.12);
+        overflow: hidden; transform: translateY(16px) scale(0.96); opacity: 0; pointer-events: none;
+        transition: transform 0.35s ease, opacity 0.35s ease;
       }
-
-      /* ---------- Reveal ---------- */
-      .reveal {
-        opacity: 0;
-        transform: translateY(42px) scale(0.985);
-        transition:
-          opacity 0.9s var(--ease),
-          transform 1s cubic-bezier(0.16, 0.8, 0.3, 1);
-        transition-delay: var(--reveal-delay, 0s);
-        will-change: opacity, transform;
-      }
-
-      .reveal.from-left {
-        transform: translateX(-48px);
-      }
-
-      .reveal.from-right {
-        transform: translateX(48px);
-      }
-
-      .reveal.visible {
-        opacity: 1;
-        transform: translate(0, 0) scale(1);
-      }
-
+      .chat-panel.is-open { transform: translateY(0) scale(1); opacity: 1; pointer-events: auto; }
+      .chat-header { display: flex; align-items: center; gap: 0.75rem; padding: 0.95rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(217,93,57,0.08); }
+      .chat-header-avatar { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 1.1rem; color: #fff; background: linear-gradient(135deg, #d95d39, #a73918); flex-shrink: 0; }
+      .chat-header-info { flex: 1; min-width: 0; }
+      .chat-header-info strong { display: block; font-size: 0.95rem; font-weight: 700; color: #e5e2e3; }
+      .chat-status { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.78rem; color: #a78b83; }
+      .chat-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 6px rgba(34,197,94,0.6); }
+      .chat-close { width: 32px; height: 32px; border: 0; border-radius: 50%; background: rgba(255,255,255,0.06); color: #c8c6c7; font-size: 1.35rem; line-height: 1; cursor: pointer; }
+      .chat-close:hover { background: rgba(255,255,255,0.12); }
+      .chat-messages { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: 0.65rem; }
+      .chat-msg { max-width: 88%; padding: 0.7rem 0.9rem; border-radius: 16px; font-size: 0.92rem; line-height: 1.55; white-space: pre-wrap; }
+      .chat-msg--bot { align-self: flex-start; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: #e5e2e3; border-end-end-radius: 4px; }
+      .chat-msg--user { align-self: flex-end; background: rgba(217,93,57,0.2); border: 1px solid rgba(217,93,57,0.35); color: #e5e2e3; border-end-start-radius: 4px; }
+      .chat-msg--summary { align-self: stretch; max-width: 100%; background: rgba(217,93,57,0.08); border: 1px dashed rgba(217,93,57,0.35); font-size: 0.86rem; }
+      .chat-footer { padding: 0.75rem 1rem 1rem; border-top: 1px solid rgba(255,255,255,0.08); background: rgba(19,19,20,0.5); }
+      .chat-quick-replies { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 0.55rem; }
+      .chat-chip { padding: 0.45rem 0.8rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); background: rgba(217,93,57,0.12); color: #ffb5a0; font-size: 0.82rem; font-weight: 600; cursor: pointer; font-family: inherit; transition: background 0.2s ease, transform 0.15s ease; }
+      .chat-chip:hover { background: rgba(217,93,57,0.22); transform: translateY(-1px); }
+      .chat-text-row { display: flex; gap: 0.5rem; }
+      .chat-text-row input { flex: 1; padding: 0.65rem 0.85rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); color: #e5e2e3; font-family: inherit; font-size: 0.92rem; }
+      .chat-text-row input:focus { outline: none; border-color: rgba(217,93,57,0.5); box-shadow: 0 0 0 3px rgba(217,93,57,0.15); }
+      .chat-send-btn, #chat-send { padding: 0.65rem 1rem; border: 1px solid rgba(217,93,57,0.35); border-radius: 12px; background: rgba(217,93,57,0.2); color: #ffb5a0; font-weight: 700; font-size: 0.88rem; cursor: pointer; font-family: inherit; }
+      .chat-send-btn:hover, #chat-send:hover { background: rgba(217,93,57,0.32); }
+      .chat-wa-btn { display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 0.8rem 1rem; border: 0; border-radius: 14px; background: #25d366; color: #fff; font-weight: 700; font-size: 0.95rem; cursor: pointer; font-family: inherit; text-decoration: none; box-shadow: 0 8px 20px rgba(37,211,102,0.35); }
+      .chat-wa-btn:hover { transform: translateY(-2px); }
+      .chat-progress { height: 3px; background: rgba(255,255,255,0.08); }
+      .chat-progress-bar { height: 100%; background: linear-gradient(90deg, #d95d39, #ffb5a0); transition: width 0.4s ease; width: 0; }
+      .chat-launcher { width: 58px; height: 58px; border: 1px solid rgba(255,255,255,0.15); border-radius: 50%; cursor: pointer; display: grid; place-items: center; background: rgba(217,93,57,0.18); backdrop-filter: blur(16px); box-shadow: 0 8px 24px rgba(0,0,0,0.35), 0 0 20px rgba(217,93,57,0.2); color: #fff; position: relative; transition: transform 0.2s ease; }
+      .chat-launcher:hover { transform: translateY(-3px) scale(1.05); }
+      .chat-launcher-pulse { position: absolute; inset: -4px; border-radius: 50%; border: 2px solid rgba(217,93,57,0.45); animation: chat-pulse 2.5s ease-out infinite; pointer-events: none; }
+      @keyframes chat-pulse { 0% { transform: scale(1); opacity: 0.7; } 70% { transform: scale(1.25); opacity: 0; } 100% { transform: scale(1.25); opacity: 0; } }
+      .chat-launcher-label { position: absolute; right: calc(100% + 0.65rem); white-space: nowrap; padding: 0.45rem 0.75rem; border-radius: 10px; background: rgba(32,31,32,0.95); border: 1px solid rgba(255,255,255,0.1); color: #e5e2e3; font-size: 0.78rem; opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; transform: translateX(8px); }
+      .chat-launcher:hover .chat-launcher-label, .chat-launcher:focus-visible .chat-launcher-label { opacity: 1; transform: translateX(0); }
+      @media (max-width: 480px) { .chat-launcher-label { display: none; } .chat-panel { width: calc(100vw - 1.7rem); } }
       @media (prefers-reduced-motion: reduce) {
-        .reveal {
-          opacity: 1;
-          transform: none;
-          transition: none;
-        }
+        html { scroll-behavior: auto; }
+        .parallax-target, .floating-anim { transform: none !important; animation: none !important; }
+        .reveal-left, .reveal-right, .glass-card { opacity: 1 !important; transform: none !important; transition: none !important; }
+        .chat-launcher-pulse, .chat-msg { animation: none !important; }
+        .liquid-glass-btn::after { transition: none !important; }
+        video { display: none; }
       }
 
-      /* ---------- Responsive ---------- */
-      @media (max-width: 900px) {
-        .grid-4,
-        .grid-3,
-        .steps {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .contact-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 720px) {
-        .nav-links {
-          position: fixed;
-          inset: var(--nav-h) 0 auto 0;
-          flex-direction: column;
-          align-items: stretch;
-          gap: 0;
-          background: rgba(255, 253, 251, 0.98);
-          backdrop-filter: blur(24px);
-          border-bottom: 1px solid var(--glass-border);
-          padding: 0.5rem 1.25rem 1.25rem;
-          transform: translateY(-150%);
-          transition: transform 0.3s var(--ease);
-        }
-        .nav-links.open {
-          transform: translateY(0);
-        }
-        .nav-links a {
-          padding: 0.9rem 0.25rem;
-          font-size: 1.02rem;
-          border-bottom: 1px solid var(--glass-border);
-        }
-        .nav-links a:last-child {
-          border-bottom: 0;
-        }
-        .nav-cta {
-          margin-top: 0.85rem;
-          justify-content: center;
-          padding-block: 0.75rem;
-        }
-        .nav-toggle {
-          display: flex;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .grid-4,
-        .grid-3,
-        .steps {
-          grid-template-columns: 1fr;
-        }
-        .hero-stats {
-          grid-template-columns: 1fr;
-          gap: 0.85rem;
-        }
-        .about-grid {
-          grid-template-columns: 1fr;
-          text-align: center;
-          justify-items: center;
-        }
-      }
     </style>
   </head>
-  <body>
-    <div class="bg-aurora" id="bg-aurora" aria-hidden="true">
-      <span class="bg-aurora__orb bg-aurora__orb--1"></span>
-      <span class="bg-aurora__orb bg-aurora__orb--2"></span>
-      <span class="bg-aurora__orb bg-aurora__orb--3"></span>
-    </div>
-    <a class="skip-link" href="#hero">דלג לתוכן הראשי</a>
-    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <body class="dark overflow-x-hidden">
+    <a class="skip-link" href="#main">דלג לתוכן הראשי</a>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" id="scroll-progress-bar"></div></div>
 
-    <header class="site-nav" role="banner">
-      <div class="nav-inner">
-        <a class="logo" href="#hero" dir="ltr" lang="en" aria-label="D Digital Studio — לראש העמוד">
-          <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-            <defs>
-              <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#ffb454" />
-                <stop offset="50%" stop-color="#ff924d" />
-                <stop offset="100%" stop-color="#ff7a59" />
-              </linearGradient>
-            </defs>
-            <rect width="32" height="32" rx="9" fill="none" stroke="url(#lg)" stroke-width="1.4" />
-            <path
-              fill="none"
-              stroke="url(#lg)"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M11.5 9.5v13h4.2c3.7 0 6.8-2.7 6.8-6.5s-3.1-6.5-6.8-6.5h-4.2z"
-            />
-          </svg>
-          <span class="logo-type">
-            <b>D Digital</b>
-            <span>Studio</span>
-          </span>
-        </a>
-
-        <nav class="nav-links" id="nav-links" aria-label="ניווט ראשי">
-          <a href="#works">עבודות</a>
-          <a href="#about">אודות</a>
-          <a href="#process">תהליך</a>
-          <a href="#pricing">שירותים</a>
-          <a href="#faq">שאלות</a>
-          <a class="nav-cta" href="#contact">צור קשר</a>
-        </nav>
-
-        <button
-          class="nav-toggle"
-          id="nav-toggle"
-          type="button"
-          aria-label="פתיחת תפריט"
-          aria-expanded="false"
-          aria-controls="nav-links"
-        >
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </header>
-
-    <main>
-      <!-- Hero -->
-      <section class="hero" id="hero">
-        <div class="container hero-inner">
-          <span class="eyebrow">D Digital Studio · דביר</span>
-          <h1>
-            אתרים, אוטומציות ובוטים<br />
-            שמביאים לעסק שלך <span class="accent-text">יותר לקוחות</span>
-          </h1>
-          <p class="hero-sub">
-            אני בונה אתרים מודרניים, דפי נחיתה ממירים, אוטומציות שחוסכות זמן ובוטים מבוססי AI שעובדים
-            בשבילך 24/7 — משלב האפיון ועד עלייה לאוויר.
-          </p>
-
-          <div class="hero-services reveal" aria-label="השירותים שאני מציע">
-            <a class="hero-service" href="#pricing">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="16" rx="2" />
-                <path d="M3 9h18" />
-              </svg>
-              אתרי תדמית
-            </a>
-            <a class="hero-service" href="#pricing">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                <circle cx="12" cy="12" r="9" />
-                <circle cx="12" cy="12" r="4.5" />
-                <circle cx="12" cy="12" r="0.8" fill="currentColor" stroke="none" />
-              </svg>
-              דפי נחיתה
-            </a>
-            <a class="hero-service" href="#pricing">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                <path d="M13 2 4 14h6l-1 8 9-12h-6z" stroke-linejoin="round" />
-              </svg>
-              אוטומציות
-            </a>
-            <a class="hero-service" href="#pricing">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                <rect x="4" y="7" width="16" height="11" rx="3" />
-                <path d="M12 7V4" />
-                <circle cx="9" cy="12.5" r="1.1" fill="currentColor" stroke="none" />
-                <circle cx="15" cy="12.5" r="1.1" fill="currentColor" stroke="none" />
-                <path d="M9 18l-2 3M15 18l2 3" />
-              </svg>
-              בוטים · AI
-            </a>
-          </div>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">קביעת שיחת היכרות</a>
-            <a class="btn btn-secondary" href="#works">לצפייה בעבודות</a>
-          </div>
-          <p class="hero-tel">או בחיוג ישיר: <a href="tel:+972525240271">052-524-0271</a></p>
-
-          <div class="hero-stats reveal">
-            <div class="hero-stat">
-              <strong>24 שעות</strong>
-              <span>זמן מענה מקסימלי לפניות — בדרך כלל הרבה לפני.</span>
-            </div>
-            <div class="hero-stat">
-              <strong>7–21 ימים</strong>
-              <span>מהאפיון ועד אתר חי באוויר, תלוי בהיקף.</span>
-            </div>
-            <div class="hero-stat">
-              <strong>24/7</strong>
-              <span>בוטים ואוטומציות שעובדים גם כשאתה ישן.</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Works -->
-      <section class="section section--alt" id="works">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">עבודות נבחרות</span>
-            <h2 class="section-title">פרויקטים שמגדירים סטנדרט</h2>
-            <p class="section-lead">כל פרויקט ממוקד במטרה אחת: להפוך מבקרים ללקוחות.</p>
-          </div>
-          <div class="grid grid-4">
-            <article class="work-card reveal">
-              <div class="work-media">
-                <img
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80"
-                  width="900"
-                  height="563"
-                  loading="lazy"
-                  decoding="async"
-                  alt="לוח בקרה ואנליטיקה — אתר תדמית לחברת שירותים"
-                />
-              </div>
-              <div class="work-body">
-                <span class="tag">אתר תדמית</span>
-                <h3>אתר תדמית לחברת שירותים</h3>
-                <p>אתר מהיר עם אזורי תוכן דינמיים ומראה ייצוגי ונקי.</p>
-                <a class="btn-ghost" href="#contact">בקשו פרויקט דומה ←</a>
-              </div>
-            </article>
-
-            <article class="work-card reveal">
-              <div class="work-media">
-                <img
-                  src="https://images.unsplash.com/photo-1555421689-d68471e189f2?w=900&q=80"
-                  width="900"
-                  height="563"
-                  loading="lazy"
-                  decoding="async"
-                  alt="צוות סביב מסך — דף נחיתה לקמפיין"
-                />
-              </div>
-              <div class="work-body">
-                <span class="tag">דף נחיתה</span>
-                <h3>דף נחיתה לקמפיין</h3>
-                <p>פוקוס על הנעה לפעולה, אופטימיזציה לניידים ושיפור המרה.</p>
-                <a class="btn-ghost" href="#contact">בקשו פרויקט דומה ←</a>
-              </div>
-            </article>
-
-            <article class="work-card reveal">
-              <div class="work-media">
-                <img
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80"
-                  width="900"
-                  height="563"
-                  loading="lazy"
-                  decoding="async"
-                  alt="שיתוף פעולה בפרויקט — מיתוג דיגיטלי לעסק"
-                />
-              </div>
-              <div class="work-body">
-                <span class="tag">מיתוג</span>
-                <h3>מיתוג דיגיטלי לעסק</h3>
-                <p>שפה ויזואלית אחידה עם חוויית משתמש נקייה וברורה.</p>
-                <a class="btn-ghost" href="#contact">בקשו פרויקט דומה ←</a>
-              </div>
-            </article>
-
-            <article class="work-card reveal">
-              <div class="work-media">
-                <img
-                  src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=900&q=80"
-                  width="900"
-                  height="563"
-                  loading="lazy"
-                  decoding="async"
-                  alt="בוט וואטסאפ ואוטומציה — פתרון AI לעסק"
-                />
-              </div>
-              <div class="work-body">
-                <span class="tag">בוט / AI</span>
-                <h3>בוט וואטסאפ ואוטומציה</h3>
-                <p>בוט מבוסס AI שמקבל לידים, עונה ללקוחות ומתאם פגישות.</p>
-                <a class="btn-ghost" href="#contact">בקשו פרויקט דומה ←</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- About -->
-      <section class="section" id="about">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">הסיפור שלי</span>
-            <h2 class="section-title">מי עומד מאחורי הקוד</h2>
-          </div>
-          <div class="about-grid reveal">
-            <div class="about-avatar" aria-hidden="true">ד</div>
-            <div class="about-text">
-              <p>
-                אני דביר, מפתח ומעצב ממשקים — מתמחה באתרי תדמית, דפי נחיתה, אוטומציות ובוטים שחוסכים
-                זמן לעסק. אני מאמין בשקיפות: זמנים משוערים, מה כלול בחבילה, ואיך נדע שהפרויקט הצליח.
-              </p>
-              <p>
-                כל פרויקט נבנה סביב המטרה שלך — יותר פניות, יותר סדר במערכות, או נוכחות מקצועית שתואמת
-                את מה שהלקוחות שלך מצפים לראות לפני שהם פונים.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Process -->
-      <section class="section section--alt" id="process">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">איך זה עובד</span>
-            <h2 class="section-title">איך נעבוד ביחד</h2>
-            <p class="section-lead">תהליך מסודר כדי שתדעו מה קורה בכל שלב — בלי הפתעות.</p>
-          </div>
-          <div class="steps">
-            <div class="step reveal">
-              <div class="step-num" aria-hidden="true"></div>
-              <h3>אפיון ומטרות</h3>
-              <p>שיחה קצרה, הבנת קהל יעד והמרה רצויה — מגדירים יחד מה צריך להשיג.</p>
-            </div>
-            <div class="step reveal">
-              <div class="step-num" aria-hidden="true"></div>
-              <h3>עיצוב וחוויה</h3>
-              <p>מבנה עמודים, טיפוגרפיה וצבעים שמשרתים את המותג — לפני הפיתוח.</p>
-            </div>
-            <div class="step reveal">
-              <div class="step-num" aria-hidden="true"></div>
-              <h3>פיתוח ובדיקות</h3>
-              <p>בנייה מהירה ונקייה, התאמה לנייד, בדיקות טפסים וקישורים.</p>
-            </div>
-            <div class="step reveal">
-              <div class="step-num" aria-hidden="true"></div>
-              <h3>עלייה וליווי</h3>
-              <p>חיבור דומיין, ניטור בסיסי והדרכה קצרה. נשארים בקשר אחרי השקה.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sectors -->
-      <section class="section" id="sectors">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">למי זה מתאים</span>
-            <h2 class="section-title">עם מי אני עובד הכי טוב</h2>
-            <p class="section-lead">
-              אם אתם נופלים לאחת הקטגוריות — סביר שיש לנו שפה משותפת ותהליך שיעבוד גם אצלכם.
+<!-- Background Layers -->
+<div class="fixed inset-0 z-[-2]">
+<div class="absolute inset-0 bg-surface-dim"></div>
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d95d39_1px,transparent_1px)] [background-size:40px_40px]"></div>
+</div>
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface-glass backdrop-blur-3xl border-b border-glass">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<a href="#" class="flex items-center gap-3 magnetic-link" aria-label="D Digital Studio">
+<div class="w-10 h-10"><img alt="D Digital Studio Logo" class="w-full h-full object-contain" src="favicon.svg" /></div>
+<div class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface tracking-tighter">D Digital Studio</div>
+</a>
+<div class="hidden md:flex space-x-12 space-x-reverse nav-desktop-links" aria-label="ניווט ראשי">
+<a class="magnetic-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="#protocol">הפרוטוקול האסטרטגי</a>
+<a class="magnetic-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="#work">תיק עבודות</a>
+<a class="magnetic-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="#philosophy">החזון שלנו</a>
+<a class="magnetic-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="#contact">צרו קשר</a>
+</div>
+<div class="flex items-center gap-3">
+<a href="#contact" class="hidden md:inline-flex liquid-glass-btn text-white px-6 py-2 rounded-full font-button-text text-button-text border border-white/10 magnetic-link">הפעלת סריקת מערכות</a>
+<button type="button" class="nav-mobile-only" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="פתיחת תפריט"><span></span><span></span><span></span></button>
+</div>
+</div>
+<div class="nav-mobile-only px-gutter max-w-container-max mx-auto" id="nav-links" aria-label="ניווט ראשי">
+<a class="magnetic-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps block py-3" href="#protocol">הפרוטוקול האסטרטגי</a>
+<a class="magnetic-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps block py-3" href="#work">תיק עבודות</a>
+<a class="magnetic-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps block py-3" href="#philosophy">החזון שלנו</a>
+<a class="magnetic-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps block py-3" href="#contact">צרו קשר</a>
+</div>
+</nav>
+<main id="main" class="relative">
+<!-- Hero Section -->
+<section class="relative pt-40 pb-20 md:pt-64 md:pb-40 overflow-hidden min-h-screen flex items-center">
+<div class="absolute inset-0 z-[-1]">
+<video autoplay="" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale contrast-125" loop="" muted="" playsinline="">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-data-center-server-room-4467-large.mp4" type="video/mp4"/>
+</video>
+<div class="absolute inset-0 video-overlay"></div>
+</div>
+<div class="relative px-gutter max-w-container-max mx-auto text-center parallax-target">
+<span class="inline-block px-4 py-1.5 rounded-full border border-primary/30 text-primary bg-primary/5 font-label-caps text-label-caps mb-8 tracking-[0.3em] uppercase">
+                הנדסת ביצועים ודיוק טכנולוגי
+            </span>
+<h1 class="font-display-lg text-display-lg md:text-[92px] md:leading-[1] mb-8 max-w-5xl mx-auto tracking-tighter font-extrabold uppercase">
+                אופטימיזציה עסקית דרך <span class="text-primary text-glow-orange italic">דיוק בנתונים</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mb-12 text-lg leading-relaxed opacity-80">
+                אנו מחדירים משמעת טכנולוגית לליבת הארגון. אוטומציה ב-D Digital Studio אינה רק כלי; היא הפרוטוקול לשחרור פוטנציאל עסקי מקסימלי וביצועי עילית חסרי פשרות.
             </p>
-          </div>
-          <ul class="sectors reveal">
-            <li>עוסקים מורשים ועסקים קטנים</li>
-            <li>חברות שירותים וסוכנויות</li>
-            <li>סטארטאפים בשלב MVP</li>
-            <li>קמפיינים שצריכים דף נחיתה חד</li>
-          </ul>
-        </div>
-      </section>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<a href="#contact" class="w-full md:w-auto liquid-glass-btn text-white px-12 py-5 rounded-full font-label-caps text-label-caps tracking-widest font-bold text-lg border border-white/10 text-center magnetic-link">הפעלת ביקורת מערכות</a>
+<a href="#protocol" class="w-full md:w-auto px-12 py-5 rounded-full border border-glass font-label-caps text-label-caps tracking-widest font-bold text-lg hover:bg-white/5 transition-all text-center magnetic-link">אימוץ הפרוטוקול</a>
+</div>
+</div>
+</section>
+<!-- The Discipline-Automation Protocol -->
+<section class="py-stack-lg relative border-y border-glass" id="protocol">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="mb-24 text-center max-w-3xl mx-auto">
+<span class="text-primary font-label-caps text-label-caps tracking-widest mb-4 block">מסגרת הליבה</span>
+<h2 class="font-display-lg text-display-lg mb-6">פרוטוקול משמעת-אוטומציה</h2>
+<p class="text-on-surface-variant font-body-md">גישה סטואית לייעול מערכות: הסרת המיותר, זיקוק הקיים, ואוטומציה של ההכרחי לטובת צמיחה אקספוננציאלית.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Data Sets / Web Development -->
+<div class="glass-card p-12 rounded-2xl relative overflow-hidden group">
+<div class="absolute inset-0 z-[-1] opacity-20">
+<video autoplay="" class="w-full h-full object-cover" loop="" muted="" playsinline="">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-blue-data-clouds-and-numbers-34538-large.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'wght' 200;">database</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile mb-4 tracking-tight uppercase">לוגיקה מבוססת נתונים</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                        פיתוח אתרי תדמית ודפי נחיתה עם דגש על יחסי המרה. אנו הופכים נתונים גולמיים לאסטרטגיית פעולה מבוססת הוכחות, תוך ניטרול רעשים.
+                    </p>
+</div>
+<!-- Bio-Performance (Automation) -->
+<div class="glass-card p-12 rounded-2xl relative overflow-hidden group border-primary/20 bg-primary/5">
+<div class="absolute inset-0 z-[-1] opacity-30">
+<video autoplay="" class="w-full h-full object-cover" loop="" muted="" playsinline="">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-41440-large.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'wght' 200;">bolt</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile mb-4 tracking-tight uppercase">ביצועי-על תפעוליים</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                        סוכני AI ואוטומציות הפועלים בדיוק של שעון שוויצרי. אוטומציה המשתלטת על משימות שוחקות ומבטיחה ביצועים רציפים 24/7.
+                    </p>
+</div>
+<!-- Skill-Based Growth / AI Bots -->
+<div class="glass-card p-12 rounded-2xl relative overflow-hidden group">
+<div class="absolute inset-0 z-[-1] opacity-20">
+<video autoplay="" class="w-full h-full object-cover" loop="" muted="" playsinline="">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-artificial-intelligence-neural-network-animation-34536-large.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'wght' 200;">trending_up</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile mb-4 tracking-tight uppercase">בוטים חכמים ו-AI</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                        צמיחה דרך עליונות טכנית. אנו בונים בוטים לומדים המסתגלים ומשתפרים ככל שהם מעבדות יותר אינטראקציות ונתונים בזמן אמת.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Selected Work: Video Bento -->
+<section class="py-stack-lg bg-surface-container-low/20" id="work">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-20">
+<div class="max-w-2xl text-right">
+<span class="text-primary font-label-caps text-label-caps tracking-widest mb-4 block">יומני ביצוע</span>
+<h2 class="font-display-lg text-display-lg mb-4">הוכחת ביצוע (Proof of Execution)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">הנדסה עילית של פתרונות אוטומציה בזמן אמת עבור ארגונים מובילים בשוק הגלובלי.</p>
+</div>
+</div>
+<div class="bento-grid">
+<!-- Project 1: Enterprise Portal -->
+<div class="col-span-12 md:col-span-8 relative h-[450px] rounded-2xl overflow-hidden group border border-glass">
+<video autoplay="" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" loop="" muted="" playsinline="">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-dashboard-on-a-monitor-screen-34537-large.mp4" type="video/mp4"/>
+</video>
+<div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent z-10"></div>
+<div class="absolute bottom-0 right-0 p-12 z-20 text-right">
+<span class="font-label-caps text-label-caps text-primary mb-3 block tracking-widest">ליבה ארגונית</span>
+<h4 class="font-headline-lg text-headline-lg mb-3 text-white">מערך פיקוד שירות גלובלי</h4>
+<p class="font-body-sm text-body-sm text-white/60 max-w-md">פורטלים ארגוניים המנהלים זרימת נתונים חוצת יבשות בדיוק מוחלט ומהירות שיא.</p>
+</div>
+</div>
+<!-- Project 2: AI Bot -->
+<div class="col-span-12 md:col-span-4 glass-card p-10 rounded-2xl flex flex-col justify-center text-right border-none bg-surface-container-high/40 relative overflow-hidden group">
+<div class="absolute inset-0 z-[-1] opacity-0 group-hover:opacity-40 transition-opacity">
+<video autoplay="" class="w-full h-full object-cover" loop="" muted="" playsinline="">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-man-working-at-a-computer-34539-large.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="w-24 h-24 mb-8 text-primary opacity-90 mx-auto md:mx-0">
+<img alt="AI Agent" class="w-full h-full object-contain" src="favicon.svg"/>
+</div>
+<span class="font-label-caps text-label-caps text-primary mb-4 block tracking-widest">פרוטוקול AI</span>
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile mb-4">סוכן WhatsApp קוגניטיבי</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-8 leading-relaxed">
+                        סוכן AI מתקדם המנהל משא ומתן, תזמון וסגירת עסקאות באופן אוטונומי לחלוטין.
+                    </p>
+<button class="flex items-center space-x-2 space-x-reverse text-primary font-bold group w-fit">
+<span class="group-hover:-translate-x-1 transition-transform uppercase text-sm tracking-widest">בקשת ביקורת מערכת</span>
+<span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform">arrow_back</span>
+</button>
+</div>
+<!-- Project 3: Metrics -->
+<div class="col-span-12 md:col-span-5 relative h-[350px] rounded-2xl overflow-hidden group border border-glass">
+<video autoplay="" class="absolute inset-0 w-full h-full object-cover opacity-20" loop="" muted="" playsinline="">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-close-up-of-a-keyboard-and-mouse-being-used-41444-large.mp4" type="video/mp4"/>
+</video>
+<div class="absolute inset-0 p-10 flex flex-col justify-end text-right">
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile mb-2">מינוף ביצועים</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">השגת 300% ROI דרך הנדסת משפכי המרה אוטומטיים ומבוססי נתונים קשיחים.</p>
+<div class="h-20 flex items-end gap-2 mt-6 flex-row-reverse">
+<div class="w-full bg-primary/20 h-1/3 rounded-t-sm"></div>
+<div class="w-full bg-primary/40 h-2/3 rounded-t-sm"></div>
+<div class="w-full bg-primary/60 h-1/2 rounded-t-sm"></div>
+<div class="w-full bg-primary h-full rounded-t-sm shadow-[0_0_20px_rgba(217,93,57,0.4)]"></div>
+</div>
+</div>
+</div>
+<!-- Project 4: Philosophy -->
+<div class="col-span-12 md:col-span-7 relative h-[350px] rounded-2xl overflow-hidden group border border-glass">
+<video autoplay="" class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale group-hover:scale-105 transition-transform duration-1000" loop="" muted="" playsinline="">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-white-robot-arm-moving-against-a-black-background-41443-large.mp4" type="video/mp4"/>
+</video>
+<div class="absolute inset-0 bg-black/60 backdrop-blur-[1px] p-12 flex flex-col justify-center text-right">
+<span class="text-primary font-label-caps text-label-caps tracking-[0.4em] mb-4">הפילוסופיה של D DIGITAL STUDIO</span>
+<h4 class="font-display-lg text-[32px] text-white uppercase tracking-tighter">יעילות קיצונית. משמעת מוחלטת.</h4>
+<p class="font-body-sm text-body-sm max-w-lg mt-4 text-white/70 leading-relaxed">אנחנו לא רק כותבים קוד. אנחנו בונים מינוף אסטרטגי המבוסס על משמעת טכנולוגית ללא פשרות עבור הלקוחות שלנו.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="py-stack-lg relative bg-background overflow-hidden" id="philosophy">
+<div class="px-gutter max-w-container-max mx-auto relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="text-right">
+<span class="text-primary font-label-caps text-label-caps tracking-[0.3em] mb-6 block">אדריכל מערכות</span>
+<h2 class="font-display-lg text-display-lg mb-8 leading-[1.1] uppercase">משמעת פוגשת <span class="text-primary italic">מינוף</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 leading-relaxed opacity-80">
+                        שלום, אני דביר, האדריכל שעומד מאחורי D Digital Studio. התפיסה שלי ברורה: המערכות שלכם צריכות להוות הרחבה ישירה של כוח הרצון העסקי שלכם. אנו בונים חוסן דיגיטלי דרך הנדסה מדויקת ופרוטוקולי ביצוע של יחידות עילית.
+                    </p>
+<div class="space-y-8">
+<div class="flex items-start gap-5 flex-row-reverse">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mt-1 shrink-0 border border-primary/20">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h4 class="font-headline-lg-mobile text-[20px] mb-2 uppercase tracking-tight">סטנדרט ביצוע מבצעי</h4>
+<p class="text-on-surface-variant text-body-sm leading-relaxed">פריסה מבצעית מלאה תוך 7–21 ימים. ללא שיהוי, ללא תירוצים – רק תוצאות בשטח.</p>
+</div>
+</div>
+<div class="flex items-start gap-5 flex-row-reverse">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mt-1 shrink-0 border border-primary/20">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+<div>
+<h4 class="font-headline-lg-mobile text-[20px] mb-2 uppercase tracking-tight">אופטימיזציה סטואית</h4>
+<p class="text-on-surface-variant text-body-sm leading-relaxed">שיפור מתמיד המבוסס על ניתוח נתונים קרים בלבד. המערכות שלנו מתפתחות בקצב השוק המשתנה.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="aspect-square glass-card rounded-full flex items-center justify-center border-primary/20 p-12 shadow-2xl relative overflow-hidden">
+<div class="absolute inset-0 opacity-20 z-0">
+<video autoplay="" class="w-full h-full object-cover" loop="" muted="" playsinline="">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-blue-abstract-particle-background-2506-large.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="w-full h-full rounded-full bg-surface-container-high/80 backdrop-blur-xl relative z-10 flex flex-col items-center justify-center border border-glass">
+<div class="w-32 h-32 mb-4">
+<img alt="D Digital Studio Logo" class="w-full h-full object-contain" src="favicon.svg"/>
+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant tracking-[0.5em] uppercase opacity-60">D Digital Studio</div>
+</div>
+</div>
+<!-- Mascot Floating Presence -->
+<div class="absolute -bottom-10 -left-10 w-48 h-48 parallax-target opacity-80 filter drop-shadow-[0_0_30px_rgba(217,93,57,0.3)] floating-anim">
+<!-- STITCH_SVG_START:ANIMATION_21 class="" --><div id="animated-svg-ANIMATION_21" class="" style="display:block;width:100%;height:100%;min-height:200px;"><svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(2deg); }
+    }
+    @keyframes wave {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(-25deg); }
+    }
+    @keyframes blink {
+      0%, 90%, 100% { transform: scaleY(1); }
+      95% { transform: scaleY(0.1); }
+    }
+    .mascot-body { animation: float 4s ease-in-out infinite; transform-origin: center; }
+    .waving-arm { animation: wave 1.5s ease-in-out infinite; transform-origin: 145px 120px; }
+    .eye { animation: blink 4s infinite; transform-origin: center; }
+  </style>
+  <g class="mascot-body">
+    <!-- Body -->
+    <rect x="60" y="30" width="80" height="140" rx="15" fill="#1c1b1c" stroke="#d95d39" stroke-width="2"/>
+    <rect x="65" y="40" width="70" height="110" rx="10" fill="#2c2b2c"/>
+    
+    <!-- Eyes -->
+    <circle class="eye" cx="85" cy="70" r="6" fill="#fff"/>
+    <circle class="eye" cx="115" cy="70" r="6" fill="#fff"/>
+    
+    <!-- Smile -->
+    <path d="M 85 95 Q 100 110 115 95" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Waving Arm -->
+    <g class="waving-arm">
+      <path d="M 140 100 Q 155 90 165 70" fill="none" stroke="#d95d39" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="165" cy="70" r="8" fill="#d95d39"/>
+    </g>
+    
+    <!-- Other Arm -->
+    <path d="M 60 100 Q 45 110 35 130" fill="none" stroke="#d95d39" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="35" cy="130" r="8" fill="#d95d39"/>
+  </g>
+</svg></div><!-- STITCH_SVG_END:ANIMATION_21 -->
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Contact -->
+<section class="py-stack-lg relative overflow-hidden" id="contact">
+<div class="px-gutter max-w-container-max mx-auto relative z-10">
+<div class="max-w-4xl mx-auto glass-card rounded-3xl p-10 md:p-20 overflow-hidden border-primary/20">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+<div class="text-right order-1 md:order-2">
+<h2 class="font-display-lg text-display-lg mb-8 uppercase tracking-tighter leading-tight">מוכנים ל- <span class="text-primary italic">Scale?</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 leading-relaxed opacity-80">
+                            מלאו את שאלון האבחון המהיר. אנו ננתח את צווארי הבקבוק שלכם ונציג פרוטוקול צמיחה מבוסס נתונים תוך 24 שעות בלבד.
+                        </p>
+<div class="space-y-6">
+<div class="flex items-center gap-5 text-on-surface flex-row-reverse group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center border border-glass group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary">phone</span>
+</div>
+<a href="tel:+972525240271" class="font-code-sm text-lg tracking-widest hover:text-primary transition-colors">052-524-0271</a>
+</div>
+<div class="flex items-center gap-5 text-on-surface flex-row-reverse group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center border border-glass group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<span class="font-code-sm text-lg tracking-tight">hello@ddigital.studio</span>
+</div>
+</div>
+</div>
+<div class="order-2 md:order-1 relative z-10">
+<form id="contact-form" class="space-y-6" autocomplete="on">
+<input id="company-url" class="hp-field" type="text" name="company_url" tabindex="-1" autocomplete="off" aria-hidden="true" />
+<div class="text-right">
+<label class="font-label-caps text-label-caps mb-3 block opacity-60 tracking-widest uppercase" for="project-type">דרישת מערכת</label>
+<select id="project-type" name="projectType" required class="w-full bg-surface-container-low/50 border border-glass rounded-xl p-4 text-on-surface focus:border-primary outline-none appearance-none cursor-pointer">
+<option value="" disabled selected>בחרו סוג פרויקט</option>
+<option value="automation">פרוטוקול אוטומציה עסקית</option>
+<option value="enterprise">הנדסת פלטפורמות Enterprise</option>
+<option value="ai">הטמעת AI קוגניטיבי</option>
+<option value="consulting">ייעוץ ביצועים אסטרטגי</option>
+</select>
+</div>
+<div class="text-right">
+<label class="font-label-caps text-label-caps mb-3 block opacity-60 tracking-widest uppercase" for="name">זהות מפעיל</label>
+<input id="name" name="name" class="w-full bg-surface-container-low/50 border border-glass rounded-xl p-4 text-on-surface focus:border-primary outline-none text-right transition-all" placeholder="שם מלא / חברה" type="text" required />
+</div>
+<div class="text-right">
+<label class="font-label-caps text-label-caps mb-3 block opacity-60 tracking-widest uppercase" for="phone">קו תקשורת</label>
+<input id="phone" name="phone" class="w-full bg-surface-container-low/50 border border-glass rounded-xl p-4 text-on-surface focus:border-primary outline-none text-right transition-all" placeholder="050-0000000" type="tel" inputmode="tel" required />
+</div>
+<div class="text-right">
+<label class="font-label-caps text-label-caps mb-3 block opacity-60 tracking-widest uppercase" for="budget">הקצאת משאבים חודשית</label>
+<select id="budget" name="budget" class="w-full bg-surface-container-low/50 border border-glass rounded-xl p-4 text-on-surface focus:border-primary outline-none appearance-none cursor-pointer">
+<option value="" selected>בחרו טווח תקציב</option>
+<option value="3to8">₪3,000 – ₪8,000</option>
+<option value="8to15">₪8,000 – ₪15,000</option>
+<option value="15plus">₪15,000+</option>
+</select>
+</div>
+<button class="w-full liquid-glass-btn text-white py-5 rounded-xl font-bold transition-all text-lg tracking-widest uppercase border border-white/10" type="submit">הפעלת בקשת ביקורת</button>
+<p class="text-on-surface-variant text-body-sm opacity-70 text-center">השליחה תפתח וואטסאפ עם סיכום הפרטים — ניתן לערוך לפני שליחה. <a href="privacy.html" class="text-primary hover:underline">מדיניות פרטיות</a></p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-dim w-full py-stack-md border-t border-glass">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-sm px-gutter max-w-container-max mx-auto items-center">
+<div class="text-right">
+<div class="flex items-center gap-3 mb-2 justify-end">
+<div class="w-8 h-8 opacity-90"><img alt="D Digital Studio Logo Small" class="w-full h-full object-contain" src="favicon.svg" /></div>
+<div class="font-headline-lg-mobile text-xl font-bold text-on-surface tracking-tighter">D Digital Studio</div>
+</div>
+<div class="font-body-sm text-body-sm text-text-muted opacity-60">© <span id="footer-year"></span> דביר — בניית אתרים, אוטומציות ובוטים</div>
+</div>
+<div class="flex flex-wrap md:justify-start gap-x-12 gap-y-4">
+<a class="text-text-muted hover:text-primary transition-colors font-label-caps text-[11px] tracking-widest uppercase" href="#contact">צור קשר</a>
+<a class="text-text-muted hover:text-primary transition-colors font-label-caps text-[11px] tracking-widest uppercase" href="privacy.html">מדיניות פרטיות</a>
+<a class="text-text-muted hover:text-primary transition-colors font-label-caps text-[11px] tracking-widest uppercase" href="tel:+972525240271">052-524-0271</a>
+<a class="text-text-muted hover:text-primary transition-colors font-label-caps text-[11px] tracking-widest uppercase" href="https://wa.me/972525240271" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+</div>
+</div>
+</footer>
 
-      <!-- Pricing -->
-      <section class="section section--alt" id="pricing">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">שירותים</span>
-            <h2 class="section-title">השירותים שאני מציע</h2>
-            <p class="section-lead">בוחרים את מה שמתאים — ומקבלים הצעת מחיר אישית תוך 24 שעות.</p>
-          </div>
-          <div class="grid grid-4">
-            <article class="price-card reveal">
-              <h3>אתרי תדמית</h3>
-              <p class="price-desc">אתר ייצוגי מלא לעסק עם מיתוג ייחודי וביצועים גבוהים.</p>
-              <ul class="price-list">
-                <li>עיצוב מותאם אישית</li>
-                <li>רספונסיביות מלאה למובייל</li>
-                <li>חיבור לטפסי יצירת קשר</li>
-              </ul>
-              <a
-                class="btn btn-secondary wa-quick-link"
-                data-wa-quick="site"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                >וואטסאפ — אתר תדמית</a
-              >
-            </article>
-
-            <article class="price-card reveal">
-              <h3>דפי נחיתה</h3>
-              <p class="price-desc">דפים ממוקדי המרה לקמפיינים עם מסרים ברורים ו־CTA חזק.</p>
-              <ul class="price-list">
-                <li>מבנה המכוון ללידים</li>
-                <li>טעינה מהירה ואופטימיזציה</li>
-                <li>התאמה לקידום ממומן</li>
-              </ul>
-              <a
-                class="btn btn-secondary wa-quick-link"
-                data-wa-quick="landing"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                >וואטסאפ — דף נחיתה</a
-              >
-            </article>
-
-            <article class="price-card reveal">
-              <h3>אוטומציות</h3>
-              <p class="price-desc">ייעול תהליכים עסקיים עם אינטגרציות וכלים שחוסכים זמן.</p>
-              <ul class="price-list">
-                <li>חיבור מערכות וטפסים</li>
-                <li>התראות ותהליכים אוטומטיים</li>
-                <li>שיפור זרימת העבודה</li>
-              </ul>
-              <a
-                class="btn btn-secondary wa-quick-link"
-                data-wa-quick="automation"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                >וואטסאפ — אוטומציות</a
-              >
-            </article>
-
-            <article class="price-card price-card--featured reveal">
-              <span class="price-badge">חדש · AI</span>
-              <h3>בוטים וצ'אטבוטים</h3>
-              <p class="price-desc">בוטים חכמים לוואטסאפ ולאתר — עונים, מתאמים פגישות ואוספים לידים.</p>
-              <ul class="price-list">
-                <li>בוט וואטסאפ / אתר מבוסס AI</li>
-                <li>מענה אוטומטי ותיאום פגישות</li>
-                <li>איסוף לידים וחיבור למערכות</li>
-              </ul>
-              <a
-                class="btn btn-primary wa-quick-link"
-                data-wa-quick="bot"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                >וואטסאפ — בוטים</a
-              >
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Tips -->
-      <section class="section" id="tips">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">לפני שמתחילים</span>
-            <h2 class="section-title">שלושה דברים שכדאי להחליט מראש</h2>
-            <p class="section-lead">חוסכים זמן וכסף בפרויקט.</p>
-          </div>
-          <div class="grid grid-3">
-            <article class="tip reveal">
-              <h3>מה המטרה העסקית?</h3>
-              <p>פניות בוואטסאפ, הרשמה לאירוע, או מיתוג? כשהמטרה ברורה — הכול נשען עליה.</p>
-            </article>
-            <article class="tip reveal">
-              <h3>תוכן אמיתי מנצח</h3>
-              <p>צילומים וטקסטים שלכם בשפה של הלקוח. אפשר לשפר ניסוח — אבל הבסיס מכם.</p>
-            </article>
-            <article class="tip reveal">
-              <h3>דומיין ומייל מקצועי</h3>
-              <p>כתובת ומייל תחת אותו דומיין מעלים אמון. אין עדיין? נעזור לבחור ולחבר.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section class="section section--alt" id="faq">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">שאלות נפוצות</span>
-            <h2 class="section-title">שאלות ותשובות</h2>
-          </div>
-          <div class="faq-list reveal">
-            <div class="faq-item">
-              <button class="faq-q" type="button" aria-expanded="false">
-                תוך כמה זמן אתר תדמית מוכן לאוויר?
-                <span class="faq-icon" aria-hidden="true"></span>
-              </button>
-              <div class="faq-a">
-                <p>ברוב המקרים בין 7 ל-21 ימי עבודה, תלוי בהיקף התוכן, עיצוב והתאמות מיוחדות.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-q" type="button" aria-expanded="false">
-                אפשר דף נחיתה עם חיבור ללידים ווואטסאפ?
-                <span class="faq-icon" aria-hidden="true"></span>
-              </button>
-              <div class="faq-a">
-                <p>כן. ניתן לחבר טפסים, וואטסאפ, אימייל והתראות אוטומטיות כך שכל ליד נכנס מיד לטיפול.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-q" type="button" aria-expanded="false">
-                מה כולל שירות אוטומציות לעסק?
-                <span class="faq-icon" aria-hidden="true"></span>
-              </button>
-              <div class="faq-a">
-                <p>אפיון תהליך, חיבור בין מערכות, יצירת פעולות אוטומטיות וחיסכון משמעותי בזמן עבודה.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-q" type="button" aria-expanded="false">
-                מה בוט מבוסס AI יכול לעשות לעסק שלי?
-                <span class="faq-icon" aria-hidden="true"></span>
-              </button>
-              <div class="faq-a">
-                <p>
-                  בוט חכם לוואטסאפ או לאתר עונה ללקוחות מסביב לשעון, משיב על שאלות נפוצות, מתאם פגישות
-                  ואוסף לידים ישירות למערכות שלך — כך שלא מפספסים פנייה גם מחוץ לשעות העבודה.
-                </p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-q" type="button" aria-expanded="false">
-                מה קורה לפרטים שאני משאיר בטופס?
-                <span class="faq-icon" aria-hidden="true"></span>
-              </button>
-              <div class="faq-a">
-                <p>
-                  הטופס בונה הודעה שתיפתח אצלך בוואטסאפ — אין שמירה בשרת של האתר. השימוש בפרטים הוא
-                  לחזרה אליך בלבד. <a href="privacy.html">מדיניות פרטיות מלאה</a>.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section class="section" id="contact">
-        <div class="container">
-          <div class="section-head reveal">
-            <span class="eyebrow">יצירת קשר</span>
-            <h2 class="section-title">בואו נתחיל לדבר</h2>
-            <p class="section-lead">
-              טופס קצר שמסנן רעש: נדע איזה פרויקט מתאים, מה התקציב ומתי דחוף — ונחזור עם הצעה ממוקדת
-              תוך 24 שעות.
-            </p>
-          </div>
-
-          <div class="contact-grid">
-            <div class="contact-aside reveal">
-              <h3>קביעת שיחה ביומן</h3>
-              <a class="btn btn-secondary" data-calendly-link href="#" target="_blank" rel="noopener noreferrer"
-                >קביעת שיחת היכרות</a
-              >
-              <p class="contact-note">מתאים כשרוצים חלון זמן קבוע — בלי להתכתב לפני.</p>
-
-              <h3>וואטסאפ מהיר לפי סוג פרויקט</h3>
-              <div class="wa-grid">
-                <a class="wa-quick-link" data-wa-quick="site" href="#" target="_blank" rel="noopener noreferrer">תדמית</a>
-                <a class="wa-quick-link" data-wa-quick="landing" href="#" target="_blank" rel="noopener noreferrer">דף נחיתה</a>
-                <a class="wa-quick-link" data-wa-quick="automation" href="#" target="_blank" rel="noopener noreferrer">אוטומציות</a>
-                <a class="wa-quick-link" data-wa-quick="bot" href="#" target="_blank" rel="noopener noreferrer">בוטים / AI</a>
-              </div>
-
-              <h3>בטלפון</h3>
-              <p class="contact-note"><a href="tel:+972525240271">052-524-0271</a></p>
-            </div>
-
-            <form id="contact-form" class="contact-form reveal" autocomplete="on">
-              <input
-                id="company-url"
-                class="hp-field"
-                type="text"
-                name="company_url"
-                tabindex="-1"
-                autocomplete="off"
-                aria-hidden="true"
-              />
-
-              <label for="project-type">סוג פרויקט</label>
-              <select id="project-type" name="projectType" required>
-                <option value="" disabled selected>בחרו — עוזר לנו להבין מה אתם צריכים</option>
-                <option value="site">אתר תדמית / פורטפוליו</option>
-                <option value="landing">דף נחיתה / קמפיין</option>
-                <option value="automation">אוטומציות / אינטגרציות</option>
-                <option value="bot">בוט / צ'אטבוט AI</option>
-                <option value="unsure">לא בטוחים — רוצים ייעוץ קצר</option>
-              </select>
-
-              <label for="name">שם מלא</label>
-              <input id="name" name="name" type="text" placeholder="השם שלך" required />
-
-              <label for="phone">טלפון (לחזרה והצעה)</label>
-              <input id="phone" name="phone" type="tel" placeholder="050-0000000" required inputmode="tel" />
-
-              <label for="business-name">שם העסק או התחום <span class="label-optional">(אופציונלי)</span></label>
-              <input id="business-name" name="businessName" type="text" placeholder="למשל: סטודיו לכושר" />
-
-              <label for="budget">תקציב משוער</label>
-              <select id="budget" name="budget">
-                <option value="" selected>בוחרים טווח — אפשר לשנות אחר כך</option>
-                <option value="up3">עד ₪3,000</option>
-                <option value="3to8">₪3,000–8,000</option>
-                <option value="8to15">₪8,000–15,000</option>
-                <option value="15plus">מעל ₪15,000</option>
-                <option value="unknown">עדיין לא יודעים</option>
-              </select>
-
-              <label for="timeline">לוח זמנים</label>
-              <select id="timeline" name="timeline">
-                <option value="" selected>מתי צריכים את זה חי? (אופציונלי)</option>
-                <option value="asap">בהקדם האפשרי</option>
-                <option value="month">תוך חודש</option>
-                <option value="flexible">גמיש</option>
-              </select>
-
-              <label for="site-need">מה צריך להשיג? (מטרות ותוכן)</label>
-              <textarea id="site-need" name="siteNeed" placeholder="למשל: לידים לוואטסאפ, תיאור השירות, דוגמאות לעבודות..." required></textarea>
-
-              <button class="btn btn-primary" type="submit">פתח וואטסאפ עם כל הפרטים</button>
-              <p class="form-hint">השליחה תפתח את וואטסאפ עם ההודעה שלך — אפשר לערוך לפני שליחה סופית.</p>
-              <p class="privacy-note">
-                הפרטים נועדו ליצירת קשר בלבד ולא יועברו לצד שלישי.
-                <a href="privacy.html">מדיניות פרטיות מלאה</a>
-              </p>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="footer-year"></span> דביר — בניית אתרים, אוטומציות ובוטים</p>
-        <!-- TODO: הוסף מייל ולינקדאין אמיתיים כשיהיו -->
-        <div class="footer-links">
-          <a href="#contact">צור קשר</a>
-          <a href="privacy.html">מדיניות פרטיות</a>
-          <a href="tel:+972525240271">052-524-0271</a>
-          <a href="https://wa.me/972525240271" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        </div>
-      </div>
-    </footer>
 
     <div class="chat-widget" id="chat-widget">
       <div class="chat-panel" id="chat-panel" role="dialog" aria-label="יועץ דיגיטלי" aria-hidden="true">
-        <div class="chat-progress" aria-hidden="true">
-          <div class="chat-progress-bar" id="chat-progress-bar" style="width: 0%"></div>
-        </div>
+        <div class="chat-progress" aria-hidden="true"><div class="chat-progress-bar" id="chat-progress-bar"></div></div>
         <header class="chat-header">
           <div class="chat-header-avatar" aria-hidden="true">ד</div>
-          <div class="chat-header-info">
-            <strong>דביר · D Digital Studio</strong>
-            <span class="chat-status">זמין · מענה תוך 24 שעות ⚡</span>
-          </div>
+          <div class="chat-header-info"><strong>דביר · D Digital Studio</strong><span class="chat-status">זמין · מענה תוך 24 שעות</span></div>
           <button type="button" class="chat-close" id="chat-close" aria-label="סגור צ'אט">×</button>
         </header>
         <div class="chat-messages" id="chat-messages" aria-live="polite"></div>
@@ -2692,67 +757,26 @@
           <div class="chat-quick-replies" id="chat-quick-replies"></div>
           <div class="chat-text-row" id="chat-text-row">
             <input type="text" id="chat-input" autocomplete="off" placeholder="הקלד/י כאן..." />
-            <button type="button" class="chat-send-btn" id="chat-send">שלח ➤</button>
+            <button type="button" class="chat-send-btn" id="chat-send">שלח</button>
           </div>
         </div>
       </div>
-      <button
-        type="button"
-        class="chat-launcher"
-        id="chat-launcher"
-        aria-label="פתח יועץ דיגיטלי"
-        aria-expanded="false"
-        aria-controls="chat-panel"
-      >
+      <button type="button" class="chat-launcher" id="chat-launcher" aria-label="פתח יועץ דיגיטלי" aria-expanded="false" aria-controls="chat-panel">
         <span class="chat-launcher-pulse" aria-hidden="true"></span>
-        <span class="chat-launcher-label">💬 שאלון קצר להצעת מחיר</span>
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-          <path d="M21 11.5a8.4 8.4 0 0 1-1.9 5.4 8.5 8.5 0 0 1-6.6 3.1 8.4 8.4 0 0 1-3.9-1L3 21l2.1-5.6a8.4 8.4 0 0 1-1-3.9 8.5 8.5 0 0 1 3.1-6.6A8.4 8.4 0 0 1 12.5 3a8.5 8.5 0 0 1 8.5 8.5z" stroke-linejoin="round" />
-        </svg>
+        <span class="chat-launcher-label">שאלון קצר להצעת מחיר</span>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-1.9 5.4 8.5 8.5 0 0 1-6.6 3.1 8.4 8.4 0 0 1-3.9-1L3 21l2.1-5.6a8.4 8.4 0 0 1-1-3.9 8.5 8.5 0 0 1 3.1-6.6A8.4 8.4 0 0 1 12.5 3a8.5 8.5 0 0 1 8.5 8.5z" stroke-linejoin="round"/></svg>
       </button>
     </div>
-
     <div id="toast" class="toast" role="status" aria-live="polite">נפתח וואטסאפ עם ההודעה — נחזור אליך בהקדם</div>
 
     <script>
       (function () {
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         const WA_PHONE = "972525240271";
-        // TODO: החלף בקישור Calendly האמיתי שלך, ואז שנה CALENDLY_ENABLED ל-true.
-        const CALENDLY_BOOKING_URL = "https://calendly.com/d-digital-studio/intro";
-        const CALENDLY_ENABLED = false;
-
-        const WA_QUICK_MSG = {
-          site: "היי דביר, הגעתי מהאתר ומעוניין/ת באתר תדמית / פורטפוליו. אשמח להצעה ולפרטים על התהליך.",
-          landing: "היי דביר, הגעתי מהאתר ומעוניין/ת בדף נחיתה / קמפיין. אשמח להצעה והכוונה קצרה.",
-          automation: "היי דביר, הגעתי מהאתר ומעוניין/ת באוטומציות / אינטגרציות לעסק. אשמח לשיחת היכרות.",
-          bot: "היי דביר, הגעתי מהאתר ומעוניין/ת בבוט / צ'אטבוט AI לעסק (וואטסאפ / אתר). אשמח לשיחת היכרות.",
-        };
-
-        function waUrl(text) {
-          return "https://wa.me/" + WA_PHONE + "?text=" + encodeURIComponent(text);
-        }
-
-        document.querySelectorAll("a[data-wa-quick]").forEach(function (a) {
-          const key = a.getAttribute("data-wa-quick");
-          if (key && WA_QUICK_MSG[key]) {
-            a.setAttribute("href", waUrl(WA_QUICK_MSG[key]));
-          }
-        });
-
-        const calendlyFallback = "היי דביר, הגעתי מהאתר ואשמח לתאם שיחת היכרות קצרה. מתי נוח לך?";
-        document.querySelectorAll("a[data-calendly-link]").forEach(function (a) {
-          if (CALENDLY_ENABLED && CALENDLY_BOOKING_URL) {
-            a.setAttribute("href", CALENDLY_BOOKING_URL);
-          } else {
-            a.setAttribute("href", waUrl(calendlyFallback));
-          }
-        });
+        function waUrl(text) { return "https://wa.me/" + WA_PHONE + "?text=" + encodeURIComponent(text); }
 
         const footerYear = document.getElementById("footer-year");
-        if (footerYear) {
-          footerYear.textContent = String(new Date().getFullYear());
-        }
+        if (footerYear) footerYear.textContent = String(new Date().getFullYear());
 
         const navToggle = document.getElementById("nav-toggle");
         const navLinks = document.getElementById("nav-links");
@@ -2770,8 +794,7 @@
           });
         }
 
-        const progressBar = document.getElementById("scroll-progress");
-        const bgAurora = document.getElementById("bg-aurora");
+        const progressBar = document.getElementById("scroll-progress-bar");
         function updateProgress() {
           const y = window.scrollY;
           if (progressBar) {
@@ -2779,143 +802,100 @@
             const p = max > 0 ? Math.min(1, Math.max(0, y / max)) : 0;
             progressBar.style.transform = "scaleX(" + p + ")";
           }
-          if (bgAurora && !reduceMotion) {
-            bgAurora.style.setProperty("--aurora-shift", y * -0.12 + "px");
+          if (!reduceMotion) {
+            document.documentElement.style.setProperty("--scroll", String(y));
           }
         }
         window.addEventListener("scroll", updateProgress, { passive: true });
         window.addEventListener("resize", updateProgress, { passive: true });
         updateProgress();
 
-        // Cursor-follow spotlight on cards
-        if (!reduceMotion && window.matchMedia("(hover: hover)").matches) {
-          document.querySelectorAll(".work-card, .price-card, .step, .tip").forEach(function (card) {
-            card.addEventListener(
-              "pointermove",
-              function (e) {
-                const r = card.getBoundingClientRect();
-                card.style.setProperty("--mx", e.clientX - r.left + "px");
-                card.style.setProperty("--my", e.clientY - r.top + "px");
-              },
-              { passive: true }
-            );
-          });
+        if (!reduceMotion) {
+          window.addEventListener("scroll", function () {
+            document.documentElement.style.setProperty("--scroll", String(window.scrollY));
+          }, { passive: true });
         }
 
-        const navTargets = Array.prototype.slice
-          .call(document.querySelectorAll(".nav-links a[href^='#']"))
-          .map(function (a) {
-            return { link: a, el: document.getElementById(a.getAttribute("href").slice(1)) };
-          })
-          .filter(function (t) {
-            return t.el;
+        const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        if (reduceMotion) {
+          document.querySelectorAll(".reveal-left, .reveal-right, .glass-card").forEach(function (el) {
+            el.classList.add("revealed", "opacity-100", "translate-y-0");
           });
-
-        if (navTargets.length && "IntersectionObserver" in window) {
-          const spy = new IntersectionObserver(
-            function (entries) {
-              entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                  navTargets.forEach(function (t) {
-                    t.link.classList.toggle("is-active", t.el === entry.target);
-                  });
+        } else if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("revealed");
+                if (!entry.target.classList.contains("reveal-left") && !entry.target.classList.contains("reveal-right")) {
+                  entry.target.classList.remove("opacity-0", "translate-y-10");
+                  entry.target.classList.add("opacity-100", "translate-y-0");
                 }
-              });
-            },
-            { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
-          );
-          navTargets.forEach(function (t) {
-            spy.observe(t.el);
-          });
-        }
-
-        const revealItems = document.querySelectorAll(".reveal");
-        if (reduceMotion || !("IntersectionObserver" in window)) {
-          revealItems.forEach(function (el) {
-            el.classList.add("visible");
-          });
-        } else {
-          // Stagger children inside grids/steps so each row glides in smoothly
-          document.querySelectorAll(".grid, .steps, .sectors").forEach(function (group) {
-            var kids = group.querySelectorAll(":scope > .reveal");
-            kids.forEach(function (el, i) {
-              el.style.setProperty("--reveal-delay", (i % 4) * 0.09 + "s");
+              }
             });
-          });
-
-          const revealObs = new IntersectionObserver(
-            function (entries) {
-              entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("visible");
-                  revealObs.unobserve(entry.target);
-                }
-              });
-            },
-            { threshold: 0.1, rootMargin: "0px 0px -8% 0px" }
-          );
-          revealItems.forEach(function (el) {
-            revealObs.observe(el);
+          }, observerOptions);
+          document.querySelectorAll(".reveal-left, .reveal-right, .glass-card").forEach(function (el) {
+            if (!el.classList.contains("reveal-left") && !el.classList.contains("reveal-right")) {
+              el.classList.add("opacity-0", "translate-y-10", "transition-all", "duration-700");
+            } else {
+              el.classList.add("transition-all", "duration-1000");
+            }
+            observer.observe(el);
           });
         }
 
-        document.querySelectorAll(".faq-q").forEach(function (btn) {
-          btn.addEventListener("click", function () {
-            const expanded = btn.getAttribute("aria-expanded") === "true";
-            const panel = btn.nextElementSibling;
-            btn.setAttribute("aria-expanded", expanded ? "false" : "true");
-            if (panel) {
-              panel.style.maxHeight = expanded ? "0px" : panel.scrollHeight + "px";
+        if (!reduceMotion && window.matchMedia("(hover: hover)").matches) {
+          document.querySelectorAll(".magnetic-link").forEach(function (link) {
+            link.addEventListener("mousemove", function (e) {
+              const rect = link.getBoundingClientRect();
+              const x = e.clientX - rect.left - rect.width / 2;
+              const y = e.clientY - rect.top - rect.height / 2;
+              link.style.transform = "translate(" + x * 0.3 + "px, " + y * 0.3 + "px)";
+            }, { passive: true });
+            link.addEventListener("mouseleave", function () { link.style.transform = "translate(0, 0)"; });
+          });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+          anchor.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
+            if (!href || href === "#") return;
+            const target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
             }
           });
         });
 
         const contactForm = document.getElementById("contact-form");
         const toast = document.getElementById("toast");
-
         function selectSummary(id) {
           const el = document.getElementById(id);
           if (!el || !el.value) return "לא צוין";
           const opt = el.options[el.selectedIndex];
           return opt ? opt.textContent.replace(/\s+/g, " ").trim() : "לא צוין";
         }
-
         function buildWhatsAppUrl() {
           const name = (document.getElementById("name") || {}).value || "";
           const phone = (document.getElementById("phone") || {}).value || "";
-          const need = (document.getElementById("site-need") || {}).value || "";
-          const business = (document.getElementById("business-name") || {}).value || "";
-          const body =
-            "היי דביר, שלחתי פרטים מהטופס באתר:\n" +
+          const body = "היי דביר, שלחתי פרטים מהטופס באתר:\n" +
             "סוג פרויקט: " + selectSummary("project-type") + "\n" +
             "שם: " + name.trim() + "\n" +
             "טלפון: " + phone.trim() + "\n" +
-            "עסק / תחום: " + (business.trim() || "לא צוין") + "\n" +
-            "תקציב משוער: " + selectSummary("budget") + "\n" +
-            "לוח זמנים: " + selectSummary("timeline") + "\n" +
-            "מה צריך להשיג / תוכן: " + need.trim();
+            "תקציב משוער: " + selectSummary("budget");
           return waUrl(body);
         }
-
         if (contactForm) {
           contactForm.addEventListener("submit", function (e) {
             e.preventDefault();
             const hp = document.getElementById("company-url");
-            if (hp && hp.value.trim()) {
-              return;
-            }
+            if (hp && hp.value.trim()) return;
             window.open(buildWhatsAppUrl(), "_blank", "noopener,noreferrer");
-            if (toast) {
-              toast.classList.add("show");
-              setTimeout(function () {
-                toast.classList.remove("show");
-              }, 2600);
-            }
+            if (toast) { toast.classList.add("show"); setTimeout(function () { toast.classList.remove("show"); }, 2600); }
             contactForm.reset();
           });
         }
 
-        /* ---------- Lead qualification chat bot ---------- */
         (function initLeadBot() {
           const panel = document.getElementById("chat-panel");
           const launcher = document.getElementById("chat-launcher");
@@ -2927,305 +907,83 @@
           const sendBtn = document.getElementById("chat-send");
           const footer = document.getElementById("chat-footer");
           const progressBar = document.getElementById("chat-progress-bar");
-
           if (!panel || !launcher || !messagesEl) return;
-
-          const data = {};
-          let stepIndex = 0;
-          let started = false;
-          let waitingForInput = false;
-
+          const data = {}; let stepIndex = 0; let started = false; let waitingForInput = false;
           const STEPS = [
-            {
-              key: "name",
-              prompt:
-                "היי! אני העוזר של דביר 👋\n" +
-                "כמה שאלות קצרות (2 דקות) ואכין לך הצעת מחיר ממוקדת 💡\n\n" +
-                "1️⃣ איך קוראים לך?",
-              type: "text",
-              placeholder: "✏️ השם שלך",
-            },
-            {
-              key: "phone",
-              prompt: function (d) {
-                return (
-                  "נעים מאוד, " +
-                  d.name +
-                  "! 😊\n\n" +
-                  "2️⃣ מה מספר הטלפון לחזרה? 📱"
-                );
-              },
-              type: "tel",
-              placeholder: "📱 050-0000000",
-              validate: function (v) {
-                const digits = v.replace(/\D/g, "");
-                return digits.length >= 9 || "⚠️ נא להזין מספר טלפון תקין (לפחות 9 ספרות)";
-              },
-            },
-            {
-              key: "business",
-              prompt: "3️⃣ מה שם העסק או התחום שאת/ה פועל/ת בו? 🏢",
-              type: "text",
-              placeholder: "🏪 למשל: סטודיו לכושר, חנות בגדים...",
-            },
-            {
-              key: "service",
-              prompt: "4️⃣ מה את/ה מחפש/ת? בחר/י אחת מהאפשרויות 👇",
-              type: "choice",
-              options: [
-                { value: "אתר תדמית", label: "🌐 אתר תדמית" },
-                { value: "דף נחיתה", label: "🎯 דף נחיתה" },
-                { value: "אוטומציות", label: "⚡ אוטומציות" },
-                { value: "בוט / AI", label: "🤖 בוט / AI" },
-                { value: "לא בטוח/ה — ייעוץ", label: "💬 לא בטוח/ה — ייעוץ" },
-              ],
-            },
-            {
-              key: "goal",
-              prompt:
-                "5️⃣ מה המטרה העיקרית? 🎯\n" +
-                "(למשל: יותר פניות 📈, מיתוג ✨, חיסכון בזמן ⏰)",
-              type: "text",
-              placeholder: "✍️ תאר/י בקצרה מה צריך להשיג",
-            },
-            {
-              key: "budget",
-              prompt: "6️⃣ מה התקציב המשוער? 💰",
-              type: "choice",
-              options: [
-                { value: "עד ₪3,000", label: "💵 עד ₪3,000" },
-                { value: "₪3,000–8,000", label: "💵 ₪3,000–8,000" },
-                { value: "₪8,000–15,000", label: "💰 ₪8,000–15,000" },
-                { value: "מעל ₪15,000", label: "💎 מעל ₪15,000" },
-                { value: "עדיין לא יודע/ת", label: "🤷 עדיין לא יודע/ת" },
-              ],
-            },
-            {
-              key: "timeline",
-              prompt: "7️⃣ מתי צריך את זה חי? ⏱️",
-              type: "choice",
-              options: [
-                { value: "בהקדם האפשרי", label: "🚀 בהקדם" },
-                { value: "תוך חודש", label: "📅 תוך חודש" },
-                { value: "גמיש", label: "🙂 גמיש" },
-              ],
-            },
+            { key: "name", prompt: "היי! אני העוזר של דביר 👋\nכמה שאלות קצרות (2 דקות) ואכין לך הצעת מחיר ממוקדת 💡\n\n1️⃣ איך קוראים לך?", type: "text", placeholder: "✏️ השם שלך" },
+            { key: "phone", prompt: function (d) { return "נעים מאוד, " + d.name + "! 😊\n\n2️⃣ מה מספר הטלפון לחזרה? 📱"; }, type: "tel", placeholder: "📱 050-0000000", validate: function (v) { const digits = v.replace(/\D/g, ""); return digits.length >= 9 || "⚠️ נא להזין מספר טלפון תקין (לפחות 9 ספרות)"; } },
+            { key: "business", prompt: "3️⃣ מה שם העסק או התחום שאת/ה פועל/ת בו? 🏢", type: "text", placeholder: "🏪 למשל: סטודיו לכושר, חנות בגדים..." },
+            { key: "service", prompt: "4️⃣ מה את/ה מחפש/ת? בחר/י אחת מהאפשרויות 👇", type: "choice", options: [
+              { value: "אתר תדמית", label: "🌐 אתר תדמית" }, { value: "דף נחיתה", label: "🎯 דף נחיתה" },
+              { value: "אוטומציות", label: "⚡ אוטומציות" }, { value: "בוט / AI", label: "🤖 בוט / AI" },
+              { value: "לא בטוח/ה — ייעוץ", label: "💬 לא בטוח/ה — ייעוץ" }
+            ]},
+            { key: "goal", prompt: "5️⃣ מה המטרה העיקרית? 🎯\n(למשל: יותר פניות 📈, מיתוג ✨, חיסכון בזמן ⏰)", type: "text", placeholder: "✍️ תאר/י בקצרה מה צריך להשיג" },
+            { key: "budget", prompt: "6️⃣ מה התקציב המשוער? 💰", type: "choice", options: [
+              { value: "עד ₪3,000", label: "💵 עד ₪3,000" }, { value: "₪3,000–8,000", label: "💵 ₪3,000–8,000" },
+              { value: "₪8,000–15,000", label: "💰 ₪8,000–15,000" }, { value: "מעל ₪15,000", label: "💎 מעל ₪15,000" },
+              { value: "עדיין לא יודע/ת", label: "🤷 עדיין לא יודע/ת" }
+            ]},
+            { key: "timeline", prompt: "7️⃣ מתי צריך את זה חי? ⏱️", type: "choice", options: [
+              { value: "בהקדם האפשרי", label: "🚀 בהקדם" }, { value: "תוך חודש", label: "📅 תוך חודש" }, { value: "גמיש", label: "🙂 גמיש" }
+            ]}
           ];
-
-          function scrollMessages() {
-            messagesEl.scrollTop = messagesEl.scrollHeight;
-          }
-
-          function addMessage(text, role) {
-            const el = document.createElement("div");
-            el.className = "chat-msg chat-msg--" + role;
-            el.textContent = text;
-            messagesEl.appendChild(el);
-            scrollMessages();
-            return el;
-          }
-
-          function updateProgress() {
-            if (!progressBar) return;
-            const pct = Math.round((stepIndex / STEPS.length) * 100);
-            progressBar.style.width = pct + "%";
-          }
-
+          function scrollMessages() { messagesEl.scrollTop = messagesEl.scrollHeight; }
+          function addMessage(text, role) { const el = document.createElement("div"); el.className = "chat-msg chat-msg--" + role; el.textContent = text; messagesEl.appendChild(el); scrollMessages(); return el; }
+          function updateProgress() { if (!progressBar) return; progressBar.style.width = Math.round((stepIndex / STEPS.length) * 100) + "%"; }
           function setInputMode(mode, step) {
             quickEl.innerHTML = "";
             if (mode === "choice" && step.options) {
               textRow.style.display = "none";
               step.options.forEach(function (opt) {
-                const btn = document.createElement("button");
-                btn.type = "button";
-                btn.className = "chat-chip";
-                btn.textContent = opt.label;
-                btn.addEventListener("click", function () {
-                  handleAnswer(opt.value, opt.label);
-                });
+                const btn = document.createElement("button"); btn.type = "button"; btn.className = "chat-chip"; btn.textContent = opt.label;
+                btn.addEventListener("click", function () { handleAnswer(opt.value, opt.label); });
                 quickEl.appendChild(btn);
               });
-            } else if (mode === "done") {
-              textRow.style.display = "none";
-              quickEl.innerHTML = "";
-            } else {
-              textRow.style.display = "flex";
-              input.placeholder = step.placeholder || "הקלד/י כאן...";
-              input.type = step.type === "tel" ? "tel" : "text";
-              input.value = "";
-              input.focus();
-            }
+            } else if (mode === "done") { textRow.style.display = "none"; quickEl.innerHTML = ""; }
+            else { textRow.style.display = "flex"; input.placeholder = step.placeholder || "הקלד/י כאן..."; input.type = step.type === "tel" ? "tel" : "text"; input.value = ""; input.focus(); }
           }
-
-          function getPrompt(step) {
-            return typeof step.prompt === "function" ? step.prompt(data) : step.prompt;
-          }
-
+          function getPrompt(step) { return typeof step.prompt === "function" ? step.prompt(data) : step.prompt; }
           function showStep() {
-            if (stepIndex >= STEPS.length) {
-              showSummary();
-              return;
-            }
-            const step = STEPS[stepIndex];
-            waitingForInput = true;
-            updateProgress();
-            setTimeout(function () {
-              addMessage(getPrompt(step), "bot");
-              setInputMode(step.type, step);
-            }, stepIndex === 0 ? 0 : 450);
+            if (stepIndex >= STEPS.length) { showSummary(); return; }
+            const step = STEPS[stepIndex]; waitingForInput = true; updateProgress();
+            setTimeout(function () { addMessage(getPrompt(step), "bot"); setInputMode(step.type, step); }, stepIndex === 0 ? 0 : 450);
           }
-
           function buildLeadSummary() {
-            const now = new Date().toLocaleString("he-IL", {
-              dateStyle: "short",
-              timeStyle: "short",
-            });
-            const serviceEmoji = {
-              "אתר תדמית": "🌐",
-              "דף נחיתה": "🎯",
-              אוטומציות: "⚡",
-              "בוט / AI": "🤖",
-              "לא בטוח/ה — ייעוץ": "💬",
-            };
-            const svc = data.service || "";
-            const svcIcon = serviceEmoji[svc] || "📦";
-
-            return (
-              "🆕 ליד חדש — בוט האתר\n" +
-              "━━━━━━━━━━━━━━━━━━\n" +
-              "👤 שם: " + data.name + "\n" +
-              "📱 טלפון: " + data.phone + "\n" +
-              "🏢 עסק / תחום: " + data.business + "\n" +
-              svcIcon + " שירות: " + svc + "\n" +
-              "🎯 מטרה: " + data.goal + "\n" +
-              "💰 תקציב: " + data.budget + "\n" +
-              "⏱️ לוח זמנים: " + data.timeline + "\n" +
-              "━━━━━━━━━━━━━━━━━━\n" +
-              "🕐 נשלח: " + now + "\n" +
-              "🌐 מקור: D Digital Studio — בוט האתר"
-            );
+            const now = new Date().toLocaleString("he-IL", { dateStyle: "short", timeStyle: "short" });
+            const serviceEmoji = { "אתר תדמית": "🌐", "דף נחיתה": "🎯", "אוטומציות": "⚡", "בוט / AI": "🤖", "לא בטוח/ה — ייעוץ": "💬" };
+            const svc = data.service || ""; const svcIcon = serviceEmoji[svc] || "📦";
+            return "🆕 ליד חדש — בוט האתר\n━━━━━━━━━━━━━━━━━━\n👤 שם: " + data.name + "\n📱 טלפון: " + data.phone + "\n🏢 עסק / תחום: " + data.business + "\n" + svcIcon + " שירות: " + svc + "\n🎯 מטרה: " + data.goal + "\n💰 תקציב: " + data.budget + "\n⏱️ לוח זמנים: " + data.timeline + "\n━━━━━━━━━━━━━━━━━━\n🕐 נשלח: " + now + "\n🌐 מקור: D Digital Studio — בוט האתר";
           }
-
           function showSummary() {
-            waitingForInput = false;
-            updateProgress();
-            if (progressBar) progressBar.style.width = "100%";
-
+            waitingForInput = false; updateProgress(); if (progressBar) progressBar.style.width = "100%";
             const summaryText = buildLeadSummary();
-            const summaryEl = document.createElement("div");
-            summaryEl.className = "chat-msg chat-msg--summary";
-            summaryEl.textContent = summaryText;
-            messagesEl.appendChild(summaryEl);
-            scrollMessages();
-
+            const summaryEl = document.createElement("div"); summaryEl.className = "chat-msg chat-msg--summary"; summaryEl.textContent = summaryText;
+            messagesEl.appendChild(summaryEl); scrollMessages();
             setTimeout(function () {
-              addMessage(
-                "מעולה " +
-                  data.name +
-                  "! 🎉✨\n\n" +
-                  "✅ הכנתי סיכום מסודר של כל השיחה.\n" +
-                  "👇 לחץ/י על הכפתור הירוק למטה — זה יפתח וואטסאפ עם כל הפרטים מוכנים לשליחה לדביר.\n\n" +
-                  "📲 רק ללחוץ «שלח» בוואטסאפ וסיימנו!",
-                "bot"
-              );
+              addMessage("מעולה " + data.name + "! 🎉✨\n\n✅ הכנתי סיכום מסודר של כל השיחה.\n👇 לחץ/י על הכפתור הירוק למטה — זה יפתח וואטסאפ עם כל הפרטים מוכנים לשליחה לדביר.\n\n📲 רק ללחוץ «שלח» בוואטסאפ וסיימנו!", "bot");
             }, 500);
-
             setInputMode("done", {});
-
-            const waBtn = document.createElement("a");
-            waBtn.className = "chat-wa-btn";
-            waBtn.href = waUrl(summaryText);
-            waBtn.target = "_blank";
-            waBtn.rel = "noopener noreferrer";
-            waBtn.innerHTML =
-              '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.8-.1 1.4z"/></svg> 📲 שלח סיכום בוואטסאפ';
-            waBtn.addEventListener("click", function () {
-              if (toast) {
-                toast.textContent = "📲 נפתח וואטסאפ — שלח/י את ההודעה ונחזור אליך בהקדם";
-                toast.classList.add("show");
-                setTimeout(function () {
-                  toast.classList.remove("show");
-                }, 3000);
-              }
-            });
+            const waBtn = document.createElement("a"); waBtn.className = "chat-wa-btn"; waBtn.href = waUrl(summaryText); waBtn.target = "_blank"; waBtn.rel = "noopener noreferrer";
+            waBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.8-.1 1.4z"/></svg> 📲 שלח סיכום בוואטסאפ';
+            waBtn.addEventListener("click", function () { if (toast) { toast.textContent = "📲 נפתח וואטסאפ — שלח/י את ההודעה ונחזור אליך בהקדם"; toast.classList.add("show"); setTimeout(function () { toast.classList.remove("show"); }, 3000); } });
             footer.appendChild(waBtn);
           }
-
           function handleAnswer(value, displayLabel) {
             if (!waitingForInput || stepIndex >= STEPS.length) return;
-            const step = STEPS[stepIndex];
-            const trimmed = String(value || "").trim();
-            if (!trimmed) return;
-
-            if (step.validate) {
-              const err = step.validate(trimmed);
-              if (err !== true) {
-                addMessage(typeof err === "string" ? err : "⚠️ נא למלא שדה תקין", "bot");
-                return;
-              }
-            }
-
-            data[step.key] = trimmed;
-            addMessage(displayLabel || trimmed, "user");
-            stepIndex += 1;
-            waitingForInput = false;
-
-            if (stepIndex < STEPS.length) {
-              setTimeout(showStep, 500);
-            } else {
-              setTimeout(showSummary, 500);
-            }
+            const step = STEPS[stepIndex]; const trimmed = String(value || "").trim(); if (!trimmed) return;
+            if (step.validate) { const err = step.validate(trimmed); if (err !== true) { addMessage(typeof err === "string" ? err : "⚠️ נא למלא שדה תקין", "bot"); return; } }
+            data[step.key] = trimmed; addMessage(displayLabel || trimmed, "user"); stepIndex += 1; waitingForInput = false;
+            if (stepIndex < STEPS.length) setTimeout(showStep, 500); else setTimeout(showSummary, 500);
           }
-
-          function submitText() {
-            if (!input || !waitingForInput) return;
-            handleAnswer(input.value);
-          }
-
-          function openChat() {
-            panel.classList.add("is-open");
-            panel.setAttribute("aria-hidden", "false");
-            launcher.setAttribute("aria-expanded", "true");
-            launcher.classList.add("is-open");
-            if (!started) {
-              started = true;
-              showStep();
-            }
-            if (input) input.focus();
-          }
-
-          function closeChat() {
-            panel.classList.remove("is-open");
-            panel.setAttribute("aria-hidden", "true");
-            launcher.setAttribute("aria-expanded", "false");
-            launcher.classList.remove("is-open");
-          }
-
-          launcher.addEventListener("click", function () {
-            if (panel.classList.contains("is-open")) {
-              closeChat();
-            } else {
-              openChat();
-            }
-          });
-
+          function submitText() { if (!input || !waitingForInput) return; handleAnswer(input.value); }
+          function openChat() { panel.classList.add("is-open"); panel.setAttribute("aria-hidden", "false"); launcher.setAttribute("aria-expanded", "true"); launcher.classList.add("is-open"); if (!started) { started = true; showStep(); } if (input) input.focus(); }
+          function closeChat() { panel.classList.remove("is-open"); panel.setAttribute("aria-hidden", "true"); launcher.setAttribute("aria-expanded", "false"); launcher.classList.remove("is-open"); }
+          launcher.addEventListener("click", function () { if (panel.classList.contains("is-open")) closeChat(); else openChat(); });
           if (closeBtn) closeBtn.addEventListener("click", closeChat);
-
           if (sendBtn) sendBtn.addEventListener("click", submitText);
-          if (input) {
-            input.addEventListener("keydown", function (e) {
-              if (e.key === "Enter") {
-                e.preventDefault();
-                submitText();
-              }
-            });
-          }
-
-          document.addEventListener("keydown", function (e) {
-            if (e.key === "Escape" && panel.classList.contains("is-open")) {
-              closeChat();
-            }
-          });
+          if (input) input.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); submitText(); } });
+          document.addEventListener("keydown", function (e) { if (e.key === "Escape" && panel.classList.contains("is-open")) closeChat(); });
         })();
       })();
     </script>
