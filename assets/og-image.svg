@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a0a0b"/>
+  <rect x="80" y="80" width="1040" height="470" rx="32" fill="#111113" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+  <circle cx="200" cy="315" r="56" fill="#18181b" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <path fill="#f5f5f5" d="M168 285h32c22 0 40 18 40 40s-18 40-40 40h-32V285zm14 14v52h18c14.6 0 26-11.4 26-26s-11.4-26-26-26h-18z"/>
+  <text x="290" y="280" fill="#fafafa" font-family="system-ui, sans-serif" font-size="52" font-weight="700">Digital Studio</text>
+  <text x="290" y="340" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="28">аъшйн З аеиеоцйеъ З беийн</text>
+  <text x="290" y="400" fill="#d95d39" font-family="system-ui, sans-serif" font-size="24">гбйш  берд гйвйим мтсчйн</text>
+</svg>

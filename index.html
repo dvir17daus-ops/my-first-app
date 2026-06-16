@@ -12,36 +12,42 @@
     <script>
       (function () {
         var u = window.location.href.replace(/[?#].*$/, "");
+        var base = u;
+        if (/\.html?$/i.test(base)) base = base.replace(/\/[^/]+$/, "/");
+        else if (!base.endsWith("/")) base += "/";
         var c = document.querySelector('link[rel="canonical"]');
         if (c) c.setAttribute("href", u);
         var o = document.getElementById("meta-og-url");
         if (o) o.setAttribute("content", u);
+        var ogImg = base + "assets/og-image.png";
+        document.querySelectorAll('meta[property="og:image"], meta[name="twitter:image"]').forEach(function (m) {
+          m.setAttribute("content", ogImg);
+        });
       })();
     </script>
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="he_IL" />
-    <meta property="og:site_name" content="D Digital Studio" />
+    <meta property="og:site_name" content="Digital Studio" />
     <meta property="og:title" content="דביר | בניית אתרים, אוטומציות ובוטים" />
     <meta property="og:description" content="אתרים, דפי נחיתה, אוטומציות ובוטים לעסק שלך — עם ליווי אישי מדביר, מהשיחה הראשונה ועד העלייה לאוויר." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=630&fit=crop&q=80" />
+    <meta property="og:image" content="assets/og-image.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="דביר | בניית אתרים, אוטומציות ובוטים" />
     <meta name="twitter:description" content="אתרים, דפי נחיתה, אוטומציות ובוטים לעסק שלך — עם ליווי אישי מדביר, מהשיחה הראשונה ועד העלייה לאוויר." />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=630&fit=crop&q=80" />
+    <meta name="twitter:image" content="assets/og-image.png" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="apple-touch-icon" href="assets/logo.png" />
+    <link rel="apple-touch-icon" href="assets/logo.svg" />
     <title>דביר | אתרים, אוטומציות ובוטים לעסקים</title>
     <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"ProfessionalService","name":"D Digital Studio — דביר","alternateName":"דביר — בניית אתרים","description":"בניית אתרי תדמית, דפי נחיתה, אוטומציות ובוטים לעסקים. ליווי אישי, מחיר ברור לפני שמתחילים.","image":"https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=630&fit=crop&q=80","telephone":"+972-52-524-0271","areaServed":{"@type":"Country","name":"IL"},"availableLanguage":["Hebrew"],"priceRange":"$$","makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"בניית אתרי תדמית"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"דפי נחיתה לקמפיינים"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"אוטומציות ואינטגרציות לעסק"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"בוטים וצ'אטבוטים"}}]}
+      {"@context":"https://schema.org","@type":"ProfessionalService","name":"Digital Studio — דביר","alternateName":"דביר — בניית אתרים","description":"בניית אתרי תדמית, דפי נחיתה, אוטומציות ובוטים לעסקים. ליווי אישי, מחיר ברור לפני שמתחילים.","telephone":"+972-52-524-0271","areaServed":{"@type":"Country","name":"IL"},"availableLanguage":["Hebrew"],"priceRange":"₪₪","makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"בניית אתרי תדמית"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"דפי נחיתה לקמפיינים"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"אוטומציות ואינטגרציות לעסק"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"בוטים וצ'אטבוטים"}}]}
     </script>
     <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"תוך כמה זמן אתר תדמית מוכן לאוויר?","acceptedAnswer":{"@type":"Answer","text":"ברוב המקרים בין 7 ל-21 ימי עבודה, תלוי בהיקף התוכן, עיצוב והתאמות מיוחדות."}},{"@type":"Question","name":"האם אפשר לקבל דף נחיתה עם חיבור ללידים ווואטסאפ?","acceptedAnswer":{"@type":"Answer","text":"כן. ניתן לחבר טפסים, וואטסאפ, אימייל והתראות אוטומטיות כך שכל ליד נכנס מיד לטיפול."}},{"@type":"Question","name":"מה כולל שירות אוטומציות לעסק?","acceptedAnswer":{"@type":"Answer","text":"אפיון תהליך, חיבור בין מערכות, יצירת פעולות אוטומטיות וחיסכון משמעותי בזמן עבודה יומיומי."}},{"@type":"Question","name":"מה בוט מבוסס AI יכול לעשות לעסק שלי?","acceptedAnswer":{"@type":"Answer","text":"בוט חכם לוואטסאפ או לאתר עונה ללקוחות מסביב לשעון, משיב על שאלות נפוצות, מתאם פגישות ואוסף לידים ישירות למערכות שלך."}}]}
+      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"תוך כמה זמן אתר תדמית מוכן לאוויר?","acceptedAnswer":{"@type":"Answer","text":"ברוב המקרים בין 7 ל-21 ימי עבודה, תלוי בהיקף התוכן, עיצוב והתאמות מיוחדות."}},{"@type":"Question","name":"האם אפשר לקבל דף נחיתה עם חיבור ללידים ווואטסאפ?","acceptedAnswer":{"@type":"Answer","text":"כן. ניתן לחבר טפסים, וואטסאפ, אימייל והתראות אוטומטיות כך שכל ליד נכנס מיד לטיפול."}},{"@type":"Question","name":"מה כולל שירות אוטומציות לעסק?","acceptedAnswer":{"@type":"Answer","text":"אפיון תהליך, חיבור בין מערכות, יצירת פעולות אוטומטיות וחיסכון משמעותי בזמן עבודה יומיומי."}},{"@type":"Question","name":"מה בוט לוואטסאפ או לאתר יכול לעשות?","acceptedAnswer":{"@type":"Answer","text":"בוט לוואטסאפ או לאתר עונה על שאלות נפוצות, אוסף פרטי קשר, מתאם פגישות ומעביר אליך רק פניות רלוונטיות."}}]}
     </script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -173,10 +179,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-            user-select: none;
-        }
 
         /* ── Ambient background ── */
         .aurora {
@@ -187,7 +189,7 @@
             animation: aurora-drift 22s ease-in-out infinite alternate;
         }
         .aurora__orb--1 { width: 55vw; height: 55vw; top: -20%; right: -10%; background: radial-gradient(circle, rgba(217,93,57,0.18) 0%, transparent 70%); }
-        .aurora__orb--2 { width: 45vw; height: 45vw; bottom: -15%; left: -10%; background: radial-gradient(circle, rgba(120,80,200,0.12) 0%, transparent 70%); animation-delay: -8s; animation-duration: 28s; }
+        .aurora__orb--2 { width: 45vw; height: 45vw; bottom: -15%; left: -10%; background: radial-gradient(circle, rgba(217,93,57,0.06) 0%, transparent 70%); animation-delay: -8s; animation-duration: 28s; }
         .aurora__orb--3 { width: 30vw; height: 30vw; top: 40%; left: 30%; background: radial-gradient(circle, rgba(217,93,57,0.08) 0%, transparent 70%); animation-delay: -14s; animation-duration: 18s; }
         .aurora__grid {
             position: absolute; inset: 0;
@@ -217,8 +219,8 @@
 
         /* ── Typography ── */
         .section-eyebrow {
-            display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
-            text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;
+            display: inline-block; font-size: 0.8125rem; font-weight: 500;
+            letter-spacing: 0; text-transform: none; color: var(--accent); margin-bottom: 1rem;
         }
         .section-title {
             font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700;
@@ -231,10 +233,7 @@
             font-size: clamp(2.25rem, 5.5vw, 3.75rem); font-weight: 700;
             letter-spacing: -0.04em; line-height: 1.08;
         }
-        .gradient-text {
-            background: linear-gradient(135deg, #ffb5a0 0%, #d95d39 50%, #ff8a65 100%);
-            -webkit-background-clip: text; background-clip: text; color: transparent;
-        }
+        .accent-text { color: var(--accent); }
 
         /* ── Buttons ── */
         .btn-primary {
@@ -282,26 +281,22 @@
         }
         .glass-card:hover { border-color: rgba(217, 93, 57, 0.25); background: rgba(255,255,255,0.035); }
 
-        .service-pill {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.15rem 1.2rem;
-            text-align: right;
-            transition: border-color 0.3s var(--ease), background 0.3s var(--ease), transform 0.3s var(--ease);
+        .trust-item { display: inline-flex; align-items: center; font-size: 0.875rem; color: var(--text-soft); }
+        .trust-item + .trust-item::before { content: "·"; margin-left: 0.75rem; margin-right: 0.75rem; color: rgba(255,255,255,0.2); }
+
+        /* ── Lists ── */
+        .dot-list { list-style: none; margin: 0; padding: 0; }
+        .dot-list li {
+            position: relative; padding-right: 1.1rem; margin-bottom: 0.55rem;
+            font-size: 0.875rem; color: var(--text-soft); line-height: 1.5;
         }
-        .service-pill:hover { border-color: rgba(217, 93, 57, 0.3); background: rgba(217, 93, 57, 0.04); transform: translateY(-2px); }
-        .service-pill .icon-wrap {
-            width: 2.5rem; height: 2.5rem; border-radius: 10px;
-            background: rgba(217, 93, 57, 0.1); border: 1px solid rgba(217, 93, 57, 0.15);
-            display: grid; place-items: center; margin-bottom: 0.75rem;
+        .dot-list li::before {
+            content: "·"; position: absolute; right: 0; color: var(--accent); font-weight: 700;
         }
-        .trust-bar {
-            display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 2rem;
-            padding: 1.25rem 0;
+        .service-num {
+            display: inline-block; font-size: 0.75rem; font-weight: 600;
+            color: var(--accent); margin-bottom: 1rem; letter-spacing: 0.04em;
         }
-        .trust-item { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--text-soft); }
-        .trust-item .material-symbols-outlined { font-size: 1.125rem; color: var(--accent); }
 
         /* ── Stats ── */
         .stats-row {
@@ -395,11 +390,7 @@
             background: rgba(255,255,255,0.03);
         }
         .project-features { list-style: none; margin: 1.25rem 0 0; padding: 0; }
-        .project-features li {
-            display: flex; align-items: flex-start; gap: 0.65rem; flex-direction: row-reverse;
-            font-size: 0.875rem; color: var(--text-soft); line-height: 1.5; margin-bottom: 0.65rem;
-        }
-        .project-features .material-symbols-outlined { font-size: 1.125rem; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+        .project-preview__arrow { font-size: 1rem; line-height: 1; }
 
         .site-logo {
             width: 2.25rem; height: 2.25rem; object-fit: contain; flex-shrink: 0;
@@ -418,11 +409,64 @@
             color: var(--text); font-family: inherit; font-size: 1rem; font-weight: 500; cursor: pointer;
             display: flex; align-items: center; justify-content: space-between; gap: 1rem;
         }
-        .faq-q .material-symbols-outlined { transition: transform 0.3s var(--ease); color: var(--text-soft); flex-shrink: 0; font-size: 1.25rem; }
-        .faq-item.is-open .faq-q .material-symbols-outlined { transform: rotate(180deg); color: var(--accent); }
+        .faq-q .faq-chevron {
+            width: 1.25rem; height: 1.25rem; flex-shrink: 0; display: grid; place-items: center;
+        }
+        .faq-q .faq-chevron::before {
+            content: ""; display: block; width: 7px; height: 7px;
+            border-right: 2px solid var(--text-soft); border-bottom: 2px solid var(--text-soft);
+            transform: rotate(45deg); margin-top: -3px;
+            transition: transform 0.3s var(--ease), border-color 0.3s;
+        }
+        .faq-item.is-open .faq-q .faq-chevron::before {
+            transform: rotate(225deg); border-color: var(--accent);
+        }
         .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease); color: var(--text-soft); line-height: 1.7; font-size: 0.9375rem; }
         .faq-item.is-open .faq-a { max-height: 240px; padding-bottom: 1.25rem; }
-        h1, h2, h3, h4 { text-transform: none; letter-spacing: -0.02em; }
+        .about-photo {
+            width: 100%; max-width: 16rem; aspect-ratio: 1; margin: 0 auto;
+            border-radius: var(--radius-lg); overflow: hidden;
+            border: 1px solid var(--border); background: var(--surface-2); position: relative;
+        }
+        .about-photo__img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .about-photo__fallback {
+            position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+            font-size: 3rem; font-weight: 700; color: #ffb5a0;
+            background: rgba(217, 93, 57, 0.08);
+        }
+        .about-photo__img:not([src]), .about-photo__img.is-hidden { display: none; }
+        .about-point { padding-right: 1rem; border-right: 2px solid rgba(217, 93, 57, 0.35); }
+        .pricing-grid {
+            display: grid; grid-template-columns: 1fr; gap: 1rem;
+        }
+        @media (min-width: 640px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .pricing-grid { grid-template-columns: repeat(4, 1fr); } }
+        .pricing-card {
+            padding: 1.5rem 1.25rem; border-radius: var(--radius);
+            border: 1px solid var(--border); background: rgba(255,255,255,0.02); text-align: right;
+            position: relative;
+        }
+        .pricing-badge {
+            display: inline-block; font-size: 0.6875rem; font-weight: 600;
+            color: var(--text-soft); background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border); border-radius: 980px;
+            padding: 0.2rem 0.55rem; margin-bottom: 0.65rem;
+        }
+        .pricing-card__price { font-size: 1.2rem; font-weight: 700; color: var(--text); margin: 0 0 0.5rem; }
+        .pricing-card p { font-size: 0.8125rem; color: var(--text-soft); line-height: 1.5; margin: 0; }
+        .pricing-footnote {
+            margin-top: 2rem; padding: 1.5rem 1.25rem; border-radius: var(--radius-lg);
+            border: 1px solid var(--border); background: rgba(255,255,255,0.02);
+        }
+        .pricing-footnote .dot-list { margin-bottom: 1.25rem; }
+        .pricing-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+        .contact-line { font-size: 0.9375rem; font-weight: 500; }
+        .contact-line a { color: inherit; text-decoration: none; }
+        .contact-line a:hover { color: var(--accent); }
+        .trust-bar {
+            display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 0.25rem 0;
+            padding: 0;
+        }
 
         /* ── Reveal ── */
         .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
@@ -565,13 +609,14 @@
 <!-- Top Navigation -->
 <nav class="site-nav fixed top-0 w-full z-50 bg-[rgba(10,10,11,0.6)] backdrop-blur-xl border-b border-glass" id="site-nav">
 <div class="flex justify-between items-center px-gutter py-3.5 max-w-container-max mx-auto">
-<a href="#" class="flex items-center gap-2.5" aria-label="D Digital Studio">
-<div class="w-9 h-9"><img alt="D Digital Studio" class="site-logo w-full h-full" src="assets/logo.png" onerror="this.onerror=null;this.src='assets/logo.svg'" /></div>
-<div class="text-base font-semibold text-on-surface tracking-tight">D Digital Studio</div>
+<a href="#" class="flex items-center gap-2.5" aria-label="Digital Studio">
+<div class="w-9 h-9"><img alt="Digital Studio" class="site-logo w-full h-full" src="assets/logo.svg" /></div>
+<div class="text-base font-semibold text-on-surface tracking-tight">Digital Studio</div>
 </a>
 <div class="hidden md:flex items-center gap-10 nav-desktop-links" aria-label="ניווט ראשי">
 <a class="nav-link" href="#work">עבודות</a>
 <a class="nav-link" href="#services">שירותים</a>
+<a class="nav-link" href="#pricing">טווח מחירים</a>
 <a class="nav-link" href="#process">איך זה עובד</a>
 <a class="nav-link" href="#about">מי אני</a>
 <a class="nav-link" href="#contact">צור קשר</a>
@@ -584,6 +629,7 @@
 <div class="nav-mobile-only px-gutter max-w-container-max mx-auto" id="nav-links" aria-label="ניווט ראשי">
 <a class="nav-link block py-3" href="#work">עבודות</a>
 <a class="nav-link block py-3" href="#services">שירותים</a>
+<a class="nav-link block py-3" href="#pricing">טווח מחירים</a>
 <a class="nav-link block py-3" href="#process">איך זה עובד</a>
 <a class="nav-link block py-3" href="#about">מי אני</a>
 <a class="nav-link block py-3" href="#contact">צור קשר</a>
@@ -595,9 +641,9 @@
 <div class="relative px-gutter max-w-container-max mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
 <div class="text-right fade-up is-visible">
-<span class="section-eyebrow">דביר · D Digital Studio</span>
+<span class="section-eyebrow">דביר — Digital Studio</span>
 <h1 class="hero-title mb-6">
-                בונה <span class="gradient-text">אתרים, אוטומציות ובוטים</span> שמביאים פניות לעסק
+                בונה <span class="accent-text">אתרים, אוטומציות ובוטים</span> שמביאים פניות לעסק
             </h1>
 <p class="section-lead mb-8">
                 ליווי אישי מהשיחה הראשונה ועד שהפרויקט באוויר. בלי סוכנות גדולה — רק מה שצריך כדי שתקבל יותר פניות ותחסוך זמן.
@@ -607,9 +653,9 @@
 <a href="#contact" class="btn-secondary">השאר פרטים בטופס</a>
 </div>
 <div class="trust-bar !justify-start !px-0 !py-0">
-<span class="trust-item"><span class="material-symbols-outlined">schedule</span> 7–21 ימים לאוויר</span>
-<span class="trust-item"><span class="material-symbols-outlined">person</span> ישירות איתי</span>
-<span class="trust-item"><span class="material-symbols-outlined">payments</span> מחיר לפני התחלה</span>
+<span class="trust-item">7–21 ימים לאוויר</span>
+<span class="trust-item">ישירות איתי</span>
+<span class="trust-item">מחיר לפני התחלה</span>
 </div>
 </div>
 <div class="fade-up fade-up-delay-2 hidden lg:block">
@@ -618,37 +664,13 @@
 <span class="browser-dot browser-dot--r"></span>
 <span class="browser-dot browser-dot--y"></span>
 <span class="browser-dot browser-dot--g"></span>
-<div class="browser-url">dvir17daus-ops.github.io/zfr-</div>
+<div class="browser-url">zfr-estates.co.il</div>
 </div>
 <div class="browser-body browser-body--shot">
 <img class="browser-shot" src="assets/zfr-estates-hero.png" alt="צילום מסך מאתר ZFR Estates — נדל״ן יוקרתי" width="1280" height="800" />
 </div>
 </a>
 </div>
-</div>
-
-<!-- 4 שירותים -->
-<div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto fade-up fade-up-delay-3 is-visible">
-<a href="#services" class="service-pill">
-<div class="icon-wrap"><span class="material-symbols-outlined text-primary">language</span></div>
-<strong class="block text-on-surface text-sm md:text-base mb-1">אתרי תדמית</strong>
-<span class="text-xs md:text-sm text-text-muted leading-snug">נוכחות מקצועית שגורמת לפנות אליך</span>
-</a>
-<a href="#services" class="service-pill">
-<div class="icon-wrap"><span class="material-symbols-outlined text-primary">rocket_launch</span></div>
-<strong class="block text-on-surface text-sm md:text-base mb-1">דפי נחיתה</strong>
-<span class="text-xs md:text-sm text-text-muted leading-snug">עמוד אחד שממיר מבקרים ללידים</span>
-</a>
-<a href="#services" class="service-pill">
-<div class="icon-wrap"><span class="material-symbols-outlined text-primary">bolt</span></div>
-<strong class="block text-on-surface text-sm md:text-base mb-1">אוטומציות</strong>
-<span class="text-xs md:text-sm text-text-muted leading-snug">פחות עבודה ידנית, יותר סדר</span>
-</a>
-<a href="#services" class="service-pill">
-<div class="icon-wrap"><span class="material-symbols-outlined text-primary">smart_toy</span></div>
-<strong class="block text-on-surface text-sm md:text-base mb-1">בוטים ו-AI</strong>
-<span class="text-xs md:text-sm text-text-muted leading-snug">מענה אוטומטי בוואטסאפ ובאתר</span>
-</a>
 </div>
 </div>
 </section>
@@ -661,12 +683,12 @@
 <div class="stat-label">ימי עבודה ממוצעים<br/>עד עלייה לאוויר</div>
 </div>
 <div class="stat-cell">
-<div class="stat-value">4</div>
-<div class="stat-label">שירותים מרכזיים<br/>שאפשר לשלב יחד</div>
+<div class="stat-value">₪3k–15k</div>
+<div class="stat-label">טווח נפוץ לפרויקט<br/>הצעה מדויקת אחרי שיחה</div>
 </div>
 <div class="stat-cell">
-<div class="stat-value">24h</div>
-<div class="stat-label">זמן מענה מקסימלי<br/>לפניות חדשות</div>
+<div class="stat-value">עד 24 שעות</div>
+<div class="stat-label">זמן מענה לפניות חדשות<br/>בימי עבודה</div>
 </div>
 </div>
 </section>
@@ -683,7 +705,7 @@
 <a href="https://dvir17daus-ops.github.io/zfr-/#concierge" target="_blank" rel="noopener noreferrer" class="project-preview">
 <img class="project-preview__img" src="assets/zfr-estates-hero.png" alt="ZFR Estates — אתר נדל״ן יוקרתי עם שאלון התאמה" width="1280" height="800" loading="lazy" />
 <div class="project-preview__shade"></div>
-<span class="project-preview__arrow" aria-hidden="true"><span class="material-symbols-outlined" style="font-size:18px">open_in_new</span></span>
+<span class="project-preview__arrow" aria-hidden="true">↗</span>
 </a>
 <div class="project-body text-right">
 <div class="project-tags">
@@ -692,19 +714,18 @@
 <span class="project-tag">עיצוב יוקרתי</span>
 <span class="project-tag">מותאם לנייד</span>
 </div>
-<h3 class="text-xl font-semibold mb-3">אתר boutique לסוכנות נדל״ן</h3>
+<h3 class="text-xl font-semibold mb-3">אתר לסוכנות נדל״ן — ZFR Estates</h3>
 <p class="text-text-muted text-[0.9375rem] leading-relaxed mb-1">
-              אתר מלא ל-ZFR Estates — סוכנות נדל״ן יוקרתי בירושלים. כולל הצגת נכסים, סיפור המותג, תהליך ליווי בשלושה שלבים, ושאלון התאמה דיסקרטי שמסנן לידים לפני שמגיעים לסוכן.
+              אתר מלא ל-ZFR Estates, סוכנות נדל״ן בירושלים. כולל הצגת נכסים, סיפור המותג, תהליך ליווי בשלושה שלבים, ושאלון התאמה שמסנן פניות לפני שמגיעות לסוכן.
             </p>
-<ul class="project-features">
-<li><span class="material-symbols-outlined">check</span> עיצוב dark premium עם טיפוגרפיה יוקרתית</li>
-<li><span class="material-symbols-outlined">check</span> שאלון concierge לאיסוף פניות ממוקדות</li>
-<li><span class="material-symbols-outlined">check</span> מבנה שמוביל לפעולה — שאלון, וואטסאפ, צפייה בנכסים</li>
-<li><span class="material-symbols-outlined">check</span> חוויית משתמש מלאה בנייד ובדסקטופ</li>
+<ul class="project-features dot-list">
+<li>עיצוב כהה ונקי, מותאם לקהל יוקרתי</li>
+<li>שאלון התאמה לאיסוף פניות ממוקדות</li>
+<li>מבנה שמוביל לפעולה — שאלון, וואטסאפ, צפייה בנכסים</li>
+<li>עובד טוב בנייד ובדסקטופ</li>
 </ul>
 <a href="https://dvir17daus-ops.github.io/zfr-/#concierge" target="_blank" rel="noopener noreferrer" class="btn-secondary mt-6 inline-flex">
               צפייה באתר
-              <span class="material-symbols-outlined" style="font-size:18px">arrow_back</span>
             </a>
 </div>
 </article>
@@ -721,40 +742,88 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
 <div class="surface-card p-8 md:p-10 fade-up">
-<div class="mb-6"><span class="material-symbols-outlined text-primary text-3xl">language</span></div>
+<span class="service-num">01</span>
 <h3 class="text-xl font-semibold mb-3">אתרי תדמית</h3>
 <p class="text-text-muted leading-relaxed mb-5 text-[0.9375rem]">אתר שמציג את העסק שלך בצורה ברורה ומקצועית — מהיר, נוח בנייד, ומחובר לוואטסאפ או טופס יצירת קשר.</p>
-<ul class="text-sm text-text-muted space-y-2.5">
-<li class="flex items-center gap-2.5 flex-row-reverse justify-end"><span class="material-symbols-outlined text-primary text-lg">check</span> עיצוב מותאם למותג שלך</li>
-<li class="flex items-center gap-2.5 flex-row-reverse justify-end"><span class="material-symbols-outlined text-primary text-lg">check</span> מותאם לנייד מהיום הראשון</li>
+<ul class="dot-list">
+<li>עיצוב מותאם למותג שלך</li>
+<li>מותאם לנייד מהיום הראשון</li>
 </ul>
 </div>
 <div class="surface-card p-8 md:p-10 fade-up fade-up-delay-1">
-<div class="mb-6"><span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span></div>
+<span class="service-num">02</span>
 <h3 class="text-xl font-semibold mb-3">דפי נחיתה</h3>
 <p class="text-text-muted leading-relaxed mb-5 text-[0.9375rem]">עמוד אחד ממוקד שמוביל לפעולה — מושלם לקמפיין בפייסבוק, גוגל או אינסטגרם.</p>
-<ul class="text-sm text-text-muted space-y-2.5">
-<li class="flex items-center gap-2.5 flex-row-reverse justify-end"><span class="material-symbols-outlined text-primary text-lg">check</span> מבנה שמוביל לשיחה או ליד</li>
-<li class="flex items-center gap-2.5 flex-row-reverse justify-end"><span class="material-symbols-outlined text-primary text-lg">check</span> חיבור לוואטסאפ ומעקב</li>
+<ul class="dot-list">
+<li>מבנה שמוביל לשיחה או ליד</li>
+<li>חיבור לוואטסאפ ומעקב</li>
 </ul>
 </div>
 <div class="surface-card p-8 md:p-10 fade-up fade-up-delay-2 border-primary/20" style="background: rgba(217,93,57,0.04);">
-<div class="mb-6"><span class="material-symbols-outlined text-primary text-3xl">bolt</span></div>
+<span class="service-num">03</span>
 <h3 class="text-xl font-semibold mb-3">אוטומציות לעסק</h3>
 <p class="text-text-muted leading-relaxed mb-5 text-[0.9375rem]">חיבור בין המערכות שלך כדי שדברים יקרו לבד — ליד נכנס, נשלחת התראה, מתעדכן גיליון, נשלח מייל.</p>
-<ul class="text-sm text-text-muted space-y-2.5">
-<li class="flex items-center gap-2.5 flex-row-reverse justify-end"><span class="material-symbols-outlined text-primary text-lg">check</span> חיסכון בשעות עבודה שבועיות</li>
-<li class="flex items-center gap-2.5 flex-row-reverse justify-end"><span class="material-symbols-outlined text-primary text-lg">check</span> פחות טעויות ידניות</li>
+<ul class="dot-list">
+<li>חיסכון בשעות עבודה שבועיות</li>
+<li>פחות טעויות ידניות</li>
 </ul>
 </div>
 <div class="surface-card p-8 md:p-10 fade-up fade-up-delay-3">
-<div class="mb-6"><span class="material-symbols-outlined text-primary text-3xl">smart_toy</span></div>
-<h3 class="text-xl font-semibold mb-3">בוטים ו-AI</h3>
-<p class="text-text-muted leading-relaxed mb-5 text-[0.9375rem]">בוט לוואטסאפ או לאתר שעונה על שאלות נפוצות, אוסף פרטים ומעביר אליך לידים מסודרים.</p>
-<ul class="text-sm text-text-muted space-y-2.5">
-<li class="flex items-center gap-2.5 flex-row-reverse justify-end"><span class="material-symbols-outlined text-primary text-lg">check</span> מענה 24/7 גם כשאתה עסוק</li>
-<li class="flex items-center gap-2.5 flex-row-reverse justify-end"><span class="material-symbols-outlined text-primary text-lg">check</span> סינון פניות לפני שמגיעות אליך</li>
+<span class="service-num">04</span>
+<h3 class="text-xl font-semibold mb-3">בוטים לוואטסאפ ולאתר</h3>
+<p class="text-text-muted leading-relaxed mb-5 text-[0.9375rem]">בוט שעונה על שאלות נפוצות, אוסף פרטים ומעביר אליך לידים מסודרים — בוואטסאפ או באתר.</p>
+<ul class="dot-list">
+<li>מענה גם כשאתה עסוק</li>
+<li>סינון פניות לפני שמגיעות אליך</li>
 </ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- טווח מחירים -->
+<section class="py-24 md:py-32 border-t border-glass" id="pricing">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="mb-12 max-w-2xl fade-up">
+<span class="section-eyebrow">טווח מחירים</span>
+<h2 class="section-title mb-4">בערך כמה זה עולה?</h2>
+<p class="section-lead">מספרים משוערים — לא מחירון סופי. כדי שתדע אם אנחנו בטווח, לפני שמתקשרים. הצעה מדויקת תמיד אחרי שיחה קצרה, לפני שמתחילים.</p>
+</div>
+<div class="pricing-grid fade-up max-w-5xl">
+<div class="pricing-card">
+<span class="pricing-badge">משוער</span>
+<h3 class="font-semibold text-[0.9375rem]">אתר תדמית</h3>
+<div class="pricing-card__price">₪3,000–8,000</div>
+<p>עד כ-5 עמודים, עיצוב מותאם, מותאם לנייד</p>
+</div>
+<div class="pricing-card">
+<span class="pricing-badge">משוער</span>
+<h3 class="font-semibold text-[0.9375rem]">דף נחיתה</h3>
+<div class="pricing-card__price">₪2,500–5,000</div>
+<p>עמוד אחד ממוקד, חיבור לוואטסאפ או טופס</p>
+</div>
+<div class="pricing-card">
+<span class="pricing-badge">משוער</span>
+<h3 class="font-semibold text-[0.9375rem]">אוטומציה</h3>
+<div class="pricing-card__price">₪4,000–10,000</div>
+<p>תלוי בכמות המערכות ובמורכבות התהליך</p>
+</div>
+<div class="pricing-card">
+<span class="pricing-badge">משוער</span>
+<h3 class="font-semibold text-[0.9375rem]">בוט לוואטסאפ / אתר</h3>
+<div class="pricing-card__price">₪5,000–12,000</div>
+<p>כולל הגדרה, תסריט שיחה וחיבור למערכות</p>
+</div>
+</div>
+<div class="pricing-footnote fade-up max-w-5xl">
+<ul class="dot-list">
+<li>אין עלויות נסתרות — מקבלים הצעה מפורטת לפני תשלום</li>
+<li>פרויקט גדול או מורכב? המחיר נקבע לפי היקף, לא לפי טבלה</li>
+<li>לא בטוח מה מתאים? שיחה קצרה בוואטסאפ ונבין ביחד</li>
+</ul>
+<div class="pricing-actions">
+<a href="https://wa.me/972525240271" target="_blank" rel="noopener noreferrer" class="btn-accent">דבר איתי בוואטסאפ</a>
+<a href="#contact" class="btn-secondary">השאר פרטים בטופס</a>
 </div>
 </div>
 </div>
@@ -799,40 +868,24 @@
                         אני בונה אתרים, אוטומציות ובוטים לעסקים שרוצים תוצאות — לא רק "אתר יפה". עובד ישירות איתך, בלי מתווכים, ומסביר הכל בשפה פשוטה.
                     </p>
 <div class="space-y-6">
-<div class="flex items-start gap-4 flex-row-reverse">
-<div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 border border-primary/15">
-<span class="material-symbols-outlined text-primary text-lg">verified</span>
-</div>
-<div>
+<div class="about-point">
 <h4 class="font-semibold mb-1 text-[0.9375rem]">זמינות אישית</h4>
 <p class="text-text-muted text-sm leading-relaxed">מדברים איתי, לא עם מוקד. וואטסאפ, טלפון או טופס — מה שנוח לך.</p>
 </div>
-</div>
-<div class="flex items-start gap-4 flex-row-reverse">
-<div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 border border-primary/15">
-<span class="material-symbols-outlined text-primary text-lg">schedule</span>
-</div>
-<div>
+<div class="about-point">
 <h4 class="font-semibold mb-1 text-[0.9375rem]">לוח זמנים ברור</h4>
 <p class="text-text-muted text-sm leading-relaxed">רוב הפרויקטים עולים לאוויר תוך 7–21 ימי עבודה, לפי היקף העבודה.</p>
 </div>
-</div>
-<div class="flex items-start gap-4 flex-row-reverse">
-<div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 border border-primary/15">
-<span class="material-symbols-outlined text-primary text-lg">handshake</span>
-</div>
-<div>
+<div class="about-point">
 <h4 class="font-semibold mb-1 text-[0.9375rem]">מחיר לפני שמתחילים</h4>
 <p class="text-text-muted text-sm leading-relaxed">מקבלים הצעה מפורטת לפני תשלום. בלי עלויות נסתרות באמצע.</p>
 </div>
 </div>
 </div>
-</div>
 <div class="order-1 md:order-2 flex justify-center fade-up fade-up-delay-2">
-<div class="w-full max-w-xs aspect-square surface-card flex flex-col items-center justify-center p-10">
-<img alt="D Digital Studio" class="site-logo site-logo--lg mb-5 object-contain opacity-95" src="assets/logo.png" onerror="this.onerror=null;this.src='assets/logo.svg'" />
-<p class="font-semibold text-center text-lg">D Digital Studio</p>
-<p class="text-text-muted text-sm text-center mt-1.5">אתרים · אוטומציות · בוטים</p>
+<div class="about-photo">
+<img src="assets/dvir.jpg" alt="דביר דאוס" class="about-photo__img" onload="document.getElementById('about-fallback').style.display='none'" onerror="this.classList.add('is-hidden')" />
+<div class="about-photo__fallback" id="about-fallback">ד</div>
 </div>
 </div>
 </div>
@@ -849,19 +902,19 @@
 </div>
 <div class="faq-list fade-up">
 <div class="faq-item">
-<button type="button" class="faq-q" aria-expanded="false">תוך כמה זמן אתר מוכן?<span class="material-symbols-outlined">expand_more</span></button>
+<button type="button" class="faq-q" aria-expanded="false">תוך כמה זמן אתר מוכן?<span class="faq-chevron" aria-hidden="true"></span></button>
 <div class="faq-a">ברוב המקרים בין 7 ל-21 ימי עבודה. תלוי בכמות העמודים, התוכן והעיצוב שצריך.</div>
 </div>
 <div class="faq-item">
-<button type="button" class="faq-q" aria-expanded="false">אפשר לחבר וואטסאפ וטפסים?<span class="material-symbols-outlined">expand_more</span></button>
+<button type="button" class="faq-q" aria-expanded="false">אפשר לחבר וואטסאפ וטפסים?<span class="faq-chevron" aria-hidden="true"></span></button>
 <div class="faq-a">כן. כל ליד יכול להגיע ישירות לוואטסאפ שלך, למייל, או לגיליון — מה שמתאים לעסק.</div>
 </div>
 <div class="faq-item">
-<button type="button" class="faq-q" aria-expanded="false">מה זה אומר "אוטומציה לעסק"?<span class="material-symbols-outlined">expand_more</span></button>
+<button type="button" class="faq-q" aria-expanded="false">מה זה אומר "אוטומציה לעסק"?<span class="faq-chevron" aria-hidden="true"></span></button>
 <div class="faq-a">למשל: לקוח ממלא טופס → נשלחת התראה → מתעדכן CRM → נשלח מייל אוטומטי. פחות העתק-הדבק, פחות שכחה.</div>
 </div>
 <div class="faq-item">
-<button type="button" class="faq-q" aria-expanded="false">מה בוט AI יכול לעשות?<span class="material-symbols-outlined">expand_more</span></button>
+<button type="button" class="faq-q" aria-expanded="false">מה בוט לוואטסאפ יכול לעשות?<span class="faq-chevron" aria-hidden="true"></span></button>
 <div class="faq-a">לענות על שאלות נפוצות, לאסוף שם וטלפון, לתאם פגישה, ולהעביר אליך רק פניות רלוונטיות.</div>
 </div>
 </div>
@@ -878,21 +931,11 @@
 <span class="section-eyebrow">צור קשר</span>
 <h2 class="section-title mb-5">בוא נדבר על הפרויקט שלך</h2>
 <p class="section-lead mb-8">
-                            ממלאים את הטופס — נפתח וואטסאפ עם הסיכום, ואפשר לערוך לפני שליחה. אחזור אליך תוך 24 שעות.
+                            ממלאים את הטופס — נפתח וואטסאפ עם הסיכום, ואפשר לערוך לפני שליחה. אחזור אליך עד 24 שעות.
                         </p>
-<div class="space-y-4">
-<div class="flex items-center gap-4 text-on-surface flex-row-reverse">
-<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center border border-glass shrink-0">
-<span class="material-symbols-outlined text-primary text-xl">phone</span>
-</div>
-<a href="tel:+972525240271" class="hover:text-primary transition-colors font-medium">052-524-0271</a>
-</div>
-<div class="flex items-center gap-4 text-on-surface flex-row-reverse">
-<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center border border-glass shrink-0">
-<span class="material-symbols-outlined text-primary text-xl">chat</span>
-</div>
-<a href="https://wa.me/972525240271" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors font-medium">שלח הודעה בוואטסאפ</a>
-</div>
+<div class="space-y-3">
+<p class="contact-line"><a href="tel:+972525240271">052-524-0271</a></p>
+<p class="contact-line"><a href="https://wa.me/972525240271" target="_blank" rel="noopener noreferrer">שלח הודעה בוואטסאפ</a></p>
 </div>
 </div>
 <div class="order-2 md:order-1 relative z-10 fade-up fade-up-delay-1">
@@ -905,7 +948,7 @@
 <option value="website">אתר תדמית</option>
 <option value="landing">דף נחיתה</option>
 <option value="automation">אוטומציה לעסק</option>
-<option value="bot">בוט / AI</option>
+<option value="bot">בוט לוואטסאפ / אתר</option>
 <option value="other">לא בטוח — רוצה ייעוץ</option>
 </select>
 </div>
@@ -939,8 +982,8 @@
 <div class="flex flex-col md:flex-row justify-between gap-6 px-gutter max-w-container-max mx-auto items-center md:items-end">
 <div class="text-right md:text-right">
 <div class="flex items-center gap-2.5 mb-2 justify-end">
-<div class="w-7 h-7 opacity-90"><img alt="" class="site-logo site-logo--sm w-full h-full" src="assets/logo.png" onerror="this.onerror=null;this.src='assets/logo.svg'" /></div>
-<div class="text-base font-semibold tracking-tight">D Digital Studio</div>
+<div class="w-7 h-7 opacity-90"><img alt="" class="site-logo site-logo--sm w-full h-full" src="assets/logo.svg" /></div>
+<div class="text-base font-semibold tracking-tight">Digital Studio</div>
 </div>
 <div class="text-sm text-text-muted">© <span id="footer-year"></span> דביר — בניית אתרים, אוטומציות ובוטים</div>
 </div>
@@ -948,7 +991,7 @@
 <a class="text-text-muted hover:text-on-surface transition-colors text-sm" href="#contact">צור קשר</a>
 <a class="text-text-muted hover:text-on-surface transition-colors text-sm" href="privacy.html">מדיניות פרטיות</a>
 <a class="text-text-muted hover:text-on-surface transition-colors text-sm" href="tel:+972525240271">052-524-0271</a>
-<a class="text-text-muted hover:text-on-surface transition-colors text-sm" href="https://wa.me/972525240271" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+<a class="text-text-muted hover:text-on-surface transition-colors text-sm" href="https://wa.me/972525240271" target="_blank" rel="noopener noreferrer">וואטסאפ</a>
 </div>
 </div>
 </footer>
@@ -959,7 +1002,7 @@
         <div class="chat-progress" aria-hidden="true"><div class="chat-progress-bar" id="chat-progress-bar"></div></div>
         <header class="chat-header">
           <div class="chat-header-avatar" aria-hidden="true">ד</div>
-          <div class="chat-header-info"><strong>דביר · D Digital Studio</strong><span class="chat-status">זמין · מענה תוך 24 שעות</span></div>
+          <div class="chat-header-info"><strong>דביר — Digital Studio</strong><span class="chat-status">זמין · מענה עד 24 שעות</span></div>
           <button type="button" class="chat-close" id="chat-close" aria-label="סגור צ'אט">×</button>
         </header>
         <div class="chat-messages" id="chat-messages" aria-live="polite"></div>
@@ -1140,12 +1183,12 @@
           if (!panel || !launcher || !messagesEl) return;
           const data = {}; let stepIndex = 0; let started = false; let waitingForInput = false;
           const STEPS = [
-            { key: "name", prompt: "היי! אני העוזר של דביר.\nכמה שאלות קצרות (כ-2 דקות) ואכין לך סיכום להצעת מחיר.\n\nאיך קוראים לך?", type: "text", placeholder: "השם שלך" },
+            { key: "name", prompt: "היי, אני דביר.\nכמה שאלות קצרות (כ-2 דקות) ואכין לך סיכום לשיחה.\n\nאיך קוראים לך?", type: "text", placeholder: "השם שלך" },
             { key: "phone", prompt: function (d) { return "נעים להכיר, " + d.name + ".\nמה מספר הטלפון לחזרה?"; }, type: "tel", placeholder: "050-0000000", validate: function (v) { const digits = v.replace(/\D/g, ""); return digits.length >= 9 || "נא להזין מספר טלפון תקין (לפחות 9 ספרות)"; } },
             { key: "business", prompt: "מה שם העסק או התחום שאת/ה עובד/ת בו?", type: "text", placeholder: "למשל: סטודיו לכושר, חנות בגדים..." },
             { key: "service", prompt: "מה את/ה מחפש/ת?", type: "choice", options: [
               { value: "אתר תדמית", label: "אתר תדמית" }, { value: "דף נחיתה", label: "דף נחיתה" },
-              { value: "אוטומציות", label: "אוטומציות" }, { value: "בוט / AI", label: "בוט / AI" },
+              { value: "אוטומציות", label: "אוטומציות" }, { value: "בוט לוואטסאפ / אתר", label: "בוט לוואטסאפ / אתר" },
               { value: "לא בטוח/ה — ייעוץ", label: "לא בטוח/ה — רוצה ייעוץ" }
             ]},
             { key: "goal", prompt: "מה המטרה העיקרית?\n(למשל: יותר פניות, מיתוג, חיסכון בזמן)", type: "text", placeholder: "תאר/י בקצרה" },
@@ -1182,7 +1225,7 @@
           function buildLeadSummary() {
             const now = new Date().toLocaleString("he-IL", { dateStyle: "short", timeStyle: "short" });
             const svc = data.service || "";
-            return "ליד חדש מהאתר\n━━━━━━━━━━━━━━━━━━\nשם: " + data.name + "\nטלפון: " + data.phone + "\nעסק / תחום: " + data.business + "\nשירות: " + svc + "\nמטרה: " + data.goal + "\nתקציב: " + data.budget + "\nלוח זמנים: " + data.timeline + "\n━━━━━━━━━━━━━━━━━━\nנשלח: " + now + "\nמקור: D Digital Studio";
+            return "ליד חדש מהאתר\n━━━━━━━━━━━━━━━━━━\nשם: " + data.name + "\nטלפון: " + data.phone + "\nעסק / תחום: " + data.business + "\nשירות: " + svc + "\nמטרה: " + data.goal + "\nתקציב: " + data.budget + "\nלוח זמנים: " + data.timeline + "\n━━━━━━━━━━━━━━━━━━\nנשלח: " + now + "\nמקור: Digital Studio";
           }
           function showSummary() {
             waitingForInput = false; updateProgress(); if (progressBar) progressBar.style.width = "100%";
@@ -1190,7 +1233,7 @@
             const summaryEl = document.createElement("div"); summaryEl.className = "chat-msg chat-msg--summary"; summaryEl.textContent = summaryText;
             messagesEl.appendChild(summaryEl); scrollMessages();
             setTimeout(function () {
-              addMessage("מעולה " + data.name + ".\n\nהכנתי סיכום של השיחה. לחץ/י על הכפתור למטה — זה יפתח וואטסאפ עם כל הפרטים, ואפשר לערוך לפני שליחה.", "bot");
+              addMessage("מעולה " + data.name + ".\n\nהכנתי סיכום של מה שדיברנו. לחץ/י על הכפתור — זה יפתח וואטסאפ עם כל הפרטים, ואפשר לערוך לפני שליחה.", "bot");
             }, 500);
             setInputMode("done", {});
             const waBtn = document.createElement("a"); waBtn.className = "chat-wa-btn"; waBtn.href = waUrl(summaryText); waBtn.target = "_blank"; waBtn.rel = "noopener noreferrer";
