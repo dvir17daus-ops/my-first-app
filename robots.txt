@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# לאחר פרסום עם דומיין קבוע: הוסף שורה
-# Sitemap: https://YOUR-DOMAIN/sitemap.xml
+Sitemap: https://dvir17daus-ops.github.io/my-first-app/sitemap.xml

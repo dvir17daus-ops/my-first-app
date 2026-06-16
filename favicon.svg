@@ -1,13 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="D Digital Studio">
   <defs>
     <linearGradient id="favG" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#59b8ff"/>
-      <stop offset="55%" stop-color="#7a6dff"/>
-      <stop offset="100%" stop-color="#9f7bff"/>
+      <stop offset="0%" stop-color="#ffb5a0"/>
+      <stop offset="100%" stop-color="#d95d39"/>
     </linearGradient>
   </defs>
-  <rect width="32" height="32" rx="9" fill="#060917"/>
-  <rect x="4" y="4" width="24" height="24" rx="7" fill="rgba(6,9,23,0.35)" stroke="url(#favG)" stroke-width="1.15"/>
-  <path fill="none" stroke="url(#favG)" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"
-    d="M11.5 9.5v13h4.2c3.7 0 6.8-2.7 6.8-6.5s-3.1-6.5-6.8-6.5h-4.2z"/>
+  <rect width="32" height="32" rx="8" fill="#111113"/>
+  <path fill="url(#favG)" d="M9 7h6.5c4.5 0 8.2 3.7 8.2 8.2s-3.7 8.2-8.2 8.2H9V7zm2.2 2.2v11.8h3.8c3.3 0 6-2.7 6-6s-2.7-6-6-6h-3.8z"/>
 </svg>
